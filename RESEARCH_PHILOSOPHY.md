@@ -27,8 +27,10 @@ The current core is:
 5. the price/time/size hardness encoding;
 6. exact binary-query smooth sensitivity on finite Hamming graphs;
 7. the exact Y majority circuit derived from the known reduction; and
-8. finite-poset law reconstruction by the full upper-set hierarchy; and
-9. distance-stratified subset-DP stability certificates.
+8. finite-poset law reconstruction by the full upper-set hierarchy;
+9. distance-stratified subset-DP stability certificates; and
+10. the exact finite zero-plus TV breakdown formula and its factor-explicit
+    bridge to integer cover stability.
 
 The analogy is not a mathematical claim about cusp forms or representations.
 It is a rule for keeping a growing research program intelligible.

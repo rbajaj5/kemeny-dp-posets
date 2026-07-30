@@ -30,6 +30,27 @@ local sensitivity of a deterministic Kemeny selector:
 B_beta(P) = choose(m, 2) * exp(-beta * max(R(P) - 1, 0)).
 ```
 
+For the empirical law `p=P/|P|`, define
+
+```text
+mu(P) = min_{tau != sigma}
+        gap_P(tau) / (|P| Kendall(sigma,tau)).
+```
+
+The repository now computes the exact zero-plus contamination breakdown under
+the standard convention `TV(p,q)=||p-q||_1/2`. It proves
+
+```text
+R(P) = ceil(|P| mu(P))
+b_TV(p) >= mu(P)/2.
+```
+
+When `mu(P) <= 2p(sigma)`, the second relation is an equality and
+`R(P)=ceil(2|P|b_TV(p))`. The [comparison note](notes/BREAKDOWN_COMPARISON.md)
+also identifies a factor-of-two normalization inconsistency between Equation
+(4) and Appendix C.2 of the closest ICML 2023 paper. This is a comparison of
+two distinct perturbation models, not a claim that Hasse adjacency equals TV.
+
 The distance-stratified subset DP computes the complete profile
 
 ```text
@@ -88,6 +109,7 @@ story as section 26 of *The Fugitive-III*, rather than *Gitanjali*.
 - exact Kemeny enumeration for small candidate sets;
 - exact subset-DP Kemeny optimization in `O(m^2 2^m)` time;
 - distance-stratified subset DP for score-gap and instability witnesses;
+- exact zero-plus standard-TV breakdown and cover-radius comparison;
 - cover-graph parents, children, distances, and finite Hasse diagrams;
 - exact local sensitivity of the optimal Kemeny score;
 - exact smooth sensitivity of that scalar score by certified shell search;
@@ -114,6 +136,7 @@ python -m unittest discover -s tests -v
 python scripts/run_experiments.py
 python scripts/run_three_voter_applications.py
 python scripts/run_subset_dp_certificates.py
+python scripts/run_breakdown_comparison.py
 python scripts/run_market_microstructure.py
 python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/run_profile_law_hierarchy.py
@@ -134,9 +157,9 @@ The repository deliberately separates:
 - `CONJECTURE` or `OPEN`: directions that still require proof.
 
 The closest prior robustness work is the breakdown-function analysis of
-ranking medians by Goibert et al. (ICML 2023). The exact integer cover-distance
-formula here should be compared carefully with that continuous contamination
-model before any novelty claim is made.
+ranking medians by Goibert et al. (ICML 2023). The repository now gives the
+exact zero-plus comparison under standard half-`L1` TV, including the
+factor-two bridge and its limits. Novelty is still unconfirmed.
 
 ## Sources
 
@@ -147,6 +170,7 @@ model before any novelty claim is made.
 - [Hillebrand et al., *Improved Differentially Private Algorithms for Rank Aggregation* (2026)](https://arxiv.org/abs/2511.11319)
 - [Peters, *Kemeny Rank Aggregation is NP-Hard for Three Voters* (2026)](https://arxiv.org/abs/2607.25540)
 - [De et al., *Parameterized Aspects of Distinct Kemeny Rank Aggregation* (2023)](https://arxiv.org/abs/2309.03517)
+- [Goibert et al., *Robust Consensus in Ranking Data Analysis* (2023)](https://proceedings.mlr.press/v202/goibert23a.html)
 - [Carroll, *Informationally Robust Trade and Limits to Contagion* (2016)](http://individual.utoronto.ca/carroll/robustlemons.pdf)
 - [Karlin and Peres, *Game Theory, Alive*](https://math.uchicago.edu/~shmuel/Modeling/Peres%20and%20Wilson%2C%20Game%20Theory%20Alive.pdf)
 - [Hou et al., *Kolmogorov-Arnold Networks: A Critical Assessment*](https://arxiv.org/abs/2407.11075)

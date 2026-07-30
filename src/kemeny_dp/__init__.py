@@ -1,5 +1,9 @@
 """Small-instance laboratory for private Kemeny aggregation."""
 
+from .breakdown import (
+    BreakdownComparison,
+    compare_cover_radius_and_breakdown,
+)
 from .core import KemenyAnalyzer, RankingSpace, kendall_distance
 from .geometry import (
     pairwise_sign_vector,
@@ -36,6 +40,7 @@ from .sensitivity import SensitivityAnalyzer, SmoothSensitivityResult
 from .subset_dp import SubsetDPResult, exact_kemeny_subset_dp
 
 __all__ = [
+    "BreakdownComparison",
     "KemenyAnalyzer",
     "BernoulliSummary",
     "RankingSpace",
@@ -46,6 +51,7 @@ __all__ = [
     "binary_winner_smooth_sensitivity",
     "center_of_attention",
     "bernoulli_summary",
+    "compare_cover_radius_and_breakdown",
     "coordinatewise_leq",
     "expected_profile",
     "exact_block_outputs",

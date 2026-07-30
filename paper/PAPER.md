@@ -8,9 +8,9 @@ Research note, updated 30 July 2026
 
 > **Status.** The propositions in this note are proved below and accompanied by
 > executable finite verification. Their novelty relative to the complete
-> literature has not been certified. In particular, the exact integer
-> cover-distance should be compared carefully with existing breakdown
-> functions for ranking medians before making a priority claim.
+> literature has not been certified. The exact zero-plus comparison with the
+> closest ranking-breakdown work is now included, with an explicit
+> total-variation normalization audit and no priority claim.
 
 ## Abstract
 
@@ -27,6 +27,14 @@ R(x)=\min_{\tau\ne\sigma}
 \frac{C_x(\tau)-C_x(\sigma)}{d_K(\sigma,\tau)}
 \right\rceil .
 \]
+
+Writing the corresponding normalized margin as \(\mu(x)\), we independently
+derive the exact zero-plus breakdown problem under
+\(\operatorname{TV}(p,q)=\|p-q\|_1/2\). Its value \(b_{\rm TV}\) satisfies
+\(b_{\rm TV}\ge\mu/2\), with equality under a transparent empirical-mass
+condition; in that case \(R(x)=\lceil2|x|b_{\rm TV}\rceil\). This exposes a
+factor-of-two normalization mismatch in the closest ICML 2023 analysis while
+keeping continuous contamination distinct from add/remove cover adjacency.
 
 We also prove exact formulas for the one-step local sensitivity of the scalar
 optimal Kemeny score and derive a \(\beta\)-smooth upper bound for the
@@ -68,15 +76,17 @@ its edges are precisely database adjacencies and that its path metric is the
 claimed database distance. The same discipline applies later to coloring
 diagrams, ranking-vector embeddings, and market encodings.
 
-This note makes five contributions:
+This note makes six contributions:
 
 1. it identifies the exact profile cover graph and its metric;
 2. it derives exact local-sensitivity identities for the scalar optimal score;
 3. it proves an exact cover-distance certificate for a unique Kemeny ranking
-   and a smooth upper bound derived from that certificate; and
-4. it supplies executable exact verification and a computationally explicit
+   and a smooth upper bound derived from that certificate;
+4. it derives the exact finite zero-plus TV contamination problem and a
+   factor-explicit bridge to the integer cover radius;
+5. it supplies executable exact verification and a computationally explicit
    sample-and-aggregate design constraint; and
-5. in a separate Hex/Y model, it gives an exact Boolean-output
+6. in a separate Hex/Y model, it gives an exact Boolean-output
    smooth-sensitivity identity and exhaustive majority-reduction checks.
 
 The claims are mathematical propositions, not yet claims of bibliographic
@@ -217,6 +227,98 @@ The denominator matters: the second-best score alone need not determine the
 first destabilizing competitor. A more distant ranking can close a larger
 score gap faster per added ballot.
 
+### Continuous zero-plus contamination
+
+Let \(n=\sum_\pi x_\pi\), let \(p_x=x/n\), and define
+
+\[
+\mu(x)=
+\min_{\tau\ne\sigma}
+\frac{\Delta_x(\tau)}
+     {n\,d_K(\sigma,\tau)}.
+\]
+
+Theorem 4 is equivalently \(R(x)=\lceil n\mu(x)\rceil\). Now use the standard
+total-variation convention
+\(\operatorname{TV}(p,q)=\|p-q\|_1/2\), and define
+
+\[
+b_{\rm TV}(p_x)=
+\inf\{\operatorname{TV}(p_x,q):
+\sigma\text{ is not the unique Kemeny optimum under }q\}.
+\]
+
+For a competitor \(\tau\), put
+
+\[
+f_\tau(\rho)=d_K(\rho,\tau)-d_K(\rho,\sigma),
+\qquad
+g_\tau=\mathbb E_{p_x}f_\tau
+=\frac{\Delta_x(\tau)}n.
+\]
+
+Let \(Q_\tau(u)\) be the decreasing quantile of \(f_\tau(\rho)\) under
+\(\rho\sim p_x\), and write \(d_\tau=d_K(\sigma,\tau)\).
+
+**Proposition 4.1 (exact zero-plus TV breakdown).** The TV distance to the
+boundary where \(\tau\) ties \(\sigma\) is
+
+\[
+b_\tau=
+\inf\left\{t\ge0:
+\int_0^t\bigl(Q_\tau(u)+d_\tau\bigr)\,du\ge g_\tau\right\},
+\]
+
+and
+
+\[
+b_{\rm TV}(p_x)=\min_{\tau\ne\sigma}b_\tau
+\ge\frac{\mu(x)}2.
+\]
+
+If a competitor attaining \(\mu(x)\) has at least
+\(\Delta_x(\tau)/(2nd_\tau)\) empirical mass on the coefficient level
+\(f_\tau=d_\tau\), equality holds. In particular,
+
+\[
+\mu(x)\le2p_x(\sigma)
+\quad\Longrightarrow\quad
+b_{\rm TV}(p_x)=\frac{\mu(x)}2
+\quad\text{and}\quad
+R(x)=\left\lceil2n b_{\rm TV}(p_x)\right\rceil.
+\]
+
+**Proof.** A TV move of size \(t\) removes \(t\) mass and adds \(t\) mass.
+For fixed \(t\), the greatest reduction of \(\mathbb E f_\tau\) removes mass
+from decreasing coefficient levels and adds it at the minimum
+\(-d_\tau\), attained at \(\rho=\tau\). This is exactly the displayed
+quantile integral. A competitor reaches the Kemeny boundary precisely when
+its expectation reaches zero, proving the minimization formula. Reverse
+triangle inequality gives
+\(-d_\tau\le f_\tau\le d_\tau\), so each unit of TV reduces the expectation
+by at most \(2d_\tau\). Hence
+\(b_\tau\ge g_\tau/(2d_\tau)\), and minimization gives the lower bound.
+Enough mass at the upper endpoint permits transport directly from that level
+to the lower endpoint and attains the bound. Since \(\rho=\sigma\) is an
+upper-endpoint state, the stated empirical-mass condition is sufficient.
+\(\square\)
+
+At attack amplitude \(\delta\to0^+\), the displayed upper expression in
+Goibert et al.'s Theorem 3.1 simplifies to \(\mu(x)\). Their construction
+removes \(\epsilon/2\) mass from the original median and adds it to its
+reverse, so its standard TV is \(\epsilon/2\). Their Equation (4) explicitly
+uses half-\(L^1\) TV, but Appendix C.2, Equation (33), bounds the full
+\(L^1\) difference by the same TV budget. The factor-two mismatch explains
+why the construction yields \(\mu/2\), not \(\mu\), in the present convention.
+This note does not claim a general correction for positive attack levels or
+bucket rankings.
+
+The identity is conditional, not universal. An exact four-candidate,
+ten-ballot profile in `results/breakdown_comparison.json` has
+\(\mu/2=1/30\) and \(b_{\rm TV}=1/20\). The numerical bridge also does not
+identify the two perturbation models: TV moves fractional mass at fixed total
+probability, whereas a cover move adds or removes an integer ballot.
+
 ### Exact stability witnesses by subset dynamic programming
 
 Theorem 4 need not be evaluated by enumerating all \(m!\) rankings. After
@@ -302,7 +404,7 @@ the parameterized and exact Kemeny literature has not been determined.
 The exact formula yields a stronger bound whenever at least one input ballot
 differs from the unique optimum.
 
-**Corollary 4.1 (non-unanimous radius bound).** In any metric 1-median problem
+**Corollary 4.3 (non-unanimous radius bound).** In any metric 1-median problem
 with \(n\ge3\) input records, if the optimum \(\sigma\) is unique and the
 profile is not unanimous at \(\sigma\), then
 
@@ -597,10 +699,11 @@ not computational complexity.
 Hay, Elagina, and Miklau introduced differentially private rank aggregation.
 Alabi et al. studied private rank aggregation in central and local models, and
 Hillebrand et al. subsequently improved private algorithms. Goibert et al.
-study robustness and breakdown functions for ranking medians. The first
-bibliographic task is to determine whether Theorem 4 is equivalent to, a
-discrete specialization of, or distinct from their contamination-radius
-formulation.
+study robustness and breakdown functions for ranking medians. Proposition 4.1
+now gives the exact zero-plus comparison under standard half-\(L^1\) TV:
+the cover radius is a discretized normalized margin, continuous breakdown is
+an exact mass-transport problem, and the factor-two bridge holds under a
+sufficient endpoint-mass condition. Novelty remains unconfirmed.
 
 The Johnson–Lindenstrauss direction is geometric but incomplete. Pairwise
 preference vectors embed rankings into \(\{-1,+1\}^D\), with Kendall distance
@@ -613,13 +716,12 @@ adjacency, and postprocessing back into the linear-order polytope together.
 
 Concrete open problems are:
 
-1. compare Theorem 4 exactly with the ICML 2023 breakdown function;
-2. compute or approximate \(R(x)\) without enumerating \(m!\) rankings;
-3. turn Theorem 5 into an end-to-end ranking-output mechanism;
-4. complete the center-of-attention privacy and utility analysis; and
-5. determine whether JL dimension reduction improves any end-to-end
+1. compare subset DP with ILP and fixed-parameter Kemeny oracles;
+2. turn Theorem 5 into an end-to-end ranking-output mechanism;
+3. complete the center-of-attention privacy and utility analysis;
+4. determine whether JL dimension reduction improves any end-to-end
    rank-aggregation privacy/utility bound after enforcing transitivity; and
-6. compare the Y pivotality data with rigorous influence and sharp-threshold
+5. compare the Y pivotality data with rigorous influence and sharp-threshold
    results for monotone Boolean functions.
 
 ## References
@@ -639,8 +741,9 @@ Concrete open problems are:
 6. L. Hillebrand et al. “Improved Differentially Private Algorithms for Rank
    Aggregation.” 2026.
    [arXiv:2511.11319](https://arxiv.org/abs/2511.11319).
-7. M. Goibert et al. “Robust Consensus in Ranking Data Analysis: Definitions,
-   Properties and Computational Issues.” ICML, 2023.
+7. M. Goibert, C. Calauzènes, E. Irurozki, and S. Clémençon. “Robust
+   Consensus in Ranking Data Analysis: Definitions, Properties and
+   Computational Issues.” ICML, 2023.
    [PMLR](https://proceedings.mlr.press/v202/goibert23a.html).
 8. J. Blocki et al. “The Johnson-Lindenstrauss Transform Itself Preserves
    Differential Privacy.” FOCS, 2012.

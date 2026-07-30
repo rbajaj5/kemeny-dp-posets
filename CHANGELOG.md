@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0 - 2026-07-30
+
+- Added an exact rational mass-transport computation of zero-plus Kemeny
+  breakdown under standard half-`L1` total variation.
+- Proved `b_TV >= mu/2`, the sufficient equality condition
+  `mu <= 2p(sigma)`, and the conditional bridge
+  `R=ceil(2n b_TV)`.
+- Audited Goibert et al. (ICML 2023) and documented the factor-two mismatch
+  between Equation (4) and Appendix C.2 without extending the correction claim
+  beyond the strict-ranking zero-plus setting.
+- Checked all 2,232 uniquely optimized three-candidate profiles through eight
+  ballots and added a four-candidate example where `b_TV > mu/2`.
+- Corrected the ICML paper's author names in the literature map.
+
 ## 0.5.0 - 2026-07-30
 
 - Added an exact subset DP stratified by Kendall distance from the selected

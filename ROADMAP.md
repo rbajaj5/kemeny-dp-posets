@@ -2,14 +2,21 @@
 
 ## Immediate
 
-- Compare the exact empirical cover radius formally with the ICML 2023
-  breakdown function at attack amplitude `delta -> 0+`.
 - Compare subset DP with an ILP or fixed-parameter oracle.
 - Prove utility bounds for pairwise-vector smooth perturbation followed by a
   transitive ranking projection.
 
 ## Recently completed
 
+- Derived the exact zero-plus standard-TV breakdown by finite mass transport,
+  proved `b_TV >= mu/2`, and identified the sufficient equality condition
+  `mu <= 2p(sigma)`.
+- Proved the factor-explicit bridge `R=ceil(2n b_TV)` under that condition and
+  documented the normalization mismatch between Equation (4) and Appendix
+  C.2 of Goibert et al. (ICML 2023).
+- Exhausted all 2,232 uniquely optimized three-candidate profiles through
+  eight ballots and recorded a strict four-candidate counterexample to
+  universal half-margin equality.
 - Extended subset DP with exact distance-stratified score gaps, a second-best
   witness, the uniqueness radius, and a constructive repeated-ballot attack.
 - Exhaustively checked those certificates against factorial enumeration for

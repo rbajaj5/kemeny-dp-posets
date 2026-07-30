@@ -60,11 +60,15 @@ used as a novelty claim.
   readout is novel.
   <https://arxiv.org/abs/2309.03517>
 
-- Marine Goibert, Alessandro Cloninger, Grégoire Leclercq, and Stephan
+- Morgane Goibert, Clément Calauzènes, Ekhine Irurozki, and Stephan
   Clémençon, **Robust Consensus in Ranking Data Analysis** (ICML 2023).
   Develops breakdown functions for ranking medians and robust bucket-ranking
-  alternatives. This is the closest known comparison point for the Hasse
-  uniqueness radius.
+  alternatives. At attack amplitude `delta -> 0+`, its displayed Kemeny upper
+  expression is the repository's normalized margin `mu`. Under standard
+  half-`L1` TV, the paper's explicit attack has budget `mu/2`, and the
+  repository proves this is exact under the paper's sufficient mass condition.
+  Equation (4) and Appendix C.2 use incompatible factor-two normalizations;
+  `notes/BREAKDOWN_COMPARISON.md` records the precise comparison.
   <https://proceedings.mlr.press/v202/goibert23a.html>
 
 ## Johnson-Lindenstrauss and privacy

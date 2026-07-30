@@ -5,8 +5,9 @@
 This is an executable research note. Claims marked **Proved** have proofs below
 and are checked exhaustively for every profile of up to four ballots over three
 candidates. The positioning against prior literature is not a claim of novelty.
-In particular, the integer stability radius is closely related to breakdown
-functions for ranking medians and needs a careful equivalence comparison.
+The integer stability radius and the zero-plus breakdown function are now
+compared exactly under standard half-`L1` total variation; novelty remains
+unconfirmed.
 
 ## 1. The profile poset
 
@@ -143,6 +144,58 @@ Taking the minimum over competitors proves the formula.
 This is an integer, finite-sample analogue of a breakdown radius. It is sharper
 than using only the second-best score gap because competitors farther from the
 optimum can close their gap faster per added ballot.
+
+### Exact comparison with continuous contamination
+
+Let `n=sum(x)`, `p=x/n`, and
+
+```text
+mu(x) = min_{tau != sigma}
+        gap_x(tau) / (n d_K(sigma,tau)).
+```
+
+Then the preceding proposition is equivalently
+
+```text
+R(x) = ceil(n mu(x)).
+```
+
+Under the standard convention `TV(p,q)=||p-q||_1/2`, let `b_TV(p)` be the
+infimum contamination needed to make `sigma` cease to be the unique Kemeny
+optimum. For fixed `tau`, sort
+
+```text
+f_tau(rho) = d_K(rho,tau) - d_K(rho,sigma)
+```
+
+in decreasing order under mass `p`. Exact mass transport removes probability
+from the largest coefficient levels and adds it at the minimum
+`-d_K(sigma,tau)`. This gives an exact finite quantile formula, implemented
+with rational arithmetic in `kemeny_dp.breakdown`.
+
+Because `f_tau` has range at most `2d_K(sigma,tau)`,
+
+```text
+b_TV(p) >= mu(x)/2.
+```
+
+If `mu(x) <= 2p(sigma)`, moving `mu(x)/2` mass from `sigma` to its reverse
+attains the bound. Therefore
+
+```text
+b_TV(p) = mu(x)/2
+R(x)    = ceil(2n b_TV(p))
+```
+
+under that sufficient condition. The equality is not universal: an exact
+four-candidate example has `mu/2=1/30` but `b_TV=1/20`.
+
+At `delta -> 0+`, Goibert et al.'s Theorem 3.1 expression simplifies to
+`mu(x)`. Their explicit attack has standard TV `mu(x)/2`. Their Equation (4)
+uses half-`L1` TV, while Appendix C.2 treats the full `L1` difference as if it
+were bounded by the same budget. The dedicated
+`notes/BREAKDOWN_COMPARISON.md` proves the factor-explicit comparison and
+limits any correction claim to this strict-ranking zero-plus setting.
 
 ### Distance-stratified subset-DP certificate
 
