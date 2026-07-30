@@ -4,12 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kemeny-dp-posets"
-version = "0.1.0"
+version = "0.2.0"
 description = "Executable research on Kemeny rank aggregation, cover posets, and smooth sensitivity"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "Kemeny DP Posets contributors"}]
+authors = [
+  {name = "Ravi Andrew Bajaj", email = "rbajaj5@jh.edu"},
+  {name = "Alexander Burns"},
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Science/Research",
@@ -19,4 +22,3 @@ classifiers = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

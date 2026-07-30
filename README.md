@@ -1,5 +1,7 @@
 # Kemeny DP Posets
 
+**Authors:** Ravi Andrew Bajaj and Alexander Burns
+
 An executable research note connecting three ideas:
 
 1. rank-profile adjacency as a covering relation in a graded multiset poset;
@@ -28,9 +30,10 @@ local sensitivity of a deterministic Kemeny selector:
 B_beta(P) = choose(m, 2) * exp(-beta * max(R(P) - 1, 0)).
 ```
 
-The proofs, literature positioning, limits, and proposed research directions
-are in [`notes/RESULTS.md`](notes/RESULTS.md). This is a research scaffold, not
-a peer-reviewed novelty claim.
+The formal write-up is [`paper/PAPER.md`](paper/PAPER.md). Supporting proof
+notes, literature positioning, limits, and proposed research directions are in
+[`notes/RESULTS.md`](notes/RESULTS.md). This is a research scaffold, not a
+peer-reviewed novelty claim.
 
 ## What runs
 
@@ -42,11 +45,14 @@ a peer-reviewed novelty claim.
 - a global-sensitivity exponential-mechanism baseline;
 - the one-dimensional Nissim-Raskhodnikova-Smith smooth-sensitivity release
   for the optimal score;
+- exact block Kemeny outputs and the efficient NRS center-of-attention in
+  Kendall space as a non-private sample-and-aggregate utility prototype;
 - reproducible CSV/JSON experiments and an SVG Hasse diagram.
 
 ## Quick start
 
 ```bash
+python -m pip install -e .
 python -m unittest discover -s tests -v
 python scripts/run_experiments.py
 python scripts/generate_hasse.py
@@ -78,3 +84,9 @@ model before any novelty claim is made.
 - [Hillebrand et al., *Improved Differentially Private Algorithms for Rank Aggregation* (2026)](https://arxiv.org/abs/2511.11319)
 - [Peters, *Kemeny Rank Aggregation is NP-Hard for Three Voters* (2026)](https://arxiv.org/abs/2607.25540)
 
+## Authorship and assistance
+
+The research note is co-authored by Ravi Andrew Bajaj and Alexander Burns.
+Ravi's verified contact address is `rbajaj5@jh.edu`; no address is published
+for Alexander because one has not been verified. OpenAI Codex provided
+computational and editorial assistance and is not an author.

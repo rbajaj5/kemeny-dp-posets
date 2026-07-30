@@ -208,7 +208,7 @@ calibration from Nissim, Raskhodnikova, and Smith (2007):
 
 ```text
 alpha = epsilon / 2
-beta  = epsilon / (2 log(1/delta))
+beta  = epsilon / (2 log(2/delta))
 release = OPT(x) + SS_beta(x)/alpha * Laplace(1).
 ```
 
@@ -232,7 +232,17 @@ That gives a concrete design constraint for private sample-and-aggregate:
   approximation, followed by center-of-attention.
 
 The repository does not yet claim a new end-to-end utility theorem for this
-pipeline.
+pipeline. It now includes an executable utility prototype:
+
+```text
+random ballot blocks
+  -> exact small-block Kemeny outputs
+  -> constrained center-of-attention under Kendall distance.
+```
+
+The final center is always one of the block outputs and is computed using only
+their pairwise distances. No privacy claim attaches to this prototype until the
+sampling influence and admissible-noise steps are implemented and analyzed.
 
 ## 7. Johnson-Lindenstrauss direction
 

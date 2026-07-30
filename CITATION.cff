@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this research note or software, please cite it as below."
+title: "Cover-Graph Stability and Smooth Sensitivity for Kemeny Rank Aggregation"
+type: software
+version: 0.2.0
+date-released: 2026-07-29
+authors:
+  - family-names: "Bajaj"
+    given-names: "Ravi Andrew"
+    email: "rbajaj5@jh.edu"
+  - family-names: "Burns"
+    given-names: "Alexander"
+repository-code: "https://github.com/rbajaj5/kemeny-dp-posets"
+license: MIT

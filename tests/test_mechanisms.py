@@ -1,4 +1,5 @@
 import unittest
+from math import log
 from random import Random
 
 from kemeny_dp.core import KemenyAnalyzer, RankingSpace
@@ -28,10 +29,10 @@ class MechanismTests(unittest.TestCase):
             rng=Random(7),
         )
         self.assertEqual(output.exact_value, 0)
+        self.assertAlmostEqual(output.beta, 4.0 / (2 * log(2 / 0.2)))
         self.assertGreaterEqual(output.smooth_sensitivity, 0)
         self.assertGreaterEqual(output.noise_scale, 0)
 
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -74,7 +74,7 @@ def release_optimum_score(
     """Release the scalar optimum using NRS07 smooth-sensitivity calibration.
 
     For one-dimensional Laplace noise, Nissim-Raskhodnikova-Smith use
-    ``alpha = epsilon/2`` and ``beta = epsilon/(2 log(1/delta))``. Their
+    ``alpha = epsilon/2`` and ``beta = epsilon/(2 log(2/delta))``. Their
     mechanism releases ``f(x) + S_beta(x)/alpha * Laplace(1)``.
     """
     if epsilon <= 0:
@@ -82,7 +82,7 @@ def release_optimum_score(
     if not 0 < delta < 1:
         raise ValueError("delta must lie strictly between zero and one")
     rng = rng or Random()
-    beta = epsilon / (2 * log(1 / delta))
+    beta = epsilon / (2 * log(2 / delta))
     smooth = sensitivity.exact_smooth_sensitivity_optimum_value(profile, beta)
     alpha = epsilon / 2
     scale = smooth.value / alpha
@@ -96,4 +96,3 @@ def release_optimum_score(
         scale,
         smooth.explored_radius,
     )
-
