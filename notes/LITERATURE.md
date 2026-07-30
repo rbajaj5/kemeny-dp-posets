@@ -65,3 +65,59 @@ used as a novelty claim.
   and lower singular-value conditions.
   <https://arxiv.org/abs/1204.2136>
 
+## Robust trade and market design
+
+- Gabriel Carroll, **Informationally Robust Trade and Limits to Contagion**
+  (Journal of Economic Theory 2016). Gives tight welfare-loss bounds for a
+  two-agent, single-fixed-deal accept/reject game across arbitrary information
+  structures. Section 5.3 identifies multiple proposals and double auctions as
+  substantially harder open extensions. The Kemeny application in this
+  repository attaches only to that multiple-proposal selection stage.
+  <http://individual.utoronto.ca/carroll/robustlemons.pdf>
+
+- Eric Budish, Peter Cramton, and John Shim, **The High-Frequency Trading Arms
+  Race: Frequent Batch Auctions as a Market Design Response** (QJE 2015).
+  Provides the microstructure motivation for batch rather than serial order
+  processing. It does not use Kemeny aggregation.
+  <https://doi.org/10.1093/qje/qjv027>
+
+## Hex/Y and heuristic-only topology source
+
+- Anna R. Karlin and Yuval Peres, **Game Theory, Alive**. The Hex/Y section
+  gives the unique-winner theorem and the recursive local majority reduction.
+  The repository formalizes it in axial coordinates and connects the coloring
+  Boolean lattice to local and smooth sensitivity.
+  <https://math.uchicago.edu/~shmuel/Modeling/Peres%20and%20Wilson%2C%20Game%20Theory%20Alive.pdf>
+
+- Jenny Lorraine Nielsen, **The Topological Unified Field Theory on the
+  Complex Hopf Fibration** (listed as forthcoming). This is retained only as a
+  heuristic prompt about local-to-global topology. No physical claim from it
+  is used. See `notes/TUFT_SOURCE_ASSESSMENT.md`.
+  <https://philpapers.org/rec/NIETTU>
+
+- John Reimer Morales, **Closing the Gaps on TUFT: Where the Mathematics Ends
+  and the Unification Claim Begins**. This critical review distinguishes a
+  classifying-space core from unestablished bridges to physical unification.
+  <https://philpapers.org/rec/REICTG>
+
+- Yuntian Hou, Tianrui Ji, Di Zhang, and Angelos Stefanidis,
+  **Kolmogorov-Arnold Networks: A Critical Assessment of Claims, Performance,
+  and Practical Viability**. Its warnings about discrete combinatorial targets,
+  resource-controlled baselines, repeated runs, and the gap between a theorem
+  and an implemented architecture govern the repository's decision not to
+  treat the Y majority circuit as evidence for a KAN advantage.
+  <https://arxiv.org/abs/2407.11075>
+
+- Andrew Critch and Jacob Tsimerman, **A Taxonomy of Omnicidal Futures
+  Involving Artificial Intelligence**. This is used only as a scenario
+  classification and governance prompt. It supplies neither empirical
+  probabilities nor a market, privacy, or social-choice theorem.
+  <https://arxiv.org/abs/2507.09369>
+
+- Arthur M. Jaffe and Zhengwei Liu, **A Mathematical Picture Language
+  Program** (PNAS 2018). Distinguishes a picture language `L`, a target
+  mathematical reality `R`, and a simulation `S: L -> R`; asks when
+  computations can be performed completely in the picture language. The
+  repository uses this as a soundness audit for transporting diagrammatic
+  identities, not as a claim that its diagrams form a TQFT.
+  <https://doi.org/10.1073/pnas.1710707114>

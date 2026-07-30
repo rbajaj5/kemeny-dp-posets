@@ -13,9 +13,10 @@ Before opening a pull request:
 ```bash
 python -m unittest discover -s tests -v
 python scripts/run_experiments.py
+python scripts/run_three_voter_applications.py
+python scripts/run_market_microstructure.py
 python scripts/generate_hasse.py
 ```
 
 Do not call a result novel solely because a keyword search did not find it.
 Include the closest theorem you found and explain the difference in models.
-

@@ -4,7 +4,7 @@
 
 Correspondence: Ravi Andrew Bajaj, `rbajaj5@jh.edu`
 
-Research note, 29 July 2026
+Research note, updated 30 July 2026
 
 > **Status.** The propositions in this note are proved below and accompanied by
 > executable finite verification. Their novelty relative to the complete
@@ -39,6 +39,13 @@ three-voter NP-hardness of exact Kemeny aggregation constrains
 sample-and-aggregate designs and provide a non-private center-of-attention
 utility prototype.
 
+As a separate finite-model extension, we place complete two-color Y-game
+boards in a Boolean-lattice Hasse graph. The known three-cell majority
+reduction preserves the global Y winner. For any nonconstant total binary
+query on a Hamming graph, we prove that its exact smooth sensitivity is
+determined by distance to the opposite outcome, and we verify the Y
+specialization exhaustively through triangular boards of side six.
+
 ## 1. Introduction
 
 Kemeny rank aggregation chooses a ranking minimizing the sum of Kendall
@@ -54,14 +61,23 @@ foregrounds covering relations and Hasse diagrams. We use those ideas
 literally: a database of ballots is a finite multiset, a one-record change is a
 cover move, and the full privacy neighborhood is a Hasse shell.
 
-This note makes four contributions:
+Following Jaffe and Liu, we distinguish a diagrammatic language \(L\), a
+target mathematical reality \(R\), and a simulation \(S:L\to R\). Here a
+Hasse diagram is not itself a privacy theorem: the simulation must prove that
+its edges are precisely database adjacencies and that its path metric is the
+claimed database distance. The same discipline applies later to coloring
+diagrams, ranking-vector embeddings, and market encodings.
+
+This note makes five contributions:
 
 1. it identifies the exact profile cover graph and its metric;
 2. it derives exact local-sensitivity identities for the scalar optimal score;
 3. it proves an exact cover-distance certificate for a unique Kemeny ranking
    and a smooth upper bound derived from that certificate; and
 4. it supplies executable exact verification and a computationally explicit
-   sample-and-aggregate design constraint.
+   sample-and-aggregate design constraint; and
+5. in a separate Hex/Y model, it gives an exact Boolean-output
+   smooth-sensitivity identity and exhaustive majority-reduction checks.
 
 The claims are mathematical propositions, not yet claims of bibliographic
 novelty.
@@ -201,6 +217,46 @@ The denominator matters: the second-best score alone need not determine the
 first destabilizing competitor. A more distant ranking can close a larger
 score gap faster per added ballot.
 
+### A sharp consequence for three voters
+
+The exact formula yields a stronger bound whenever at least one input ballot
+differs from the unique optimum.
+
+**Corollary 4.1 (non-unanimous radius bound).** In any metric 1-median problem
+with \(n\ge3\) input records, if the optimum \(\sigma\) is unique and the
+profile is not unanimous at \(\sigma\), then
+
+\[
+R(x)\le n-2.
+\]
+
+For exactly three voters, the radius is therefore exactly one at every unique
+non-unanimous profile. A unanimous three-voter profile has radius three.
+
+**Proof.** Choose an input record \(\rho\ne\sigma\), and distinguish that copy
+from the other \(n-1\) records. Its competitor gap satisfies
+
+\[
+\begin{aligned}
+C_x(\rho)-C_x(\sigma)
+&=-d(\rho,\sigma)
+  +\sum_{\pi\ne\rho}\bigl(d(\pi,\rho)-d(\pi,\sigma)\bigr)\\
+&\le -d(\rho,\sigma)+(n-1)d(\rho,\sigma)\\
+&=(n-2)d(\rho,\sigma),
+\end{aligned}
+\]
+
+where the inequality is the triangle inequality. Uniqueness makes the gap
+positive. Substituting competitor \(\tau=\rho\) in Theorem 4 gives
+\(R(x)\le n-2\). When \(n=3\), the positive integer radius is one. If all three
+records equal \(\sigma\), every competitor \(\tau\) has gap
+\(3d(\sigma,\tau)\), so Theorem 4 gives radius three. \(\square\)
+
+This metric argument is computationally agnostic: Peters's theorem says
+finding the three-voter Kemeny optimum is NP-hard as the candidate count grows,
+while the corollary characterizes the optimum's cover stability once it is
+known.
+
 ## 6. A smooth bound for ranking-output sensitivity
 
 Let \(\kappa(x)\) be a deterministic Kemeny selector with any fixed
@@ -232,6 +288,13 @@ for adjacent \(x,y\). \(\square\)
 This theorem supplies a smooth sensitivity bound, not by itself a complete
 private mechanism for a discrete ranking output. A mechanism still needs an
 admissible output perturbation or embedding and a utility analysis.
+
+For exactly three voters, Corollary 4.1 makes this particular bound
+degenerate away from unanimity: it equals the global diameter \(D\) at every
+non-unanimous unique profile and at every tied profile, while a unanimous
+profile receives the smaller value \(D e^{-2\beta}\). Thus a more informative
+three-voter mechanism would need a finer statistic than distance to loss of
+uniqueness alone.
 
 ## 7. Exact scalar smooth sensitivity
 
@@ -314,7 +377,142 @@ ranking selector has zero one-step local sensitivity. At \(\beta=0.7\), the
 smooth upper bound is \(3e^{-1.4}\approx0.7398\), below the global diameter
 three. These are finite computational observations, not asymptotic claims.
 
-## 10. Relation to prior work and open questions
+The dedicated application script additionally exhausts all three-voter
+profiles for three, four, and five candidates. It checks 56, 2,600, and
+295,240 multiset profiles, respectively. In all three atlases, every unique
+non-unanimous profile has radius one and the only radius-three profiles are
+the \(m!\) unanimous profiles, as Corollary 4.1 requires.
+
+## 10. A robust market-design application
+
+Carroll studies a bilateral accept/reject game for one fixed deal under
+uncertainty about the agents' information structure. Under his Condition B,
+the simple consent mechanism achieves the optimal robust guarantee. That
+single-deal result has no ranking-aggregation stage, so the Peters theorem does
+not apply to it directly.
+
+Carroll's Section 5.3 asks about multiple alternative deals and leaves that
+extension open. Consider a two-stage mechanism that first ranks candidate
+proposals using three priority lists and then submits the selected proposal to
+bilateral accept/reject. The three rankings might come from a buyer, seller,
+and regulator, or from price, time, and size priorities on a set of orders.
+
+**Proposition 6 (market-priority hardness).** Suppose distinct orders receive
+separate price, time, and size rankings, and a composite priority rule minimizes
+total Kendall distance to those three rankings. Computing the exact composite
+ranking is NP-hard in the number of orders.
+
+**Proof.** Any three rankings can be encoded by assigning distinct prices in
+the order of the first ranking, timestamps in the order of the second, and
+sizes in the order of the third. An exact composite-priority solver would
+therefore solve an arbitrary three-voter Kemeny instance. Peters's theorem
+gives the result. \(\square\)
+
+The radius dichotomy then says that a unique non-unanimous composite has cover
+radius one. This applies to adding or removing a priority source, not to a
+small numeric perturbation of an order attribute.
+
+The hardness is domain-dependent. For one-dimensional proposal prices and
+three single-peaked stakeholder rankings, pairwise majority is transitive and
+the generic feedback-arc obstruction disappears. In 500 synthetic trials at
+each of 5, 8, 10, and 12 proposals, every single-peaked instance had a unique
+Kemeny ranking and no majority cycle. With independent price, time, and size
+rankings, the observed majority-cycle rates were 0.350, 0.760, 0.914, and
+0.986. These are computational illustrations, not equilibrium or welfare
+claims; finite-sample intervals are reported in the experiment artifact.
+
+A Carroll-style economic extension must specify how proposal selection changes
+the prior over bilateral values, the allowed cross-proposal information
+structures, strategic reporting in the ranking stage, and equilibrium
+selection. The present proposition establishes a computational boundary for a
+candidate selection layer; it does not extend Carroll's robust welfare theorem.
+
+## 11. A Hex/Y local-to-global extension
+
+This section is deliberately separate from the rank-aggregation theorems.
+Karlin and Peres describe the following reduction for the game of Y. A
+complete two-color triangular hex board has a unique monochromatic connected
+component meeting all three sides. Replacing each cell of a board of side
+\(n-1\) by the majority color of its corresponding triangle of three adjacent
+cells in the side-\(n\) board preserves the winner. Iteration reaches one cell.
+This is a known combinatorial-game result, not a contribution of this note.
+
+The reduction also gives an exact monotone ternary-majority circuit. Its depth
+is \(n-1\), and its number of gates is
+
+\[
+\sum_{k=1}^{n-1}\frac{k(k+1)}2
+=\frac{(n-1)n(n+1)}6
+=\binom{n+1}{3}.
+\]
+
+This representation is exact on the Boolean domain; it is not a learned
+smooth approximation.
+
+The cover geometry supplies a new application of the same sensitivity
+language. Let \(T_n\) be the cells and represent a coloring by its blue subset
+\(B\subseteq T_n\). Covers in the Boolean lattice \(2^{T_n}\) add one blue
+cell; the undirected Hasse graph joins colorings differing at one cell, and
+its metric is Hamming distance. Let \(w(B)\in\{0,1\}\) be the unique winner and
+
+\[
+R_Y(B)=\min\{|B\mathbin{\triangle}B'|:w(B')\ne w(B)\}.
+\]
+
+In picture-language terms, the local rewrite is sound because the winner maps
+commute:
+
+\[
+w_{n-1}\circ M_n=w_n.
+\]
+
+Thus repeated picture reduction is complete for the specific winner query.
+No completeness claim is made for arbitrary connectivity, influence, or
+probability questions.
+
+**Proposition 7 (exact binary smooth sensitivity).** For any nonconstant total
+binary query on a Hamming graph, including \(w\),
+
+\[
+SS_\beta(B)=
+\exp\{-\beta\max(R_Y(B)-1,0)\}.
+\]
+
+**Proof.** The local sensitivity is one exactly on the set \(\Pi\) of pivotal
+inputs. Along a shortest path from \(B\) to the opposite output, the
+penultimate input is pivotal, so \(d(B,\Pi)\le R_Y(B)-1\). Conversely, a
+pivotal input at distance \(d\) has an opposite-output neighbor at distance at
+most \(d+1\), so \(R_Y(B)\le d+1\). Hence
+\(d(B,\Pi)=R_Y(B)-1\). Maximizing
+\(e^{-\beta d(B,B')}LS(B')\) therefore gives the displayed identity.
+\(\square\)
+
+This is a general Boolean-function specialization of smooth sensitivity, and
+no novelty claim is made. It does not by itself make exact winner release
+private: adjacent pivotal colorings have different deterministic outputs.
+
+The implementation found zero unique-winner or reduction failures for every
+board through side six, including all \(2^{21}=2{,}097{,}152\) colorings at
+side six. Exact uniform-random-cell pivotal probabilities for sides one
+through five were
+
+\[
+1,\quad 0.5,\quad 0.3125,\quad 0.22109375,\quad 0.16826171875.
+\]
+
+Monte Carlo estimates at larger sizes suggest threshold sharpening as the
+blue-cell probability moves away from one half; these finite observations are
+not an asymptotic theorem. The full counts, Wilson intervals, outcome-radius
+histograms, and implementation details appear in `notes/HEX_Y.md` and
+`results/hex_y.json`.
+
+The occurrence of three inputs in the local majority gate does not invoke
+Peters's hardness theorem. A fixed binary majority gate is constant-size,
+whereas Peters concerns a Kemeny median of three arbitrary permutations as
+the candidate count grows. The common structure is the cover-radius question,
+not computational complexity.
+
+## 12. Relation to prior work and open questions
 
 Hay, Elagina, and Miklau introduced differentially private rank aggregation.
 Alabi et al. studied private rank aggregation in central and local models, and
@@ -340,7 +538,9 @@ Concrete open problems are:
 3. turn Theorem 5 into an end-to-end ranking-output mechanism;
 4. complete the center-of-attention privacy and utility analysis; and
 5. determine whether JL dimension reduction improves any end-to-end
-   rank-aggregation privacy/utility bound after enforcing transitivity.
+   rank-aggregation privacy/utility bound after enforcing transitivity; and
+6. compare the Y pivotality data with rigorous influence and sharp-threshold
+   results for monotone Boolean functions.
 
 ## References
 
@@ -365,6 +565,19 @@ Concrete open problems are:
 8. J. Blocki et al. “The Johnson-Lindenstrauss Transform Itself Preserves
    Differential Privacy.” FOCS, 2012.
    [arXiv:1204.2136](https://arxiv.org/abs/1204.2136).
+9. G. Carroll. “Informationally Robust Trade and Limits to Contagion.”
+   *Journal of Economic Theory* 166, 2016, 334–361.
+   [Author PDF](http://individual.utoronto.ca/carroll/robustlemons.pdf).
+10. E. Budish, P. Cramton, and J. Shim. “The High-Frequency Trading Arms
+    Race: Frequent Batch Auctions as a Market Design Response.” *Quarterly
+    Journal of Economics* 130(4), 2015, 1547–1621.
+    [DOI](https://doi.org/10.1093/qje/qjv027).
+11. A. R. Karlin and Y. Peres. *Game Theory, Alive*. American Mathematical
+    Society, 2017.
+    [Author PDF](https://math.uchicago.edu/~shmuel/Modeling/Peres%20and%20Wilson%2C%20Game%20Theory%20Alive.pdf).
+12. A. M. Jaffe and Z. Liu. "A Mathematical Picture Language Program."
+    *Proceedings of the National Academy of Sciences* 115(1), 2018, 81-86.
+    [DOI](https://doi.org/10.1073/pnas.1710707114).
 
 ## Acknowledgments
 

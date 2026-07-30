@@ -144,6 +144,30 @@ This is an integer, finite-sample analogue of a breakdown radius. It is sharper
 than using only the second-best score gap because competitors farther from the
 optimum can close their gap faster per added ballot.
 
+### Corollary: the three-voter radius dichotomy
+
+**Proved.** For any metric 1-median problem on `n >= 3` input records, a unique
+non-unanimous optimum has
+
+```text
+R(x) <= n - 2.
+```
+
+Choose an input record `rho` different from the optimum `sigma`. Its own term
+in `C_x(rho)-C_x(sigma)` is `-d(rho,sigma)`. Each of the other `n-1` terms is
+at most `d(rho,sigma)` by the triangle inequality. Thus the competitor gap for
+`rho` is at most `(n-2)d(rho,sigma)`, and the exact radius formula gives the
+claim.
+
+Consequently, with exactly three voters:
+
+- every unique non-unanimous profile has radius exactly `1`;
+- every unanimous profile has radius exactly `3`; and
+- a tied profile has radius `0` by definition.
+
+This has an immediate limitation for the smooth ranking bound below: on three
+voters it improves over the global diameter only at unanimous profiles.
+
 ## 4. A smooth upper bound for ranking-output sensitivity
 
 Let `kappa(x)` be a deterministic Kemeny selector using any fixed tie-breaking
@@ -178,6 +202,9 @@ B_beta(x) <= exp(beta) B_beta(y)
 ```
 
 for neighboring profiles.
+
+For exactly three voters, the proved radius dichotomy reduces this bound to
+`D exp(-2 beta)` at unanimous profiles and `D` everywhere else.
 
 This is a sensitivity result, not yet a complete discrete-output mechanism.
 One path is to embed a ranking as its pairwise-preference vector, add
@@ -282,3 +309,41 @@ oracle in the test suite and record:
 - exact scalar smooth sensitivity for representative profiles.
 
 These observations are finite checks, not asymptotic theorems.
+
+## 9. Hex/Y Boolean-lattice extension
+
+For a triangular Y board, identify a coloring with the subset of blue cells.
+The coloring space is a Boolean lattice; its undirected cover graph is
+one-cell substitution adjacency and its distance is Hamming distance.
+
+For the unique binary winner `w`, define `R_Y(B)` as the Hamming distance to
+the nearest coloring with the opposite winner. Since local sensitivity is one
+exactly at pivotal colorings, the distance to the local-sensitivity-one set is
+exactly `R_Y(B)-1`. Therefore:
+
+```text
+SS_beta(B) = exp(-beta * max(R_Y(B)-1, 0)).
+```
+
+This is an exact smooth sensitivity formula, not merely an upper bound. It is
+a general nonconstant binary-function observation and is not claimed as novel. It also
+does not constitute a complete private release of the deterministic winner.
+
+The known three-cell majority reduction and unique-Y theorem were implemented
+and tested on every coloring through side six. All 2,097,152 side-six
+colorings passed both the unique-winner and winner-preservation checks.
+Exact radius histograms through side five and Monte Carlo results through side
+24 are documented in `notes/HEX_Y.md`.
+
+The full reduction is also a monotone ternary-majority circuit of depth `n-1`
+and size
+
+```text
+sum_{k=1}^{n-1} k(k+1)/2 = choose(n+1, 3).
+```
+
+Repeated same-input benchmarks found no disagreement with direct
+connectivity, but the standard-library circuit implementation was 4.47 to
+15.17 times slower over sides 8 to 24. Those ratios are machine-dependent and
+support using the circuit as a proof object rather than claiming a throughput
+improvement.

@@ -82,6 +82,31 @@ class SensitivityTests(unittest.TestCase):
         profile = space.profile_from_ballots([(0, 1, 2, 3)] * 4)
         self.assertEqual(sensitivity.uniqueness_radius(profile), 4)
 
+    def test_three_voter_radius_dichotomy(self):
+        space = RankingSpace.create(4)
+        kemeny = KemenyAnalyzer(space)
+        sensitivity = SensitivityAnalyzer(kemeny)
+        observed_radii = set()
+        for profile in profiles_of_size(space, 3):
+            if len(kemeny.optima(profile)) != 1:
+                continue
+            radius = sensitivity.uniqueness_radius(profile)
+            is_unanimous = 3 in profile
+            self.assertEqual(radius, 3 if is_unanimous else 1)
+            observed_radii.add(radius)
+        self.assertEqual(observed_radii, {1, 3})
+
+    def test_nonunanimous_radius_is_at_most_n_minus_two(self):
+        for size in (3, 4):
+            for profile in profiles_of_size(self.space, size):
+                if size in profile:
+                    continue
+                if len(self.kemeny.optima(profile)) != 1:
+                    continue
+                self.assertLessEqual(
+                    self.sensitivity.uniqueness_radius(profile), size - 2
+                )
+
 
 if __name__ == "__main__":
     unittest.main()

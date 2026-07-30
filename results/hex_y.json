@@ -1,0 +1,871 @@
+{
+  "status": "COMPUTATIONAL",
+  "seed": 20260730,
+  "exhaustive": [
+    {
+      "side": 1,
+      "cells": 1,
+      "colorings": 2,
+      "blue_wins": 1,
+      "yellow_wins": 1,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    },
+    {
+      "side": 2,
+      "cells": 3,
+      "colorings": 8,
+      "blue_wins": 4,
+      "yellow_wins": 4,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    },
+    {
+      "side": 3,
+      "cells": 6,
+      "colorings": 64,
+      "blue_wins": 32,
+      "yellow_wins": 32,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    },
+    {
+      "side": 4,
+      "cells": 10,
+      "colorings": 1024,
+      "blue_wins": 512,
+      "yellow_wins": 512,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    },
+    {
+      "side": 5,
+      "cells": 15,
+      "colorings": 32768,
+      "blue_wins": 16384,
+      "yellow_wins": 16384,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    },
+    {
+      "side": 6,
+      "cells": 21,
+      "colorings": 2097152,
+      "blue_wins": 1048576,
+      "yellow_wins": 1048576,
+      "unique_winner_failures": 0,
+      "majority_reduction_failures": 0
+    }
+  ],
+  "exact_pivotality": [
+    {
+      "side": 1,
+      "cells": 1,
+      "uniform_random_cell_flip_probability": 1.0,
+      "winner_radius_histogram": {
+        "1": 2
+      },
+      "mean_smooth_sensitivity_beta_0_5": 1.0,
+      "per_cell": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "influence": 1.0
+        }
+      ]
+    },
+    {
+      "side": 2,
+      "cells": 3,
+      "uniform_random_cell_flip_probability": 0.5,
+      "winner_radius_histogram": {
+        "1": 6,
+        "2": 2
+      },
+      "mean_smooth_sensitivity_beta_0_5": 0.9016326649281583,
+      "per_cell": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "influence": 0.5
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "influence": 0.5
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "influence": 0.5
+        }
+      ]
+    },
+    {
+      "side": 3,
+      "cells": 6,
+      "uniform_random_cell_flip_probability": 0.3125,
+      "winner_radius_histogram": {
+        "1": 50,
+        "2": 12,
+        "3": 2
+      },
+      "mean_smooth_sensitivity_beta_0_5": 0.9064707312327264,
+      "per_cell": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "influence": 0.25
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "influence": 0.375
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "influence": 0.25
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "influence": 0.375
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "influence": 0.375
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "influence": 0.25
+        }
+      ]
+    },
+    {
+      "side": 4,
+      "cells": 10,
+      "uniform_random_cell_flip_probability": 0.22109375,
+      "winner_radius_histogram": {
+        "1": 806,
+        "2": 196,
+        "3": 20,
+        "4": 2
+      },
+      "mean_smooth_sensitivity_beta_0_5": 0.9108240805150408,
+      "per_cell": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "influence": 0.140625
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            0,
+            3
+          ],
+          "influence": 0.140625
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "influence": 0.3359375
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "influence": 0.2421875
+        },
+        {
+          "cell": [
+            3,
+            0
+          ],
+          "influence": 0.140625
+        }
+      ]
+    },
+    {
+      "side": 5,
+      "cells": 15,
+      "uniform_random_cell_flip_probability": 0.16826171875,
+      "winner_radius_histogram": {
+        "1": 25892,
+        "2": 6230,
+        "3": 614,
+        "4": 30,
+        "5": 2
+      },
+      "mean_smooth_sensitivity_beta_0_5": 0.9125832691119353,
+      "per_cell": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "influence": 0.0869140625
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "influence": 0.18408203125
+        },
+        {
+          "cell": [
+            0,
+            3
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            0,
+            4
+          ],
+          "influence": 0.0869140625
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "influence": 0.251953125
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "influence": 0.251953125
+        },
+        {
+          "cell": [
+            1,
+            3
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "influence": 0.18408203125
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "influence": 0.251953125
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "influence": 0.18408203125
+        },
+        {
+          "cell": [
+            3,
+            0
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            3,
+            1
+          ],
+          "influence": 0.1591796875
+        },
+        {
+          "cell": [
+            4,
+            0
+          ],
+          "influence": 0.0869140625
+        }
+      ]
+    }
+  ],
+  "monte_carlo": [
+    {
+      "side": 8,
+      "blue_probability": 0.4,
+      "blue_win": {
+        "successes": 359,
+        "trials": 2000,
+        "rate": 0.1795,
+        "standard_error": 0.008581367897951934,
+        "wilson_95_lower": 0.16330014148804087,
+        "wilson_95_upper": 0.1969286858192422,
+        "plugin_berry_esseen_ratio_without_constant": 0.041103033245338615
+      },
+      "random_cell_pivotal": {
+        "successes": 133,
+        "trials": 2000,
+        "rate": 0.0665,
+        "standard_error": 0.005571254347092763,
+        "wilson_95_lower": 0.05639044543582205,
+        "wilson_95_upper": 0.07827163455702424,
+        "plugin_berry_esseen_ratio_without_constant": 0.07860388751206811
+      }
+    },
+    {
+      "side": 8,
+      "blue_probability": 0.45,
+      "blue_win": {
+        "successes": 660,
+        "trials": 2000,
+        "rate": 0.33,
+        "standard_error": 0.01051427600931229,
+        "wilson_95_lower": 0.30973547882362323,
+        "wilson_95_upper": 0.35091631725200273,
+        "plugin_berry_esseen_ratio_without_constant": 0.026525839701467192
+      },
+      "random_cell_pivotal": {
+        "successes": 184,
+        "trials": 2000,
+        "rate": 0.092,
+        "standard_error": 0.006462816723379984,
+        "wilson_95_lower": 0.08010326619960463,
+        "wilson_95_upper": 0.10546104438189775,
+        "plugin_berry_esseen_ratio_without_constant": 0.06444001397925977
+      }
+    },
+    {
+      "side": 8,
+      "blue_probability": 0.5,
+      "blue_win": {
+        "successes": 993,
+        "trials": 2000,
+        "rate": 0.4965,
+        "standard_error": 0.011180065965816124,
+        "wilson_95_lower": 0.4746151957501872,
+        "wilson_95_upper": 0.5183982235807815,
+        "plugin_berry_esseen_ratio_without_constant": 0.022362323331940166
+      },
+      "random_cell_pivotal": {
+        "successes": 185,
+        "trials": 2000,
+        "rate": 0.0925,
+        "standard_error": 0.006478570444164361,
+        "wilson_95_lower": 0.08057157812198121,
+        "wilson_95_upper": 0.10599081541223992,
+        "plugin_berry_esseen_ratio_without_constant": 0.0642203791076729
+      }
+    },
+    {
+      "side": 8,
+      "blue_probability": 0.55,
+      "blue_win": {
+        "successes": 1316,
+        "trials": 2000,
+        "rate": 0.658,
+        "standard_error": 0.010607450211997226,
+        "wilson_95_lower": 0.6369246151903301,
+        "wilson_95_upper": 0.678469597868794,
+        "plugin_berry_esseen_ratio_without_constant": 0.0259217808714304
+      },
+      "random_cell_pivotal": {
+        "successes": 189,
+        "trials": 2000,
+        "rate": 0.0945,
+        "standard_error": 0.0065410148295199574,
+        "wilson_95_lower": 0.08244593448548859,
+        "wilson_95_upper": 0.10810879085960753,
+        "plugin_berry_esseen_ratio_without_constant": 0.06335870821292953
+      }
+    },
+    {
+      "side": 8,
+      "blue_probability": 0.6,
+      "blue_win": {
+        "successes": 1609,
+        "trials": 2000,
+        "rate": 0.8045,
+        "standard_error": 0.008867912663079175,
+        "wilson_95_lower": 0.786542328328027,
+        "wilson_95_upper": 0.82129018987769,
+        "plugin_berry_esseen_ratio_without_constant": 0.03864722883738893
+      },
+      "random_cell_pivotal": {
+        "successes": 147,
+        "trials": 2000,
+        "rate": 0.0735,
+        "standard_error": 0.005835141386461857,
+        "wilson_95_lower": 0.06286270425155069,
+        "wilson_95_upper": 0.08577253707935806,
+        "plugin_berry_esseen_ratio_without_constant": 0.07401744386212454
+      }
+    },
+    {
+      "side": 12,
+      "blue_probability": 0.4,
+      "blue_win": {
+        "successes": 238,
+        "trials": 2000,
+        "rate": 0.119,
+        "standard_error": 0.0072401312142805815,
+        "wilson_95_lower": 0.10553480426223787,
+        "wilson_95_upper": 0.13392598576607684,
+        "plugin_berry_esseen_ratio_without_constant": 0.0545792594505161
+      },
+      "random_cell_pivotal": {
+        "successes": 59,
+        "trials": 2000,
+        "rate": 0.0295,
+        "standard_error": 0.003783500363420096,
+        "wilson_95_lower": 0.02293885238774463,
+        "wilson_95_upper": 0.037865089103914375,
+        "plugin_berry_esseen_ratio_without_constant": 0.1245857551798686
+      }
+    },
+    {
+      "side": 12,
+      "blue_probability": 0.45,
+      "blue_win": {
+        "successes": 608,
+        "trials": 2000,
+        "rate": 0.304,
+        "standard_error": 0.010285523807760107,
+        "wilson_95_lower": 0.28423231272438626,
+        "wilson_95_upper": 0.3245191698098648,
+        "plugin_berry_esseen_ratio_without_constant": 0.0280409637263587
+      },
+      "random_cell_pivotal": {
+        "successes": 104,
+        "trials": 2000,
+        "rate": 0.052,
+        "standard_error": 0.004964675215963275,
+        "wilson_95_lower": 0.043099720209557914,
+        "wilson_95_upper": 0.06261795415444468,
+        "plugin_berry_esseen_ratio_without_constant": 0.09078217212493965
+      }
+    },
+    {
+      "side": 12,
+      "blue_probability": 0.5,
+      "blue_win": {
+        "successes": 983,
+        "trials": 2000,
+        "rate": 0.4915,
+        "standard_error": 0.01117872421164419,
+        "wilson_95_lower": 0.46962740321749985,
+        "wilson_95_upper": 0.5134051865862813,
+        "plugin_berry_esseen_ratio_without_constant": 0.02237037476418956
+      },
+      "random_cell_pivotal": {
+        "successes": 110,
+        "trials": 2000,
+        "rate": 0.055,
+        "standard_error": 0.005097793640389928,
+        "wilson_95_lower": 0.04583478836864504,
+        "wilson_95_upper": 0.06587138371167006,
+        "plugin_berry_esseen_ratio_without_constant": 0.0878860604419701
+      }
+    },
+    {
+      "side": 12,
+      "blue_probability": 0.55,
+      "blue_win": {
+        "successes": 1425,
+        "trials": 2000,
+        "rate": 0.7125,
+        "standard_error": 0.010120369311443136,
+        "wilson_95_lower": 0.6922719032880766,
+        "wilson_95_upper": 0.7319133516173908,
+        "plugin_berry_esseen_ratio_without_constant": 0.029164573042434912
+      },
+      "random_cell_pivotal": {
+        "successes": 106,
+        "trials": 2000,
+        "rate": 0.053,
+        "standard_error": 0.005009540897128199,
+        "wilson_95_lower": 0.04401045720579706,
+        "wilson_95_upper": 0.06370338306364304,
+        "plugin_berry_esseen_ratio_without_constant": 0.08979046368457841
+      }
+    },
+    {
+      "side": 12,
+      "blue_probability": 0.6,
+      "blue_win": {
+        "successes": 1711,
+        "trials": 2000,
+        "rate": 0.8555,
+        "standard_error": 0.00786192565469809,
+        "wilson_95_lower": 0.8394090976870506,
+        "wilson_95_upper": 0.8702278816959786,
+        "plugin_berry_esseen_ratio_without_constant": 0.04787379918494708
+      },
+      "random_cell_pivotal": {
+        "successes": 66,
+        "trials": 2000,
+        "rate": 0.033,
+        "standard_error": 0.003994433626936364,
+        "wilson_95_lower": 0.026022752700289677,
+        "wilson_95_upper": 0.041767769460400554,
+        "plugin_berry_esseen_ratio_without_constant": 0.1171853243081706
+      }
+    },
+    {
+      "side": 16,
+      "blue_probability": 0.4,
+      "blue_win": {
+        "successes": 193,
+        "trials": 2000,
+        "rate": 0.0965,
+        "standard_error": 0.006602565789145913,
+        "wilson_95_lower": 0.0843220272921492,
+        "wilson_95_upper": 0.11022502986382192,
+        "plugin_berry_esseen_ratio_without_constant": 0.06252300441725701
+      },
+      "random_cell_pivotal": {
+        "successes": 31,
+        "trials": 2000,
+        "rate": 0.0155,
+        "standard_error": 0.0027622228367747597,
+        "wilson_95_lower": 0.010940972933704062,
+        "wilson_95_upper": 0.021916645881830028,
+        "plugin_berry_esseen_ratio_without_constant": 0.17548919064256052
+      }
+    },
+    {
+      "side": 16,
+      "blue_probability": 0.45,
+      "blue_win": {
+        "successes": 485,
+        "trials": 2000,
+        "rate": 0.2425,
+        "standard_error": 0.00958367753005077,
+        "wilson_95_lower": 0.22422149850377981,
+        "wilson_95_upper": 0.2617657808460654,
+        "plugin_berry_esseen_ratio_without_constant": 0.0330046841630662
+      },
+      "random_cell_pivotal": {
+        "successes": 61,
+        "trials": 2000,
+        "rate": 0.0305,
+        "standard_error": 0.0038451105315712316,
+        "wilson_95_lower": 0.02381739549016912,
+        "wilson_95_upper": 0.03898271190692737,
+        "plugin_berry_esseen_ratio_without_constant": 0.1223450525381302
+      }
+    },
+    {
+      "side": 16,
+      "blue_probability": 0.5,
+      "blue_win": {
+        "successes": 1039,
+        "trials": 2000,
+        "rate": 0.5195,
+        "standard_error": 0.011171834003421283,
+        "wilson_95_lower": 0.4975871916271909,
+        "wilson_95_upper": 0.5413380435288401,
+        "plugin_berry_esseen_ratio_without_constant": 0.022411740983917506
+      },
+      "random_cell_pivotal": {
+        "successes": 68,
+        "trials": 2000,
+        "rate": 0.034,
+        "standard_error": 0.0040524066923249445,
+        "wilson_95_lower": 0.026908260159560583,
+        "wilson_95_upper": 0.042878427906567144,
+        "plugin_berry_esseen_ratio_without_constant": 0.11527865672632759
+      }
+    },
+    {
+      "side": 16,
+      "blue_probability": 0.55,
+      "blue_win": {
+        "successes": 1513,
+        "trials": 2000,
+        "rate": 0.7565,
+        "standard_error": 0.009597076377730877,
+        "wilson_95_lower": 0.7372099594299001,
+        "wilson_95_upper": 0.774806595314817,
+        "plugin_berry_esseen_ratio_without_constant": 0.032905047075874744
+      },
+      "random_cell_pivotal": {
+        "successes": 65,
+        "trials": 2000,
+        "rate": 0.0325,
+        "standard_error": 0.003965081966365891,
+        "wilson_95_lower": 0.025580698826170273,
+        "wilson_95_upper": 0.04121174038180121,
+        "plugin_berry_esseen_ratio_without_constant": 0.11817063404352394
+      }
+    },
+    {
+      "side": 16,
+      "blue_probability": 0.6,
+      "blue_win": {
+        "successes": 1831,
+        "trials": 2000,
+        "rate": 0.9155,
+        "standard_error": 0.006219314672855845,
+        "wilson_95_lower": 0.9024995017830912,
+        "wilson_95_upper": 0.9269074319261874,
+        "plugin_berry_esseen_ratio_without_constant": 0.06795608073098637
+      },
+      "random_cell_pivotal": {
+        "successes": 40,
+        "trials": 2000,
+        "rate": 0.02,
+        "standard_error": 0.0031304951684997056,
+        "wilson_95_lower": 0.014721726201265444,
+        "wilson_95_upper": 0.027118639188737373,
+        "plugin_berry_esseen_ratio_without_constant": 0.15345815091298554
+      }
+    },
+    {
+      "side": 24,
+      "blue_probability": 0.4,
+      "blue_win": {
+        "successes": 71,
+        "trials": 2000,
+        "rate": 0.0355,
+        "standard_error": 0.004137617067830226,
+        "wilson_95_lower": 0.028239876230264,
+        "wilson_95_upper": 0.04454106069401996,
+        "plugin_berry_esseen_ratio_without_constant": 0.11256726815568882
+      },
+      "random_cell_pivotal": {
+        "successes": 5,
+        "trials": 2000,
+        "rate": 0.0025,
+        "standard_error": 0.001116635571706365,
+        "wilson_95_lower": 0.0010683087284139143,
+        "wilson_95_upper": 0.005839153316432755,
+        "plugin_berry_esseen_ratio_without_constant": 0.44554039169623233
+      }
+    },
+    {
+      "side": 24,
+      "blue_probability": 0.45,
+      "blue_win": {
+        "successes": 368,
+        "trials": 2000,
+        "rate": 0.184,
+        "standard_error": 0.008664409962599876,
+        "wilson_95_lower": 0.16762932898245075,
+        "wilson_95_upper": 0.20158224489930104,
+        "plugin_berry_esseen_ratio_without_constant": 0.04037851411811785
+      },
+      "random_cell_pivotal": {
+        "successes": 35,
+        "trials": 2000,
+        "rate": 0.0175,
+        "standard_error": 0.002932042803234632,
+        "wilson_95_lower": 0.012609752959581211,
+        "wilson_95_upper": 0.024240197666827872,
+        "plugin_berry_esseen_ratio_without_constant": 0.164665484919718
+      }
+    },
+    {
+      "side": 24,
+      "blue_probability": 0.5,
+      "blue_win": {
+        "successes": 981,
+        "trials": 2000,
+        "rate": 0.4905,
+        "standard_error": 0.011178321653987239,
+        "wilson_95_lower": 0.46863010699531177,
+        "wilson_95_upper": 0.5124063169030318,
+        "plugin_berry_esseen_ratio_without_constant": 0.0223727906336274
+      },
+      "random_cell_pivotal": {
+        "successes": 47,
+        "trials": 2000,
+        "rate": 0.0235,
+        "standard_error": 0.0033873108803297047,
+        "wilson_95_lower": 0.017718224361690932,
+        "wilson_95_upper": 0.031108721697343113,
+        "plugin_berry_esseen_ratio_without_constant": 0.1408350951104807
+      }
+    },
+    {
+      "side": 24,
+      "blue_probability": 0.55,
+      "blue_win": {
+        "successes": 1644,
+        "trials": 2000,
+        "rate": 0.822,
+        "standard_error": 0.00855324499824482,
+        "wilson_95_lower": 0.804623363055714,
+        "wilson_95_upper": 0.8381420584951589,
+        "plugin_berry_esseen_ratio_without_constant": 0.04135085573634079
+      },
+      "random_cell_pivotal": {
+        "successes": 41,
+        "trials": 2000,
+        "rate": 0.0205,
+        "standard_error": 0.00316857617866448,
+        "wilson_95_lower": 0.01514715886374858,
+        "wilson_95_upper": 0.02769128947897298,
+        "plugin_berry_esseen_ratio_without_constant": 0.15146243073830123
+      }
+    },
+    {
+      "side": 24,
+      "blue_probability": 0.6,
+      "blue_win": {
+        "successes": 1909,
+        "trials": 2000,
+        "rate": 0.9545,
+        "standard_error": 0.004659922209651143,
+        "wilson_95_lower": 0.9444626753715425,
+        "wilson_95_upper": 0.9627947286497985,
+        "plugin_berry_esseen_ratio_without_constant": 0.09797808406638195
+      },
+      "random_cell_pivotal": {
+        "successes": 8,
+        "trials": 2000,
+        "rate": 0.004,
+        "standard_error": 0.001411382301150188,
+        "wilson_95_lower": 0.0020282466069651696,
+        "wilson_95_upper": 0.007873464296037741,
+        "plugin_berry_esseen_ratio_without_constant": 0.3514398611884095
+      }
+    }
+  ],
+  "algorithm_benchmark": {
+    "status": "COMPUTATIONAL; MACHINE-DEPENDENT",
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "rows": [
+      {
+        "side": 8,
+        "cells": 36,
+        "majority_gates_per_board": 84,
+        "boards": 1000,
+        "repeats": 5,
+        "mismatches": 0,
+        "direct_connectivity_median_seconds": 0.006423700018785894,
+        "majority_circuit_median_seconds": 0.028739300003508106,
+        "majority_circuit_over_direct_time": 4.473948023640736
+      },
+      {
+        "side": 12,
+        "cells": 78,
+        "majority_gates_per_board": 286,
+        "boards": 1000,
+        "repeats": 5,
+        "mismatches": 0,
+        "direct_connectivity_median_seconds": 0.013749700010521337,
+        "majority_circuit_median_seconds": 0.09870539998519234,
+        "majority_circuit_over_direct_time": 7.178731165746343
+      },
+      {
+        "side": 16,
+        "cells": 136,
+        "majority_gates_per_board": 680,
+        "boards": 1000,
+        "repeats": 5,
+        "mismatches": 0,
+        "direct_connectivity_median_seconds": 0.024421600013738498,
+        "majority_circuit_median_seconds": 0.22851829999126494,
+        "majority_circuit_over_direct_time": 9.35722065150157
+      },
+      {
+        "side": 24,
+        "cells": 300,
+        "majority_gates_per_board": 2300,
+        "boards": 1000,
+        "repeats": 5,
+        "mismatches": 0,
+        "direct_connectivity_median_seconds": 0.05331449999357574,
+        "majority_circuit_median_seconds": 0.8086424999928568,
+        "majority_circuit_over_direct_time": 15.167402865830049
+      }
+    ]
+  },
+  "interpretation_limits": [
+    "The exhaustive rows certify only the enumerated finite boards.",
+    "Monte Carlo rows are finite-sample estimates, not asymptotic proofs.",
+    "The Y local majority rule does not imply three-voter Kemeny hardness.",
+    "Timing ratios are environment-specific and are not complexity bounds."
+  ]
+}

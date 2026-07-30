@@ -4,8 +4,8 @@
 
 - Compare the exact empirical cover radius formally with the ICML 2023
   breakdown function at attack amplitude `delta -> 0+`.
-- Replace factorial enumeration with an ILP or fixed-parameter oracle for score
-  gaps and the minimum gap-to-distance ratio.
+- Extend the new subset-DP solver with score-gap and radius witnesses.
+- Compare subset DP with an ILP or fixed-parameter oracle.
 - Prove utility bounds for pairwise-vector smooth perturbation followed by a
   transitive ranking projection.
 
@@ -21,7 +21,7 @@
 
 ## Geometry
 
-- Test sparse JL embeddings of pairwise ranking vectors.
+- Extend the dense JL experiment to sparse transforms and neutral tie-breaking.
 - Quantify when Euclidean distortion controls Kendall utility.
 - Study whether low-dimensional tournament structure permits efficient
   transitive postprocessing.
@@ -31,3 +31,27 @@
 - Port the uniqueness-radius proposition to Lean.
 - Reuse the public Kemeny hardness formalization where definitions align.
 
+## Hex/Y sensitivity
+
+- Derive or bound the outcome-radius distribution beyond side five without
+  enumerating the full coloring hypercube.
+- Compare exact pivotality with rigorous influence and sharp-threshold bounds
+  for monotone Boolean functions.
+- Quantify the expansion of Hamming perturbations under repeated overlapping
+  majority reduction.
+- Add bit-parallel CPU and then GPU batches only when profiling shows that
+  exhaustive or Monte Carlo throughput is the bottleneck.
+- If learned winner surrogates are tested, compare KAN, MLP/tree, and the exact
+  circuit under matched parameter and latency budgets, multiple seeds, and
+  radius-stratified held-out sizes.
+
+## Market design
+
+- Compute Carroll's robust guarantee proposal by proposal on a finite
+  price/deal menu.
+- Characterize domains where those robust-guarantee rankings are
+  single-peaked or otherwise structured.
+- Specify strategic reporting and equilibrium selection in a genuine
+  multiple-proposal mechanism.
+- Test randomized, pro-rata, and batch queue-allocation domains without
+  confusing synthetic ranking criteria with actual exchange rules.

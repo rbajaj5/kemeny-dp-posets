@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="600" viewBox="0 0 760 600">
+<style>
+text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#172033}
+.edge{stroke:#94a3b8;stroke-width:1.5}
+.pivotal{stroke:#7c3aed;stroke-width:4}
+.node{stroke:#334155;stroke-width:1.2}
+.label{font-size:13px;text-anchor:middle}
+.layer{font-size:13px;font-weight:700}
+</style>
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="32" y="40" font-size="24" font-weight="700">Side-2 Y coloring Hasse graph</text>
+<text x="32" y="68" font-size="13">Each edge recolors one cell yellow to blue; purple edges change the unique Y winner.</text>
+<text x="32" y="91" font-size="12">Node labels give the blue-cell subset, winner, and distance R to the opposite outcome.</text>
+<line class="edge" x1="380.0" y1="498.0" x2="206.7" y2="422.0"/>
+<line class="edge" x1="380.0" y1="498.0" x2="380.0" y2="422.0"/>
+<line class="edge" x1="380.0" y1="498.0" x2="553.3" y2="422.0"/>
+<line class="edge pivotal" x1="206.7" y1="368.0" x2="206.7" y2="292.0"/>
+<line class="edge pivotal" x1="206.7" y1="368.0" x2="380.0" y2="292.0"/>
+<line class="edge pivotal" x1="380.0" y1="368.0" x2="206.7" y2="292.0"/>
+<line class="edge pivotal" x1="380.0" y1="368.0" x2="553.3" y2="292.0"/>
+<line class="edge" x1="206.7" y1="238.0" x2="380.0" y2="162.0"/>
+<line class="edge pivotal" x1="553.3" y1="368.0" x2="380.0" y2="292.0"/>
+<line class="edge pivotal" x1="553.3" y1="368.0" x2="553.3" y2="292.0"/>
+<line class="edge" x1="380.0" y1="238.0" x2="380.0" y2="162.0"/>
+<line class="edge" x1="553.3" y1="238.0" x2="380.0" y2="162.0"/>
+<text class="layer" x="24" y="530.0">|B|=0</text>
+<g>
+<title>blue subset empty; winner Yellow; radius 2</title>
+<rect class="node" x="314.0" y="498.0" width="132" height="54" rx="9" fill="#fef08a"/>
+<text class="label" x="380.0" y="522.0">B=empty</text>
+<text class="label" x="380.0" y="541.0">winner=Yellow, R=2</text>
+</g>
+<text class="layer" x="24" y="400.0">|B|=1</text>
+<g>
+<title>blue subset {a}; winner Yellow; radius 1</title>
+<rect class="node" x="140.7" y="368.0" width="132" height="54" rx="9" fill="#fef08a"/>
+<text class="label" x="206.7" y="392.0">B={a}</text>
+<text class="label" x="206.7" y="411.0">winner=Yellow, R=1</text>
+</g>
+<g>
+<title>blue subset {b}; winner Yellow; radius 1</title>
+<rect class="node" x="314.0" y="368.0" width="132" height="54" rx="9" fill="#fef08a"/>
+<text class="label" x="380.0" y="392.0">B={b}</text>
+<text class="label" x="380.0" y="411.0">winner=Yellow, R=1</text>
+</g>
+<g>
+<title>blue subset {c}; winner Yellow; radius 1</title>
+<rect class="node" x="487.3" y="368.0" width="132" height="54" rx="9" fill="#fef08a"/>
+<text class="label" x="553.3" y="392.0">B={c}</text>
+<text class="label" x="553.3" y="411.0">winner=Yellow, R=1</text>
+</g>
+<text class="layer" x="24" y="270.0">|B|=2</text>
+<g>
+<title>blue subset {a,b}; winner Blue; radius 1</title>
+<rect class="node" x="140.7" y="238.0" width="132" height="54" rx="9" fill="#bfdbfe"/>
+<text class="label" x="206.7" y="262.0">B={a,b}</text>
+<text class="label" x="206.7" y="281.0">winner=Blue, R=1</text>
+</g>
+<g>
+<title>blue subset {a,c}; winner Blue; radius 1</title>
+<rect class="node" x="314.0" y="238.0" width="132" height="54" rx="9" fill="#bfdbfe"/>
+<text class="label" x="380.0" y="262.0">B={a,c}</text>
+<text class="label" x="380.0" y="281.0">winner=Blue, R=1</text>
+</g>
+<g>
+<title>blue subset {b,c}; winner Blue; radius 1</title>
+<rect class="node" x="487.3" y="238.0" width="132" height="54" rx="9" fill="#bfdbfe"/>
+<text class="label" x="553.3" y="262.0">B={b,c}</text>
+<text class="label" x="553.3" y="281.0">winner=Blue, R=1</text>
+</g>
+<text class="layer" x="24" y="140.0">|B|=3</text>
+<g>
+<title>blue subset {a,b,c}; winner Blue; radius 2</title>
+<rect class="node" x="314.0" y="108.0" width="132" height="54" rx="9" fill="#bfdbfe"/>
+<text class="label" x="380.0" y="132.0">B={a,b,c}</text>
+<text class="label" x="380.0" y="151.0">winner=Blue, R=2</text>
+</g>
+</svg>

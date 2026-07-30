@@ -30,14 +30,39 @@ local sensitivity of a deterministic Kemeny selector:
 B_beta(P) = choose(m, 2) * exp(-beta * max(R(P) - 1, 0)).
 ```
 
+A further proved corollary is especially sharp at the Peters boundary:
+every unique, non-unanimous three-voter profile has `R(P)=1`, whereas every
+unanimous three-voter profile has `R(P)=3`. Thus computational hardness and
+cover stability separate cleanly: finding the optimum is hard in the candidate
+count even though its three-voter stability radius has only this dichotomy.
+
 The formal write-up is [`paper/PAPER.md`](paper/PAPER.md). Supporting proof
 notes, literature positioning, limits, and proposed research directions are in
-[`notes/RESULTS.md`](notes/RESULTS.md). This is a research scaffold, not a
-peer-reviewed novelty claim.
+[`notes/RESULTS.md`](notes/RESULTS.md). Dedicated application notes cover the
+[`PDF's three-voter directions`](notes/THREE_VOTER_APPLICATIONS.md) and
+[`robust market design`](notes/MARKET_MICROSTRUCTURE.md). A separate
+[`Hex/Y laboratory`](notes/HEX_Y.md) formalizes the coloring Boolean lattice,
+the majority reduction, pivotality, and exact binary smooth sensitivity.
+The [`TUFT source assessment`](notes/TUFT_SOURCE_ASSESSMENT.md) records the
+strict heuristic-only boundary for the latest supplied source. This is a
+research scaffold, not a peer-reviewed novelty claim.
+
+The [`KAN/Hex assessment`](notes/KAN_HEX_ASSESSMENT.md) applies the supplied
+critical KAN survey as an evaluation guardrail: it derives and benchmarks the
+exact majority circuit instead of assuming that smooth spline models help on
+a discontinuous combinatorial target. The
+[`AI-risk governance note`](notes/AI_RISK_GOVERNANCE.md) keeps scenario
+taxonomy separate from probability claims and deployment.
+
+The [`picture-language transport audit`](notes/PICTURE_LANGUAGE.md) follows
+Jaffe and Liu's separation of language `L`, target reality `R`, and simulation
+`S`. It records exactly which Hasse, Hex, JL, and market diagrams transport
+proved statements and which remain heuristic.
 
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
+- exact subset-DP Kemeny optimization in `O(m^2 2^m)` time;
 - cover-graph parents, children, distances, and finite Hasse diagrams;
 - exact local sensitivity of the optimal Kemeny score;
 - exact smooth sensitivity of that scalar score by certified shell search;
@@ -47,7 +72,12 @@ peer-reviewed novelty claim.
   for the optimal score;
 - exact block Kemeny outputs and the efficient NRS center-of-attention in
   Kendall space as a non-private sample-and-aggregate utility prototype;
-- reproducible CSV/JSON experiments and an SVG Hasse diagram.
+- three-voter JL, private-learning, and market-priority experiments;
+- exact triangular Y-game connectivity and majority reduction;
+- exact small-board pivotality, outcome radii, and binary smooth sensitivity;
+- exact majority-circuit size and repeated connectivity-versus-circuit timings;
+- reproducible CSV/JSON experiments and SVG Hasse diagrams for both profile
+  and coloring cover relations.
 
 ## Quick start
 
@@ -55,7 +85,11 @@ peer-reviewed novelty claim.
 python -m pip install -e .
 python -m unittest discover -s tests -v
 python scripts/run_experiments.py
+python scripts/run_three_voter_applications.py
+python scripts/run_market_microstructure.py
+python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/generate_hasse.py
+python scripts/generate_hex_hasse.py
 ```
 
 The code uses only the Python standard library.
@@ -83,6 +117,11 @@ model before any novelty claim is made.
 - [Alabi et al., *Private Rank Aggregation in Central and Local Models* (2022)](https://arxiv.org/abs/2112.14652)
 - [Hillebrand et al., *Improved Differentially Private Algorithms for Rank Aggregation* (2026)](https://arxiv.org/abs/2511.11319)
 - [Peters, *Kemeny Rank Aggregation is NP-Hard for Three Voters* (2026)](https://arxiv.org/abs/2607.25540)
+- [Carroll, *Informationally Robust Trade and Limits to Contagion* (2016)](http://individual.utoronto.ca/carroll/robustlemons.pdf)
+- [Karlin and Peres, *Game Theory, Alive*](https://math.uchicago.edu/~shmuel/Modeling/Peres%20and%20Wilson%2C%20Game%20Theory%20Alive.pdf)
+- [Hou et al., *Kolmogorov-Arnold Networks: A Critical Assessment*](https://arxiv.org/abs/2407.11075)
+- [Critch and Tsimerman, *A Taxonomy of Omnicidal Futures Involving Artificial Intelligence*](https://arxiv.org/abs/2507.09369)
+- [Jaffe and Liu, *A Mathematical Picture Language Program*](https://doi.org/10.1073/pnas.1710707114)
 
 ## Authorship and assistance
 

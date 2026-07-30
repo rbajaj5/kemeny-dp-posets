@@ -1,0 +1,391 @@
+{
+  "candidate_counts": [
+    5,
+    8,
+    10,
+    12
+  ],
+  "carroll_connection": {
+    "paper": "Informationally Robust Trade and Limits to Contagion",
+    "scope": "A Kemeny selection layer is proposed only for Carroll's multiple-proposal extension in Section 5.3, before bilateral accept/reject. It does not alter the single-deal theorem."
+  },
+  "independent_price_time_size": {
+    "10": {
+      "cover_radius_histogram": {
+        "0": 244,
+        "1": 256
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.13443522514924502,
+        "rate": 0.914,
+        "standard_error": 0.01253826144248077,
+        "successes": 457,
+        "trials": 500,
+        "wilson_95_lower": 0.8861601885014425,
+        "wilson_95_upper": 0.9355268575963924
+      },
+      "majority_cycle_rate": 0.914,
+      "optimum_count_histogram": {
+        "1": 256,
+        "2": 39,
+        "3": 98,
+        "4": 12,
+        "5": 44,
+        "6": 9,
+        "7": 8,
+        "9": 15,
+        "10": 1,
+        "11": 2,
+        "12": 4,
+        "15": 6,
+        "17": 2,
+        "21": 1,
+        "23": 1,
+        "24": 1,
+        "25": 1
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.2667940348160468,
+        "rate": 0.026,
+        "standard_error": 0.007116740827092132,
+        "successes": 13,
+        "trials": 500,
+        "wilson_95_lower": 0.015256383923327248,
+        "wilson_95_upper": 0.04397149083422428
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 0.026,
+      "subset_dp_states": 1024,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.044760011793315076,
+        "rate": 0.512,
+        "standard_error": 0.022354238971613417,
+        "successes": 256,
+        "trials": 500,
+        "wilson_95_lower": 0.46826225284987066,
+        "wilson_95_upper": 0.5555547629790522
+      },
+      "unique_kemeny_rate": 0.512
+    },
+    "12": {
+      "cover_radius_histogram": {
+        "0": 315,
+        "1": 185
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.3701296697416537,
+        "rate": 0.986,
+        "standard_error": 0.0052543315464481325,
+        "successes": 493,
+        "trials": 500,
+        "wilson_95_lower": 0.9713869308622147,
+        "wilson_95_upper": 0.9932022102091564
+      },
+      "majority_cycle_rate": 0.986,
+      "optimum_count_histogram": {
+        "1": 185,
+        "2": 44,
+        "3": 106,
+        "4": 22,
+        "5": 52,
+        "6": 17,
+        "7": 8,
+        "8": 10,
+        "9": 24,
+        "10": 8,
+        "11": 6,
+        "12": 1,
+        "13": 2,
+        "15": 6,
+        "18": 2,
+        "22": 1,
+        "23": 1,
+        "24": 1,
+        "26": 1,
+        "33": 1,
+        "39": 1,
+        "56": 1
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.702879722376819,
+        "rate": 0.004,
+        "standard_error": 0.002822764602300376,
+        "successes": 2,
+        "trials": 500,
+        "wilson_95_lower": 0.0010976305226827934,
+        "wilson_95_upper": 0.014465715215177033
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 0.004,
+      "subset_dp_states": 4096,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.049445005612382936,
+        "rate": 0.37,
+        "standard_error": 0.021591665058535898,
+        "successes": 185,
+        "trials": 500,
+        "wilson_95_lower": 0.32882226377423945,
+        "wilson_95_upper": 0.4131600647457642
+      },
+      "unique_kemeny_rate": 0.37
+    },
+    "5": {
+      "cover_radius_histogram": {
+        "0": 106,
+        "1": 394
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.051099988172296,
+        "rate": 0.35,
+        "standard_error": 0.02133072900770154,
+        "successes": 175,
+        "trials": 500,
+        "wilson_95_lower": 0.3094801731446609,
+        "wilson_95_upper": 0.39280712899380477
+      },
+      "majority_cycle_rate": 0.35,
+      "optimum_count_histogram": {
+        "1": 394,
+        "2": 6,
+        "3": 93,
+        "5": 7
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.04479009262333289,
+        "rate": 0.484,
+        "standard_error": 0.022349228174592516,
+        "successes": 242,
+        "trials": 500,
+        "wilson_95_lower": 0.4404854432314528,
+        "wilson_95_upper": 0.527758535663317
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 0.484,
+      "subset_dp_states": 32,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.07285932562233054,
+        "rate": 0.788,
+        "standard_error": 0.018278730809331373,
+        "successes": 394,
+        "trials": 500,
+        "wilson_95_lower": 0.7500478841824445,
+        "wilson_95_upper": 0.8215604957117015
+      },
+      "unique_kemeny_rate": 0.788
+    },
+    "8": {
+      "cover_radius_histogram": {
+        "0": 201,
+        "1": 299
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.06651400063672125,
+        "rate": 0.76,
+        "standard_error": 0.019099738218101316,
+        "successes": 380,
+        "trials": 500,
+        "wilson_95_lower": 0.7206732029933738,
+        "wilson_95_upper": 0.7953621399666191
+      },
+      "majority_cycle_rate": 0.76,
+      "optimum_count_histogram": {
+        "1": 299,
+        "2": 29,
+        "3": 113,
+        "4": 4,
+        "5": 32,
+        "6": 3,
+        "7": 5,
+        "9": 10,
+        "11": 2,
+        "13": 1,
+        "15": 2
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.16706942541291456,
+        "rate": 0.06,
+        "standard_error": 0.010620734437881401,
+        "successes": 30,
+        "trials": 500,
+        "wilson_95_lower": 0.0423483564809462,
+        "wilson_95_upper": 0.08436106312521979
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 0.06,
+      "subset_dp_states": 256,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": 0.047357934746572544,
+        "rate": 0.598,
+        "standard_error": 0.021926969694875762,
+        "successes": 299,
+        "trials": 500,
+        "wilson_95_lower": 0.5544343695956807,
+        "wilson_95_upper": 0.640071259673855
+      },
+      "unique_kemeny_rate": 0.598
+    }
+  },
+  "single_peaked_price_menu": {
+    "10": {
+      "cover_radius_histogram": {
+        "1": 497,
+        "3": 3
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 0.0,
+        "standard_error": 0.0,
+        "successes": 0,
+        "trials": 500,
+        "wilson_95_lower": 4.336808689942018e-19,
+        "wilson_95_upper": 0.007624340461552241
+      },
+      "majority_cycle_rate": 0.0,
+      "optimum_count_histogram": {
+        "1": 500
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 1.0,
+      "subset_dp_states": 1024,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "unique_kemeny_rate": 1.0
+    },
+    "12": {
+      "cover_radius_histogram": {
+        "1": 500
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 0.0,
+        "standard_error": 0.0,
+        "successes": 0,
+        "trials": 500,
+        "wilson_95_lower": 4.336808689942018e-19,
+        "wilson_95_upper": 0.007624340461552241
+      },
+      "majority_cycle_rate": 0.0,
+      "optimum_count_histogram": {
+        "1": 500
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 1.0,
+      "subset_dp_states": 4096,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "unique_kemeny_rate": 1.0
+    },
+    "5": {
+      "cover_radius_histogram": {
+        "1": 489,
+        "3": 11
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 0.0,
+        "standard_error": 0.0,
+        "successes": 0,
+        "trials": 500,
+        "wilson_95_lower": 4.336808689942018e-19,
+        "wilson_95_upper": 0.007624340461552241
+      },
+      "majority_cycle_rate": 0.0,
+      "optimum_count_histogram": {
+        "1": 500
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 1.0,
+      "subset_dp_states": 32,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "unique_kemeny_rate": 1.0
+    },
+    "8": {
+      "cover_radius_histogram": {
+        "1": 498,
+        "3": 2
+      },
+      "majority_cycle_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 0.0,
+        "standard_error": 0.0,
+        "successes": 0,
+        "trials": 500,
+        "wilson_95_lower": 4.336808689942018e-19,
+        "wilson_95_upper": 0.007624340461552241
+      },
+      "majority_cycle_rate": 0.0,
+      "optimum_count_histogram": {
+        "1": 500
+      },
+      "selected_consensus_is_input_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "selected_consensus_is_one_of_three_inputs_rate": 1.0,
+      "subset_dp_states": 256,
+      "unique_kemeny_finite_sample": {
+        "plugin_berry_esseen_ratio_without_constant": null,
+        "rate": 1.0,
+        "standard_error": 0.0,
+        "successes": 500,
+        "trials": 500,
+        "wilson_95_lower": 0.9923756595384479,
+        "wilson_95_upper": 1.0
+      },
+      "unique_kemeny_rate": 1.0
+    }
+  },
+  "status": {
+    "economic_equilibrium_claim": "NONE",
+    "market_priority_hardness": "PROVED_BY_ENCODING",
+    "market_statistics": "COMPUTATIONAL"
+  },
+  "trials_per_candidate_count": 500
+}

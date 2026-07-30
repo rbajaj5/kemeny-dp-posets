@@ -38,14 +38,34 @@ def exponential_kemeny(
     if epsilon <= 0:
         raise ValueError("epsilon must be positive")
     rng = rng or Random()
+    probabilities = exponential_kemeny_probabilities(kemeny, profile, epsilon)
+    return _weighted_choice(
+        kemeny.space.rankings, list(probabilities), rng
+    )
+
+
+def exponential_kemeny_probabilities(
+    kemeny: KemenyAnalyzer,
+    profile: Profile,
+    epsilon: float,
+) -> tuple[float, ...]:
+    """Return the exact finite-output exponential-mechanism distribution.
+
+    Probabilities are aligned with ``kemeny.space.rankings``. The score is
+    negative Kemeny cost and its add/remove-one-ballot sensitivity is the
+    Kendall diameter.
+    """
+    if epsilon <= 0:
+        raise ValueError("epsilon must be positive")
     scores = kemeny.scores(profile)
     sensitivity = kemeny.space.diameter
     if sensitivity == 0:
-        return kemeny.space.rankings[0]
+        return (1.0,)
     log_weights = [-(epsilon * score) / (2 * sensitivity) for score in scores]
     shift = max(log_weights)
     weights = [exp(weight - shift) for weight in log_weights]
-    return _weighted_choice(kemeny.space.rankings, weights, rng)
+    total = sum(weights)
+    return tuple(weight / total for weight in weights)
 
 
 @dataclass(frozen=True)
