@@ -50,6 +50,16 @@ used as a novelty claim.
   boundary used in this repository's sample-and-aggregate discussion.
   <https://arxiv.org/abs/2607.25540>
 
+- Koustav De, Harshil Mittal, Palash Dey, and Neeldhara Misra,
+  **Parameterized Aspects of Distinct Kemeny Rank Aggregation** (2023).
+  Studies enumeration of distinct optimal and approximate Kemeny rankings
+  under several parameters, including the candidate count and
+  Kendall-distance-based parameters. It is the closest source identified in
+  the targeted search for the distance-stratified certificate, but it does
+  not by itself establish that the repository recurrence or robustness
+  readout is novel.
+  <https://arxiv.org/abs/2309.03517>
+
 - Marine Goibert, Alessandro Cloninger, Grégoire Leclercq, and Stephan
   Clémençon, **Robust Consensus in Ranking Data Analysis** (ICML 2023).
   Develops breakdown functions for ranking medians and robust bucket-ranking

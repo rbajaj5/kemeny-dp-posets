@@ -30,6 +30,18 @@ local sensitivity of a deterministic Kemeny selector:
 B_beta(P) = choose(m, 2) * exp(-beta * max(R(P) - 1, 0)).
 ```
 
+The distance-stratified subset DP computes the complete profile
+
+```text
+F_P(d) = min_{tau: Kendall(sigma, tau) = d} cost_P(tau)
+```
+
+in `O(m D 2^m)` time after transition precomputation, where
+`D = choose(m, 2)`. It returns the second-best ranking, the exact radius, and
+a constructive competitor whose repeated addition makes the selected optimum
+lose uniqueness. This avoids factorial enumeration while remaining
+exponential, as the three-voter hardness result requires.
+
 A further proved corollary is especially sharp at the Peters boundary:
 every unique, non-unanimous three-voter profile has `R(P)=1`, whereas every
 unanimous three-voter profile has `R(P)=3`. Thus computational hardness and
@@ -75,6 +87,7 @@ story as section 26 of *The Fugitive-III*, rather than *Gitanjali*.
 
 - exact Kemeny enumeration for small candidate sets;
 - exact subset-DP Kemeny optimization in `O(m^2 2^m)` time;
+- distance-stratified subset DP for score-gap and instability witnesses;
 - cover-graph parents, children, distances, and finite Hasse diagrams;
 - exact local sensitivity of the optimal Kemeny score;
 - exact smooth sensitivity of that scalar score by certified shell search;
@@ -100,6 +113,7 @@ python -m pip install -e .
 python -m unittest discover -s tests -v
 python scripts/run_experiments.py
 python scripts/run_three_voter_applications.py
+python scripts/run_subset_dp_certificates.py
 python scripts/run_market_microstructure.py
 python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/run_profile_law_hierarchy.py
@@ -132,6 +146,7 @@ model before any novelty claim is made.
 - [Alabi et al., *Private Rank Aggregation in Central and Local Models* (2022)](https://arxiv.org/abs/2112.14652)
 - [Hillebrand et al., *Improved Differentially Private Algorithms for Rank Aggregation* (2026)](https://arxiv.org/abs/2511.11319)
 - [Peters, *Kemeny Rank Aggregation is NP-Hard for Three Voters* (2026)](https://arxiv.org/abs/2607.25540)
+- [De et al., *Parameterized Aspects of Distinct Kemeny Rank Aggregation* (2023)](https://arxiv.org/abs/2309.03517)
 - [Carroll, *Informationally Robust Trade and Limits to Contagion* (2016)](http://individual.utoronto.ca/carroll/robustlemons.pdf)
 - [Karlin and Peres, *Game Theory, Alive*](https://math.uchicago.edu/~shmuel/Modeling/Peres%20and%20Wilson%2C%20Game%20Theory%20Alive.pdf)
 - [Hou et al., *Kolmogorov-Arnold Networks: A Critical Assessment*](https://arxiv.org/abs/2407.11075)

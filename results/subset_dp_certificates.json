@@ -1,0 +1,139 @@
+{
+  "atlas": {
+    "by_profile_size": {
+      "1": {
+        "larger_gap_faster_destabilizer_count": 0,
+        "profile_count": 6,
+        "tied_profile_count": 0,
+        "unique_profile_count": 6,
+        "uniqueness_radius_histogram": {
+          "1": 6
+        }
+      },
+      "2": {
+        "larger_gap_faster_destabilizer_count": 0,
+        "profile_count": 21,
+        "tied_profile_count": 15,
+        "unique_profile_count": 6,
+        "uniqueness_radius_histogram": {
+          "0": 15,
+          "2": 6
+        }
+      },
+      "3": {
+        "larger_gap_faster_destabilizer_count": 0,
+        "profile_count": 56,
+        "tied_profile_count": 2,
+        "unique_profile_count": 54,
+        "uniqueness_radius_histogram": {
+          "0": 2,
+          "1": 48,
+          "3": 6
+        }
+      },
+      "4": {
+        "larger_gap_faster_destabilizer_count": 0,
+        "profile_count": 126,
+        "tied_profile_count": 66,
+        "unique_profile_count": 60,
+        "uniqueness_radius_histogram": {
+          "0": 66,
+          "1": 6,
+          "2": 48,
+          "4": 6
+        }
+      },
+      "5": {
+        "larger_gap_faster_destabilizer_count": 6,
+        "profile_count": 252,
+        "tied_profile_count": 12,
+        "unique_profile_count": 240,
+        "uniqueness_radius_histogram": {
+          "0": 12,
+          "1": 180,
+          "2": 6,
+          "3": 48,
+          "5": 6
+        }
+      },
+      "6": {
+        "larger_gap_faster_destabilizer_count": 6,
+        "profile_count": 462,
+        "tied_profile_count": 192,
+        "unique_profile_count": 270,
+        "uniqueness_radius_histogram": {
+          "0": 192,
+          "1": 30,
+          "2": 180,
+          "3": 6,
+          "4": 48,
+          "6": 6
+        }
+      },
+      "7": {
+        "larger_gap_faster_destabilizer_count": 36,
+        "profile_count": 792,
+        "tied_profile_count": 36,
+        "unique_profile_count": 756,
+        "uniqueness_radius_histogram": {
+          "0": 36,
+          "1": 486,
+          "2": 30,
+          "3": 180,
+          "4": 6,
+          "5": 48,
+          "7": 6
+        }
+      },
+      "8": {
+        "larger_gap_faster_destabilizer_count": 36,
+        "profile_count": 1287,
+        "tied_profile_count": 447,
+        "unique_profile_count": 840,
+        "uniqueness_radius_histogram": {
+          "0": 447,
+          "1": 84,
+          "2": 486,
+          "3": 30,
+          "4": 180,
+          "5": 6,
+          "6": 48,
+          "8": 6
+        }
+      }
+    },
+    "candidate_count": 3,
+    "first_strict_denominator_example": {
+      "added_witness_copies": 2,
+      "ballots": [
+        "ABC",
+        "ABC",
+        "ABC",
+        "BCA",
+        "CAB"
+      ],
+      "destabilizing_distance": 2,
+      "destabilizing_ranking": "BCA",
+      "destabilizing_score_gap": 4,
+      "exact_uniqueness_radius": 2,
+      "minimum_cost_by_kendall_distance": [
+        4,
+        7,
+        8,
+        11
+      ],
+      "optimum_cost": 4,
+      "profile_size": 5,
+      "second_attack_radius": 3,
+      "second_distance": 1,
+      "second_ranking": "ACB",
+      "second_score_gap": 3,
+      "selected_optimum": "ABC"
+    },
+    "maximum_profile_size": 8,
+    "profiles_examined": 3002,
+    "strict_denominator_example_count": 84
+  },
+  "method": "subset dynamic programming stratified by Kendall distance from the selected optimum",
+  "status": "exact finite computation"
+}

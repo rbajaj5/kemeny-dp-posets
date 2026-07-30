@@ -4,10 +4,19 @@
 
 - Compare the exact empirical cover radius formally with the ICML 2023
   breakdown function at attack amplitude `delta -> 0+`.
-- Extend the new subset-DP solver with score-gap and radius witnesses.
 - Compare subset DP with an ILP or fixed-parameter oracle.
 - Prove utility bounds for pairwise-vector smooth perturbation followed by a
   transitive ranking projection.
+
+## Recently completed
+
+- Extended subset DP with exact distance-stratified score gaps, a second-best
+  witness, the uniqueness radius, and a constructive repeated-ballot attack.
+- Exhaustively checked those certificates against factorial enumeration for
+  all 2,600 four-candidate, three-voter profiles.
+- Exhausted 3,002 three-candidate profiles of sizes one through eight and
+  found 84 cases where a larger-gap, more distant competitor destabilizes
+  faster than every second-best competitor.
 
 ## Sample-and-aggregate
 

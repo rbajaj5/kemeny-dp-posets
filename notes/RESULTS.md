@@ -144,6 +144,72 @@ This is an integer, finite-sample analogue of a breakdown radius. It is sharper
 than using only the second-best score gap because competitors farther from the
 optimum can close their gap faster per added ballot.
 
+### Distance-stratified subset-DP certificate
+
+The exact formula appears to require all `m!` competitor scores. It can instead
+be evaluated by a subset DP with an additional Kendall-distance coordinate.
+Fix the selected optimum `sigma` and define
+
+```text
+F_x(d) = min_{tau: d_K(sigma, tau)=d} C_x(tau).
+```
+
+For a candidate subset `S`, let `A(S,d)` be the least partial Kemeny cost of
+an ordering of `S` having `d` pair inversions relative to `sigma|S`. If `a`
+is placed last, every other `b in S - {a}` precedes it. Let
+
+```text
+q(a,b) = number of ballots placing a before b
+r_sigma(a,S) = number of b in S-{a} that sigma places after a.
+```
+
+Then
+
+```text
+A(S,d) = min over a in S [
+    A(S-{a}, d-r_sigma(a,S))
+    + sum over b in S-{a} q(a,b)
+].
+```
+
+The base state is `A(empty,0)=0`, and the full-set values are exactly
+`F_x(d)`. The recurrence follows by conditioning on the last candidate:
+`q(a,b)` counts precisely the new disagreements, while
+`r_sigma(a,S)` counts precisely the new inversions relative to `sigma`.
+Induction on `|S|` proves exactness.
+
+With `D=choose(m,2)`, precomputed transitions give `O(m D 2^m)` time and
+`O(D 2^m)` numeric states plus parent pointers. Consequently:
+
+```text
+second_cost = min_{d>=1} F_x(d)
+R(x) = min_{d>=1} ceil((F_x(d)-OPT(x))/d)
+```
+
+for a unique optimum. A minimizing parent-pointer path supplies a competitor
+`tau`; adding `R(x)` copies of `tau` reduces its gap by
+`R(x)d_K(sigma,tau)` and is therefore a constructive instability witness.
+For a tied input, another optimum occurs in a positive-distance layer and the
+reported radius is zero.
+
+The distinction from the second-best score is already strict with three
+candidates and five ballots:
+
+```text
+profile:       ABC, ABC, ABC, BCA, CAB
+selected:      ABC with cost 4
+F_x(1..3):     7, 8, 11
+second-best:   ACB, gap 3, distance 1, attack radius 3
+destabilizer:  BCA, gap 4, distance 2, attack radius 2
+```
+
+Thus the farther competitor has a larger raw gap but destabilizes sooner.
+The executable audit checks all 3,002 three-candidate profiles of sizes one
+through eight and finds 84 such strict denominator examples. It separately
+checks all 2,600 four-candidate, three-voter profiles against factorial
+enumeration. This algorithm and proof are established in the repository, but
+their novelty relative to parameterized Kemeny algorithms is unconfirmed.
+
 ### Corollary: the three-voter radius dichotomy
 
 **Proved.** For any metric 1-median problem on `n >= 3` input records, a unique

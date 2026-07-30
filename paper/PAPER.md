@@ -217,6 +217,86 @@ The denominator matters: the second-best score alone need not determine the
 first destabilizing competitor. A more distant ranking can close a larger
 score gap faster per added ballot.
 
+### Exact stability witnesses by subset dynamic programming
+
+Theorem 4 need not be evaluated by enumerating all \(m!\) rankings. After
+finding a selected optimum \(\sigma\), define the distance-stratified score
+profile
+
+\[
+F_x(d)=
+\min_{\tau:\,d_K(\sigma,\tau)=d} C_x(\tau),
+\qquad 0\le d\le D.
+\]
+
+For \(S\subseteq[m]\), let \(A(S,d)\) be the minimum partial Kemeny cost of an
+ordering of \(S\) whose Kendall distance from \(\sigma|_S\) is \(d\). Write
+\(q(a,b)\) for the number of ballots placing \(a\) before \(b\), and set
+
+\[
+r_\sigma(a,S)=
+\left|\{b\in S\setminus\{a\}:
+        \sigma\text{ places }a\text{ before }b\}\right|.
+\]
+
+Conditioning on the last candidate \(a\) gives the recurrence
+
+\[
+A(S,d)=
+\min_{a\in S}
+\left[
+A(S\setminus\{a\},d-r_\sigma(a,S))
++\sum_{b\in S\setminus\{a\}}q(a,b)
+\right],
+\]
+
+with \(A(\varnothing,0)=0\) and infeasible states assigned infinity.
+
+**Proposition 4.2 (distance-stratified certificate).** The full-set DP values
+satisfy \(A([m],d)=F_x(d)\). If \(\sigma\) is unique, then
+
+\[
+\min_{d\ge1}F_x(d)
+\]
+
+is the second-best score and
+
+\[
+R(x)=\min_{d\ge1}
+\left\lceil\frac{F_x(d)-\operatorname{OPT}(x)}d\right\rceil.
+\]
+
+A parent-pointer witness at a minimizing distance is a ranking whose repeated
+addition attains the radius. With precomputed transitions, the DP uses
+\(O(mD2^m)\) time and \(O(D2^m)\) numeric states plus parent pointers.
+
+**Proof.** If \(a\) is last in an ordering of \(S\), each
+\(b\in S\setminus\{a\}\) is placed before \(a\). The new Kemeny disagreements
+are exactly the ballots counted by \(q(a,b)\). The new inversions relative to
+\(\sigma\) are exactly those pairs for which \(\sigma\) places \(a\) before
+\(b\), counted by \(r_\sigma(a,S)\). Removing the last candidate is a
+bijection between feasible full states and the recurrence's predecessor
+states, so induction on \(|S|\) proves \(A([m],d)=F_x(d)\). The two displayed
+conclusions then follow from the definitions and Theorem 4. Adding \(R(x)\)
+copies of the returned competitor reduces its gap by
+\(R(x)d_K(\sigma,\tau)\), proving witness attainment. \(\square\)
+
+For the five-ballot profile
+
+\[
+(ABC,ABC,ABC,BCA,CAB),
+\]
+
+the unique optimum \(ABC\) has cost \(4\), and
+\(F_x(1),F_x(2),F_x(3)=(7,8,11)\). The second-best witness \(ACB\) has gap
+three and attack radius three, whereas \(BCA\) has the larger gap four but
+Kendall distance two and attack radius two. This is a strict finite example
+showing why the distance denominator cannot be discarded.
+
+The recurrence and proof are contributions of this executable note only in
+the limited sense that they are established here. Their novelty relative to
+the parameterized and exact Kemeny literature has not been determined.
+
 ### A sharp consequence for three voters
 
 The exact formula yields a stronger bound whenever at least one input ballot
@@ -578,6 +658,9 @@ Concrete open problems are:
 12. A. M. Jaffe and Z. Liu. "A Mathematical Picture Language Program."
     *Proceedings of the National Academy of Sciences* 115(1), 2018, 81-86.
     [DOI](https://doi.org/10.1073/pnas.1710707114).
+13. K. De, H. Mittal, P. Dey, and N. Misra. "Parameterized Aspects of
+    Distinct Kemeny Rank Aggregation." 2023.
+    [arXiv:2309.03517](https://arxiv.org/abs/2309.03517).
 
 ## Acknowledgments
 

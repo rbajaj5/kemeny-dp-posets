@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.5.0 - 2026-07-30
+
+- Added an exact subset DP stratified by Kendall distance from the selected
+  optimum.
+- Added second-best score, exact uniqueness-radius, and constructive
+  repeated-ballot witnesses without factorial enumeration.
+- Proved the distance-stratified recurrence and its `O(m D 2^m)` running-time
+  bound, with novelty explicitly unconfirmed.
+- Matched the certificates against factorial enumeration on every one of the
+  2,600 four-candidate, three-voter profiles.
+- Exhausted 3,002 three-candidate profiles through size eight and recorded 84
+  strict examples where a larger-gap, more distant competitor destabilizes
+  faster than every second-best competitor.
+
 ## 0.4.1 - 2026-07-30
 
 - Added a source-checked research-policy note for Tagore's untitled section 26
