@@ -24,10 +24,31 @@ The current core is:
 3. the `n-2` non-unanimous metric-median bound and three-voter radius
    dichotomy;
 4. the resulting smooth upper bound; and
-5. the price/time/size hardness encoding.
+5. the price/time/size hardness encoding;
+6. exact binary-query smooth sensitivity on finite Hamming graphs;
+7. the exact Y majority circuit derived from the known reduction; and
+8. finite-poset law reconstruction by the full upper-set hierarchy.
 
 The analogy is not a mathematical claim about cusp forms or representations.
 It is a rule for keeping a growing research program intelligible.
+
+## Useful uselessness
+
+Tagore's untitled section 26 of *The Fugitive-III*, often circulated as "A
+Wrong Man in Workers' Paradise," introduces art into a society that recognizes
+only immediately useful work. The patterns on a water pitcher have no stated
+purpose, yet they reveal attention and preference that the society's schedule
+could not represent.
+
+The repository takes this as permission to explore questions before their
+utility is known. It does not take it as permission to publish unsupported
+claims. Exploration may begin with a pattern, analogy, or failed experiment;
+certification still requires a correct source, a defined target, a proof or
+reproducible computation, and an explicit status label.
+
+The dedicated [source and policy note](notes/TAGORE_USELESS_WORK.md) also
+corrects a bibliographic ambiguity in the supplied transcript: the English
+piece is in *The Fugitive* (1921), not *Gitanjali*.
 
 ## Local rules and global invariants
 
@@ -128,3 +149,7 @@ execute a mechanism against people or infrastructure.
 - Arthur M. Jaffe and Zhengwei Liu,
   [*A Mathematical Picture Language Program*](https://doi.org/10.1073/pnas.1710707114),
   for the language/reality/simulation distinction.
+- Rabindranath Tagore,
+  [*The Fugitive*](https://www.gutenberg.org/ebooks/7971), section 26 of
+  *The Fugitive-III*, for the distinction between exploration and compulsory
+  utility.

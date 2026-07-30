@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.1 - 2026-07-30
+
+- Added a source-checked research-policy note for Tagore's untitled section 26
+  of *The Fugitive-III*, often circulated as "A Wrong Man in Workers'
+  Paradise."
+- Corrected the supplied transcript's bibliographic ambiguity: the underlying
+  English work is in *The Fugitive* (1921), not *Gitanjali*.
+- Distinguished non-instrumental exploration from claim certification and
+  added five concrete criteria for useful automated research increments.
+- Updated the quiet-public-program core to include the exact Boolean, Y-circuit,
+  and finite-poset hierarchy results.
+
 ## 0.4.0 - 2026-07-30
 
 - Audited Bourgade and Huang's random-matrix characterization theorem using

@@ -132,3 +132,11 @@ used as a novelty claim.
   repository uses this as a soundness audit for transporting diagrammatic
   identities, not as a claim that its diagrams form a TQFT.
   <https://doi.org/10.1073/pnas.1710707114>
+
+## Research practice and non-instrumental exploration
+
+- Rabindranath Tagore, **The Fugitive** (1921), section 26 of
+  *The Fugitive-III*. The untitled prose-poem is often circulated as "A Wrong
+  Man in Workers' Paradise." It is used here only to distinguish open-ended
+  exploration from certification. It supplies no mathematical premise.
+  <https://www.gutenberg.org/ebooks/7971>

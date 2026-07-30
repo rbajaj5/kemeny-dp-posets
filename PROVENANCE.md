@@ -25,6 +25,7 @@ item. Git history supplies the exact timestamps.
 | A1 | Kemeny aggregation could combine stakeholder rankings of high-level risk-mitigation priorities. | OPEN APPLICATION; NO PROBABILITY OR POLICY CLAIM | 0.3.0 | Critch-Tsimerman scenario taxonomy; social-choice caveats. |
 | A2 | Language/reality/simulation ledger for every cross-domain diagram. | METHODOLOGICAL AUDIT; NO NEW DOMAIN THEOREM | 0.3.0 | Jaffe-Liu picture-language program. |
 | A3 | Loop-equation proof audit separating identities, error control, and branch selection; no random-matrix theorem is transported to Kemeny or privacy. | METHODOLOGICAL AUDIT | 0.4.0 | Bourgade-Huang characterization theorems. |
+| A4 | Non-instrumental exploration is permitted, but certification still requires correct sources, defined maps, evidence, and status labels. | RESEARCH POLICY; NO MATHEMATICAL CLAIM | 0.4.1 | Tagore, *The Fugitive-III*, section 26. |
 
 ## Corrections
 

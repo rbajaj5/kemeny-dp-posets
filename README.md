@@ -66,6 +66,11 @@ probability hierarchy on a bounded profile poset determines a random-profile
 law exactly by Möbius inversion, while first moments do not, even on the
 three-voter layer. No random-matrix or privacy theorem is inferred.
 
+The [`Tagore source and policy note`](notes/TAGORE_USELESS_WORK.md) protects
+room for exploratory work whose use is not yet known, while keeping the
+proof-and-provenance threshold unchanged. It also identifies the supplied
+story as section 26 of *The Fugitive-III*, rather than *Gitanjali*.
+
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
@@ -133,6 +138,7 @@ model before any novelty claim is made.
 - [Critch and Tsimerman, *A Taxonomy of Omnicidal Futures Involving Artificial Intelligence*](https://arxiv.org/abs/2507.09369)
 - [Jaffe and Liu, *A Mathematical Picture Language Program*](https://doi.org/10.1073/pnas.1710707114)
 - [Bourgade and Huang, *Loop Equations Characterize Random Matrix Statistics*](https://arxiv.org/abs/2607.07617)
+- [Tagore, *The Fugitive*, section 26 of *The Fugitive-III*](https://www.gutenberg.org/ebooks/7971)
 
 ## Authorship and assistance
 
