@@ -1,0 +1,78 @@
+{
+  "bounded_profile_poset": {
+    "cover_count": 168,
+    "layer_counts": {
+      "0": 1,
+      "1": 6,
+      "2": 21,
+      "3": 56
+    },
+    "maximum_ballots": 3,
+    "ranking_types": 6,
+    "state_count": 84
+  },
+  "exact_reconstruction": {
+    "input_mass_total": "1",
+    "maximum_absolute_error": "0",
+    "recovered_exactly": true,
+    "upper_probability_at_empty": "1"
+  },
+  "status": {
+    "bourgade_huang_random_matrix_results": "KNOWN_SOURCE",
+    "finite_poset_characterization": "KNOWN_MOBIUS_INVERSION_SPECIALIZATION",
+    "random_matrix_or_privacy_claim": "NONE",
+    "reconstruction": "EXACT_COMPUTATIONAL"
+  },
+  "three_voter_first_moment_collision": {
+    "full_hierarchies_equal": false,
+    "mixture_profiles": [
+      [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    "mixture_upper_probability": "1/2",
+    "mixture_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "point_mass_profile": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "point_mass_upper_probability": "0",
+    "same_first_moments": true,
+    "separating_upper_set": [
+      2,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "shared_expected_profile": [
+      "1",
+      "1",
+      "1",
+      "0",
+      "0",
+      "0"
+    ]
+  }
+}

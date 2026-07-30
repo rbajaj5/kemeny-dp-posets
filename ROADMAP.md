@@ -31,6 +31,17 @@
 - Port the uniqueness-radius proposition to Lean.
 - Reuse the public Kemeny hardness formalization where definitions align.
 
+## Law-characterizing hierarchies
+
+- Quantify how many upper-set queries are needed to identify restricted
+  families of random-profile laws, rather than releasing the full zeta table.
+- Study noisy Möbius inversion and the amplification of query error.
+- If any hierarchy is released from private profile data, derive its
+  sensitivity and privacy mechanism separately; exact invertibility is a
+  disclosure warning, not a privacy guarantee.
+- Do not treat finite residual checks as a characterization without an
+  admissible-class and uniqueness theorem.
+
 ## Hex/Y sensitivity
 
 - Derive or bound the outcome-radius distribution beyond side five without

@@ -15,6 +15,13 @@ from .hex_y import (
     exact_winner_radii,
     majority_circuit_gate_count,
 )
+from .law_hierarchy import (
+    coordinatewise_leq,
+    expected_profile,
+    invert_upper_set_probabilities,
+    upper_set_probabilities,
+    validate_probability_mass,
+)
 from .mechanisms import (
     exponential_kemeny,
     exponential_kemeny_probabilities,
@@ -39,11 +46,14 @@ __all__ = [
     "binary_winner_smooth_sensitivity",
     "center_of_attention",
     "bernoulli_summary",
+    "coordinatewise_leq",
+    "expected_profile",
     "exact_block_outputs",
     "exact_kemeny_subset_dp",
     "exact_pivotality",
     "exact_winner_radii",
     "majority_circuit_gate_count",
+    "invert_upper_set_probabilities",
     "exponential_kemeny",
     "exponential_kemeny_probabilities",
     "kendall_distance",
@@ -53,4 +63,6 @@ __all__ = [
     "release_optimum_score",
     "sample_and_center",
     "squared_euclidean",
+    "upper_set_probabilities",
+    "validate_probability_mass",
 ]

@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0 - 2026-07-30
+
+- Audited Bourgade and Huang's random-matrix characterization theorem using
+  the full manuscript and supplied excerpts on Gronwall control, resolvent
+  cancellation, exceptional events, and asymptotic branch selection.
+- Added the exact upper-set probability hierarchy and finite-poset Möbius
+  inversion for bounded random profiles.
+- Reconstructed an exact rational law on all 84 profiles through three ballots
+  with zero error.
+- Added a three-voter example showing that first moments do not identify a
+  profile law, while the full hierarchy separates the two laws.
+- Kept the random-matrix beta parameter distinct from the smooth-sensitivity
+  beta parameter and made no cross-domain theorem claim.
+
 ## 0.3.0 - 2026-07-30
 
 - Proved the `n-2` radius bound for unique non-unanimous metric medians and

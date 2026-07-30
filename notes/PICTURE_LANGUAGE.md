@@ -94,6 +94,8 @@ expressed purely in the shared Hasse language transport without extra work.
 | Majority-triangle rewrite | Y connectivity winner | Unique winner | **KNOWN; EXHAUSTIVELY CHECKED THROUGH SIDE 6** |
 | TUFT topology terminology | Kemeny/Hex program | No mathematical quantity currently specified | **HEURISTIC ONLY; NO SIMULATION MAP** |
 | AI-risk scenario taxonomy | Governance-priority rankings | Category labels only, not probabilities or policy validity | **OPEN APPLICATION** |
+| Upper-set probability hierarchy | Law of a bounded random profile | Exact finite zeta transform and Möbius inverse | **PROVED; STANDARD SPECIALIZATION** |
+| Random-matrix loop equations | Kemeny/profile program | No simulation map preserving the analytic hierarchy | **SOURCE THEOREM ONLY; NO TRANSPORT** |
 
 The table distinguishes exact faithful embeddings from lossy approximations
 and metaphors. In particular:
@@ -105,6 +107,9 @@ and metaphors. In particular:
 - TUFT motivates a local-to-global question, but no theorem is transported.
 - A risk taxonomy can define alternatives for a social-choice exercise, but
   aggregation cannot manufacture calibrated empirical probabilities.
+- The loop-equation hierarchy motivates a completeness audit, but its
+  Nevanlinna, local-law, and asymptotic-branch arguments do not transport to a
+  finite profile Hasse diagram.
 
 ## 5. Diagram review checklist
 

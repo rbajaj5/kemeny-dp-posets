@@ -81,6 +81,17 @@ used as a novelty claim.
   processing. It does not use Kemeny aggregation.
   <https://doi.org/10.1093/qje/qjv027>
 
+## Characterizing probability laws by hierarchies
+
+- Paul Bourgade and Jiaoyang Huang, **Loop Equations Characterize Random
+  Matrix Statistics** (2026). For rational positive beta, proves that the full
+  microscopic bulk and edge loop-equation hierarchies uniquely identify the
+  Sine-beta and Airy-beta point processes, respectively, and turns approximate
+  hierarchies with uniform error control into convergence criteria. The
+  repository imports only the proof discipline and a separate finite-poset
+  Möbius-inversion analogue.
+  <https://arxiv.org/abs/2607.07617>
+
 ## Hex/Y and heuristic-only topology source
 
 - Anna R. Karlin and Yuval Peres, **Game Theory, Alive**. The Hex/Y section
