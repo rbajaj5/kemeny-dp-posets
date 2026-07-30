@@ -30,7 +30,9 @@ The current core is:
 8. finite-poset law reconstruction by the full upper-set hierarchy;
 9. distance-stratified subset-DP stability certificates; and
 10. the exact finite zero-plus TV breakdown formula and its factor-explicit
-    bridge to integer cover stability.
+    bridge to integer cover stability; and
+11. the sharp metric factor-two input-center lemma and exact two-ballot
+    Kemeny shortcut.
 
 The analogy is not a mathematical claim about cusp forms or representations.
 It is a rule for keeping a growing research program intelligible.

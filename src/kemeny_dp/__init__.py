@@ -32,15 +32,22 @@ from .mechanisms import (
     release_optimum_score,
 )
 from .sample_aggregate import (
+    AttentionCertificate,
+    borda_block_outputs,
+    borda_ranking,
     center_of_attention,
+    center_of_attention_certificate,
     exact_block_outputs,
     sample_and_center,
+    two_ballot_kemeny,
+    unrestricted_attention_certificate,
 )
 from .sensitivity import SensitivityAnalyzer, SmoothSensitivityResult
 from .subset_dp import SubsetDPResult, exact_kemeny_subset_dp
 
 __all__ = [
     "BreakdownComparison",
+    "AttentionCertificate",
     "KemenyAnalyzer",
     "BernoulliSummary",
     "RankingSpace",
@@ -51,7 +58,10 @@ __all__ = [
     "binary_winner_smooth_sensitivity",
     "center_of_attention",
     "bernoulli_summary",
+    "borda_block_outputs",
+    "borda_ranking",
     "compare_cover_radius_and_breakdown",
+    "center_of_attention_certificate",
     "coordinatewise_leq",
     "expected_profile",
     "exact_block_outputs",
@@ -70,5 +80,7 @@ __all__ = [
     "sample_and_center",
     "squared_euclidean",
     "upper_set_probabilities",
+    "two_ballot_kemeny",
+    "unrestricted_attention_certificate",
     "validate_probability_mass",
 ]

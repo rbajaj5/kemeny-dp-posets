@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.7.0 - 2026-07-30
+
+- Added exact center-of-attention certificates, including the full minimizing
+  input-center set and an unrestricted small-instance oracle.
+- Proved and exhaustively checked the sharp factor-two input-center
+  approximation in Kendall space.
+- Added a linear-time exact two-ballot Kemeny shortcut and a polynomial-time
+  Borda block estimator.
+- Checked 8,581 center certificates, 612 ordered two-ballot profiles, and
+  3,002 Borda profiles; recorded deterministic lexicographic non-neutrality
+  instead of hiding it.
+- Fixed validation so an invalid ballot in a discarded incomplete block is
+  rejected before shuffling.
+- Regenerated the sample-and-center experiment under the explicit new
+  two-ballot selector.
+
 ## 0.6.0 - 2026-07-30
 
 - Added an exact rational mass-transport computation of zero-plus Kemeny

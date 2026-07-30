@@ -254,7 +254,17 @@ def sample_and_center_experiment() -> dict[str, object]:
         "candidate_count": candidate_count,
         "ballot_count": ballot_count,
         "trials_per_phi": trials,
-        "tie_breaking": "lexicographic",
+        "tie_breaking": {
+            "full_kemeny_and_blocks_of_size_at_least_three": (
+                "lexicographic among all optima"
+            ),
+            "two_ballot_blocks": (
+                "lexicographically smaller input; exact by triangle inequality"
+            ),
+            "center_of_attention": (
+                "lexicographic among input-restricted minimum-radius centers"
+            ),
+        },
         "results": summary,
     }
 

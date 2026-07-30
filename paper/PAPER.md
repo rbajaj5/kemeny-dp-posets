@@ -538,6 +538,48 @@ complete blocks, and applies this center. It is explicitly a utility
 prototype: privacy requires completing and proving the sampling-influence and
 admissible-noise stages.
 
+Write \(r_{\rm in}\) for the displayed input-restricted radius and
+\(r_{\rm all}\) for the minimum radius when the center may be any ranking.
+
+**Proposition 8.1 (input-center approximation).** In every metric space,
+
+\[
+r_{\rm all}\le r_{\rm in}\le2r_{\rm all}.
+\]
+
+The factor two is sharp in Kendall space. The full set of input centers
+attaining \(r_{\rm in}\) is equivariant under a common relabeling of
+candidates, although lexicographically selecting one minimizer is not.
+
+**Proof.** The first inequality follows by domain inclusion. A radius
+\(r_{\rm all}\) ball contains the target number of input points. Choose one
+such input point as a new center. Triangle inequality places every point in
+the same witness set within radius \(2r_{\rm all}\) of it. For sharpness, use
+the two three-candidate rankings \(ABC\) and \(BCA\): either input center has
+radius two, while \(BAC\) has radius one. Common relabeling preserves all
+Kendall distances and therefore maps the minimizing set equivariantly.
+\(\square\)
+
+For two-ballot blocks, either input is an exact Kemeny optimum by triangle
+inequality. The implementation returns the lexicographically smaller input in
+linear input time. It also supplies Borda as a polynomial-time option for
+larger blocks and validates every ballot before shuffling, including ballots
+that would fall in an incomplete discarded block.
+
+The exact finite audit checks 8,581 center certificates through seven points
+in the three-candidate space. It finds zero witness, approximation, or
+minimizer-set equivariance failures and 986 sharp factor-two cases. It also
+checks all 612 ordered two-ballot profiles through four candidates with zero
+optimality failures. Borda attains exact Kemeny cost on 2,712 of the 3,002
+three-candidate profiles through eight ballots; the largest observed cost
+ratio is \(3/2\), which is not asserted as a general bound.
+
+Lexicographic resolution is intentionally labeled non-neutral. On the
+candidate-symmetric multiset containing every ranking equally often, no
+deterministic single-ranking output can be invariant under every candidate
+relabeling. The certificate therefore exposes the complete minimizing set for
+set-valued or explicitly randomized downstream use.
+
 ## 9. Exhaustive verification
 
 The test suite checks the identities independently on every profile with

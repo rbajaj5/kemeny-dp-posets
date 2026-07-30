@@ -377,18 +377,37 @@ That gives a concrete design constraint for private sample-and-aggregate:
 - block estimators may use exact two-voter Kemeny, Borda/footrule, or a Kemeny
   approximation, followed by center-of-attention.
 
-The repository does not yet claim a new end-to-end utility theorem for this
-pipeline. It now includes an executable utility prototype:
+The repository does not yet claim a new end-to-end privacy or distributional
+utility theorem for this pipeline. It now includes exact utility-side
+certificates:
 
 ```text
-random ballot blocks
-  -> exact small-block Kemeny outputs
-  -> constrained center-of-attention under Kendall distance.
+validated random ballot blocks
+  -> exact two-ballot, enumerated Kemeny, or Borda outputs
+  -> certified constrained center-of-attention under Kendall distance.
 ```
 
-The final center is always one of the block outputs and is computed using only
-their pairwise distances. No privacy claim attaches to this prototype until the
-sampling influence and admissible-noise steps are implemented and analyzed.
+If `r_in` is the best radius among input points and `r_all` the best radius
+among all metric points for the same target count, triangle inequality gives
+
+```text
+r_all <= r_in <= 2 r_all.
+```
+
+The bound is sharp for the two rankings `ABC,BCA`: an input center has radius
+two and `BAC` has radius one. The minimizing input-center **set** is equivariant
+under common candidate relabeling. The lexicographically selected member is
+not neutral, and cannot be made deterministically neutral on every symmetric
+input while remaining a single linear ranking.
+
+The exact audit checks 8,581 center certificates, all 612 ordered two-ballot
+profiles through four candidates, and all 3,002 three-candidate profiles
+through eight ballots for the Borda option. Detailed results and the discarded
+invalid-ballot validation correction are in
+`notes/SAMPLE_AGGREGATE_AUDIT.md`.
+
+No privacy claim attaches to this prototype until the sampling influence and
+admissible-noise steps are implemented and analyzed.
 
 ## 7. Johnson-Lindenstrauss direction
 

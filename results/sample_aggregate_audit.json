@@ -1,0 +1,129 @@
+{
+  "borda": {
+    "borda_optimum_cost_matches": 2712,
+    "by_profile_size": {
+      "1": {
+        "borda_optimum_cost_matches": 6,
+        "profiles": 6
+      },
+      "2": {
+        "borda_optimum_cost_matches": 21,
+        "profiles": 21
+      },
+      "3": {
+        "borda_optimum_cost_matches": 49,
+        "profiles": 56
+      },
+      "4": {
+        "borda_optimum_cost_matches": 126,
+        "profiles": 126
+      },
+      "5": {
+        "borda_optimum_cost_matches": 207,
+        "profiles": 252
+      },
+      "6": {
+        "borda_optimum_cost_matches": 449,
+        "profiles": 462
+      },
+      "7": {
+        "borda_optimum_cost_matches": 642,
+        "profiles": 792
+      },
+      "8": {
+        "borda_optimum_cost_matches": 1212,
+        "profiles": 1287
+      }
+    },
+    "candidate_count": 3,
+    "first_maximum_example": {
+      "borda_cost": 3,
+      "borda_ranking": "BCA",
+      "optimum_cost": 2,
+      "profile": "BAC:1 CBA:2",
+      "profile_size": 3,
+      "ratio": "3/2"
+    },
+    "five_approximation_failures": 0,
+    "maximum_cost_ratio": "3/2",
+    "maximum_profile_size": 8,
+    "profiles_examined": 3002
+  },
+  "center_of_attention": {
+    "by_point_count": {
+      "2": {
+        "certificates": 21,
+        "factor_two_cases": 6,
+        "point_multisets": 21
+      },
+      "3": {
+        "certificates": 112,
+        "factor_two_cases": 24,
+        "point_multisets": 56
+      },
+      "4": {
+        "certificates": 378,
+        "factor_two_cases": 60,
+        "point_multisets": 126
+      },
+      "5": {
+        "certificates": 1008,
+        "factor_two_cases": 144,
+        "point_multisets": 252
+      },
+      "6": {
+        "certificates": 2310,
+        "factor_two_cases": 260,
+        "point_multisets": 462
+      },
+      "7": {
+        "certificates": 4752,
+        "factor_two_cases": 492,
+        "point_multisets": 792
+      }
+    },
+    "candidate_count": 3,
+    "candidate_relabeling_checks": 51486,
+    "certificates_examined": 8581,
+    "factor_two_count": 986,
+    "first_factor_two_example": {
+      "points": "ABC:1 BCA:1",
+      "restricted_center": "ABC",
+      "restricted_radius": 2,
+      "step": 1,
+      "target_count": 2,
+      "unrestricted_center": "BAC",
+      "unrestricted_radius": 1
+    },
+    "input_center_failures": 0,
+    "lexicographic_selector_equivariance_failures": 17129,
+    "maximum_point_count": 7,
+    "maximum_restricted_to_unrestricted_ratio": "2",
+    "minimum_radius_equivariance_failures": 0,
+    "restricted_radius_equals_unrestricted_count": 7190,
+    "target_count_failures": 0,
+    "two_approximation_failures": 0
+  },
+  "status": {
+    "borda_audit": "KNOWN_APPROXIMATION_EXACT_FINITE_AUDIT",
+    "center_two_approximation": "PROVED_STANDARD_METRIC_LEMMA",
+    "privacy": "NOT_CLAIMED",
+    "two_ballot_shortcut": "PROVED_EXACT"
+  },
+  "two_ballot_kemeny": {
+    "by_candidate_count": {
+      "3": {
+        "different_from_factorial_lexicographic_selector": 6,
+        "ordered_pairs": 36
+      },
+      "4": {
+        "different_from_factorial_lexicographic_selector": 240,
+        "ordered_pairs": 576
+      }
+    },
+    "different_from_factorial_lexicographic_selector": 246,
+    "input_support_failures": 0,
+    "optimum_failures": 0,
+    "ordered_pairs_examined": 612
+  }
+}

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this research note or software, please cite it as below."
 title: "Cover-Graph Stability and Smooth Sensitivity for Kemeny Rank Aggregation"
 type: software
-version: 0.6.0
+version: 0.7.0
 date-released: 2026-07-30
 authors:
   - family-names: "Bajaj"

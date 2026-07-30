@@ -104,6 +104,12 @@ room for exploratory work whose use is not yet known, while keeping the
 proof-and-provenance threshold unchanged. It also identifies the supplied
 story as section 26 of *The Fugitive-III*, rather than *Gitanjali*.
 
+The [`sample-and-center audit`](notes/SAMPLE_AGGREGATE_AUDIT.md) proves the
+sharp factor-two input-center lemma, implements a linear-time exact
+two-ballot shortcut and a Borda block option, and exhaustively tests metric
+witnesses, relabeling, approximation, and invalid-remainder validation. It
+does not claim an end-to-end private mechanism.
+
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
@@ -119,6 +125,8 @@ story as section 26 of *The Fugitive-III*, rather than *Gitanjali*.
   for the optimal score;
 - exact block Kemeny outputs and the efficient NRS center-of-attention in
   Kendall space as a non-private sample-and-aggregate utility prototype;
+- exact attention certificates, a two-ballot Kemeny shortcut, and Borda block
+  outputs with exhaustive component audits;
 - three-voter JL, private-learning, and market-priority experiments;
 - exact triangular Y-game connectivity and majority reduction;
 - exact small-board pivotality, outcome radii, and binary smooth sensitivity;
@@ -137,6 +145,7 @@ python scripts/run_experiments.py
 python scripts/run_three_voter_applications.py
 python scripts/run_subset_dp_certificates.py
 python scripts/run_breakdown_comparison.py
+python scripts/run_sample_aggregate_audit.py
 python scripts/run_market_microstructure.py
 python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/run_profile_law_hierarchy.py

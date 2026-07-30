@@ -8,6 +8,13 @@
 
 ## Recently completed
 
+- Proved the sharp factor-two input-center approximation, exposed the complete
+  relabeling-equivariant minimizer set, and documented why lexicographic
+  resolution is not neutral.
+- Added an exact linear-time two-ballot Kemeny shortcut, a polynomial-time
+  Borda block option, and validation of every ballot before shuffling.
+- Exhausted 8,581 center certificates, 612 ordered two-ballot profiles, and
+  3,002 Borda profiles with zero theorem-bound failures.
 - Derived the exact zero-plus standard-TV breakdown by finite mass transport,
   proved `b_TV >= mu/2`, and identified the sufficient equality condition
   `mu <= 2p(sigma)`.
@@ -27,10 +34,6 @@
 
 ## Sample-and-aggregate
 
-- Implement two-voter exact block Kemeny and approximate larger-block
-  estimators.
-- Implement the Nissim-Raskhodnikova-Smith center-of-attention on Kendall
-  space.
 - Identify distributional conditions under which block rankings concentrate
   around the full Kemeny optimum.
 - Compare against the 2022 and 2026 worst-case DP algorithms.

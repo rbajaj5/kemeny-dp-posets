@@ -286,9 +286,9 @@
           "2": {
             "at_or_above_three_voter_hardness_boundary": false,
             "block_output_count": 30,
-            "full_kemeny_match_rate": 0.99,
-            "mean_distance_to_full_kemeny": 0.01,
-            "mean_distance_to_planted": 0.0
+            "full_kemeny_match_rate": 0.97,
+            "mean_distance_to_full_kemeny": 0.03,
+            "mean_distance_to_planted": 0.02
           },
           "3": {
             "at_or_above_three_voter_hardness_boundary": true,
@@ -319,9 +319,9 @@
           "2": {
             "at_or_above_three_voter_hardness_boundary": false,
             "block_output_count": 30,
-            "full_kemeny_match_rate": 0.5,
-            "mean_distance_to_full_kemeny": 0.65,
-            "mean_distance_to_planted": 0.08
+            "full_kemeny_match_rate": 0.52,
+            "mean_distance_to_full_kemeny": 0.66,
+            "mean_distance_to_planted": 0.11
           },
           "3": {
             "at_or_above_three_voter_hardness_boundary": true,
@@ -352,9 +352,9 @@
           "2": {
             "at_or_above_three_voter_hardness_boundary": false,
             "block_output_count": 30,
-            "full_kemeny_match_rate": 0.08,
-            "mean_distance_to_full_kemeny": 2.69,
-            "mean_distance_to_planted": 0.12
+            "full_kemeny_match_rate": 0.11,
+            "mean_distance_to_full_kemeny": 2.57,
+            "mean_distance_to_planted": 0.36
           },
           "3": {
             "at_or_above_three_voter_hardness_boundary": true,
@@ -374,7 +374,11 @@
         "mean_full_kemeny_distance_to_planted": 2.77
       }
     },
-    "tie_breaking": "lexicographic",
+    "tie_breaking": {
+      "center_of_attention": "lexicographic among input-restricted minimum-radius centers",
+      "full_kemeny_and_blocks_of_size_at_least_three": "lexicographic among all optima",
+      "two_ballot_blocks": "lexicographically smaller input; exact by triangle inequality"
+    },
     "trials_per_phi": 100
   },
   "status": {
