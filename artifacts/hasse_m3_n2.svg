@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2436" height="560" viewBox="0 0 2436 560">
+<style>
+text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#172033}
+.edge{stroke:#9aa6b8;stroke-width:1.2;opacity:.55}
+.node{stroke:#34445d;stroke-width:1.2}
+.label{font-size:11px;text-anchor:middle}
+.layer{font-size:14px;font-weight:700}
+</style>
+<rect width="100%" height="100%" fill="#f7f9fc"/>
+<text x="36" y="42" font-size="24" font-weight="700">Kemeny profile Hasse diagram: 3 candidates, at most 2 ballots</text>
+<text x="36" y="70" font-size="13">Edges add one ballot. Green = unique optimum with radius >= 2; amber = radius 1; red = tied optimum.</text>
+<line class="edge" x1="1218.0" y1="449.0" x2="2174.7" y2="316.0"/>
+<line class="edge" x1="1218.0" y1="449.0" x2="1792.0" y2="316.0"/>
+<line class="edge" x1="1218.0" y1="449.0" x2="1409.3" y2="316.0"/>
+<line class="edge" x1="1218.0" y1="449.0" x2="1026.7" y2="316.0"/>
+<line class="edge" x1="1218.0" y1="449.0" x2="644.0" y2="316.0"/>
+<line class="edge" x1="1218.0" y1="449.0" x2="261.3" y2="316.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="1764.7" y2="141.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="1218.0" y2="141.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="780.7" y2="141.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="452.7" y2="141.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="234.0" y2="141.0"/>
+<line class="edge" x1="261.3" y1="274.0" x2="124.7" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="1874.0" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="1327.3" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="890.0" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="562.0" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="343.3" y2="141.0"/>
+<line class="edge" x1="644.0" y1="274.0" x2="234.0" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="1983.3" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="1436.7" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="999.3" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="671.3" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="562.0" y2="141.0"/>
+<line class="edge" x1="1026.7" y1="274.0" x2="452.7" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="2092.7" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="1546.0" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="1108.7" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="999.3" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="890.0" y2="141.0"/>
+<line class="edge" x1="1409.3" y1="274.0" x2="780.7" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="2202.0" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="1655.3" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="1546.0" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="1436.7" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="1327.3" y2="141.0"/>
+<line class="edge" x1="1792.0" y1="274.0" x2="1218.0" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="2311.3" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="2202.0" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="2092.7" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="1983.3" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="1874.0" y2="141.0"/>
+<line class="edge" x1="2174.7" y1="274.0" x2="1764.7" y2="141.0"/>
+<text class="layer" x="18" y="475.0">n=0</text>
+<g>
+<title>empty; selected=ABC; optima=6; uniqueness radius=0</title>
+<rect class="node" x="1170.0" y="449.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1218.0" y="468.0">empty</text>
+<text class="label" x="1218.0" y="483.0">R=0, opt=ABC</text>
+</g>
+<text class="layer" x="18" y="300.0">n=1</text>
+<g>
+<title>CBA:1; selected=CBA; optima=1; uniqueness radius=1</title>
+<rect class="node" x="213.3" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="261.3" y="293.0">CBA:1</text>
+<text class="label" x="261.3" y="308.0">R=1, opt=CBA</text>
+</g>
+<g>
+<title>CAB:1; selected=CAB; optima=1; uniqueness radius=1</title>
+<rect class="node" x="596.0" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="644.0" y="293.0">CAB:1</text>
+<text class="label" x="644.0" y="308.0">R=1, opt=CAB</text>
+</g>
+<g>
+<title>BCA:1; selected=BCA; optima=1; uniqueness radius=1</title>
+<rect class="node" x="978.7" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="1026.7" y="293.0">BCA:1</text>
+<text class="label" x="1026.7" y="308.0">R=1, opt=BCA</text>
+</g>
+<g>
+<title>BAC:1; selected=BAC; optima=1; uniqueness radius=1</title>
+<rect class="node" x="1361.3" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="1409.3" y="293.0">BAC:1</text>
+<text class="label" x="1409.3" y="308.0">R=1, opt=BAC</text>
+</g>
+<g>
+<title>ACB:1; selected=ACB; optima=1; uniqueness radius=1</title>
+<rect class="node" x="1744.0" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="1792.0" y="293.0">ACB:1</text>
+<text class="label" x="1792.0" y="308.0">R=1, opt=ACB</text>
+</g>
+<g>
+<title>ABC:1; selected=ABC; optima=1; uniqueness radius=1</title>
+<rect class="node" x="2126.7" y="274.0" width="96" height="42" rx="9" fill="#fde68a"/>
+<text class="label" x="2174.7" y="293.0">ABC:1</text>
+<text class="label" x="2174.7" y="308.0">R=1, opt=ABC</text>
+</g>
+<text class="layer" x="18" y="125.0">n=2</text>
+<g>
+<title>CBA:2; selected=CBA; optima=1; uniqueness radius=2</title>
+<rect class="node" x="76.7" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="124.7" y="118.0">CBA:2</text>
+<text class="label" x="124.7" y="133.0">R=2, opt=CBA</text>
+</g>
+<g>
+<title>CAB:1 CBA:1; selected=CAB; optima=2; uniqueness radius=0</title>
+<rect class="node" x="186.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="234.0" y="118.0">CAB:1 CBA:1</text>
+<text class="label" x="234.0" y="133.0">R=0, opt=CAB</text>
+</g>
+<g>
+<title>CAB:2; selected=CAB; optima=1; uniqueness radius=2</title>
+<rect class="node" x="295.3" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="343.3" y="118.0">CAB:2</text>
+<text class="label" x="343.3" y="133.0">R=2, opt=CAB</text>
+</g>
+<g>
+<title>BCA:1 CBA:1; selected=BCA; optima=2; uniqueness radius=0</title>
+<rect class="node" x="404.7" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="452.7" y="118.0">BCA:1 CBA:1</text>
+<text class="label" x="452.7" y="133.0">R=0, opt=BCA</text>
+</g>
+<g>
+<title>BCA:1 CAB:1; selected=BCA; optima=3; uniqueness radius=0</title>
+<rect class="node" x="514.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="562.0" y="118.0">BCA:1 CAB:1</text>
+<text class="label" x="562.0" y="133.0">R=0, opt=BCA</text>
+</g>
+<g>
+<title>BCA:2; selected=BCA; optima=1; uniqueness radius=2</title>
+<rect class="node" x="623.3" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="671.3" y="118.0">BCA:2</text>
+<text class="label" x="671.3" y="133.0">R=2, opt=BCA</text>
+</g>
+<g>
+<title>BAC:1 CBA:1; selected=BAC; optima=3; uniqueness radius=0</title>
+<rect class="node" x="732.7" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="780.7" y="118.0">BAC:1 CBA:1</text>
+<text class="label" x="780.7" y="133.0">R=0, opt=BAC</text>
+</g>
+<g>
+<title>BAC:1 CAB:1; selected=ABC; optima=6; uniqueness radius=0</title>
+<rect class="node" x="842.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="890.0" y="118.0">BAC:1 CAB:1</text>
+<text class="label" x="890.0" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>BAC:1 BCA:1; selected=BAC; optima=2; uniqueness radius=0</title>
+<rect class="node" x="951.3" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="999.3" y="118.0">BAC:1 BCA:1</text>
+<text class="label" x="999.3" y="133.0">R=0, opt=BAC</text>
+</g>
+<g>
+<title>BAC:2; selected=BAC; optima=1; uniqueness radius=2</title>
+<rect class="node" x="1060.7" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="1108.7" y="118.0">BAC:2</text>
+<text class="label" x="1108.7" y="133.0">R=2, opt=BAC</text>
+</g>
+<g>
+<title>ACB:1 CBA:1; selected=ACB; optima=3; uniqueness radius=0</title>
+<rect class="node" x="1170.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1218.0" y="118.0">ACB:1 CBA:1</text>
+<text class="label" x="1218.0" y="133.0">R=0, opt=ACB</text>
+</g>
+<g>
+<title>ACB:1 CAB:1; selected=ACB; optima=2; uniqueness radius=0</title>
+<rect class="node" x="1279.3" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1327.3" y="118.0">ACB:1 CAB:1</text>
+<text class="label" x="1327.3" y="133.0">R=0, opt=ACB</text>
+</g>
+<g>
+<title>ACB:1 BCA:1; selected=ABC; optima=6; uniqueness radius=0</title>
+<rect class="node" x="1388.7" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1436.7" y="118.0">ACB:1 BCA:1</text>
+<text class="label" x="1436.7" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ACB:1 BAC:1; selected=ABC; optima=3; uniqueness radius=0</title>
+<rect class="node" x="1498.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1546.0" y="118.0">ACB:1 BAC:1</text>
+<text class="label" x="1546.0" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ACB:2; selected=ACB; optima=1; uniqueness radius=2</title>
+<rect class="node" x="1607.3" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="1655.3" y="118.0">ACB:2</text>
+<text class="label" x="1655.3" y="133.0">R=2, opt=ACB</text>
+</g>
+<g>
+<title>ABC:1 CBA:1; selected=ABC; optima=6; uniqueness radius=0</title>
+<rect class="node" x="1716.7" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1764.7" y="118.0">ABC:1 CBA:1</text>
+<text class="label" x="1764.7" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ABC:1 CAB:1; selected=ABC; optima=3; uniqueness radius=0</title>
+<rect class="node" x="1826.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1874.0" y="118.0">ABC:1 CAB:1</text>
+<text class="label" x="1874.0" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ABC:1 BCA:1; selected=ABC; optima=3; uniqueness radius=0</title>
+<rect class="node" x="1935.3" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="1983.3" y="118.0">ABC:1 BCA:1</text>
+<text class="label" x="1983.3" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ABC:1 BAC:1; selected=ABC; optima=2; uniqueness radius=0</title>
+<rect class="node" x="2044.7" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="2092.7" y="118.0">ABC:1 BAC:1</text>
+<text class="label" x="2092.7" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ABC:1 ACB:1; selected=ABC; optima=2; uniqueness radius=0</title>
+<rect class="node" x="2154.0" y="99.0" width="96" height="42" rx="9" fill="#fecaca"/>
+<text class="label" x="2202.0" y="118.0">ABC:1 ACB:1</text>
+<text class="label" x="2202.0" y="133.0">R=0, opt=ABC</text>
+</g>
+<g>
+<title>ABC:2; selected=ABC; optima=1; uniqueness radius=2</title>
+<rect class="node" x="2263.3" y="99.0" width="96" height="42" rx="9" fill="#bbf7d0"/>
+<text class="label" x="2311.3" y="118.0">ABC:2</text>
+<text class="label" x="2311.3" y="133.0">R=2, opt=ABC</text>
+</g>
+</svg>
