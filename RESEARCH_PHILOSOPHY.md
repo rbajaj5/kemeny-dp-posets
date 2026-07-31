@@ -129,6 +129,12 @@ We adopt that measurement discipline, but not its RKHS/PDE theorem. Any
 transitivity, privacy, or neutrality residual in this repository must be
 defined and proved for the finite ranking model itself.
 
+Li and Xia's zero-mass counterexample adds a complementary warning:
+one-sided control by a coarse local invariant is not automatically reversible.
+The repository therefore states sufficient equality hypotheses beside lower
+bounds and retains strict counterexamples when they exist. The analogy is
+methodological; pluripotential theory supplies no ranking theorem.
+
 ## Priority and publication
 
 The repository follows these rules:

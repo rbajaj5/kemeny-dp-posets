@@ -8,6 +8,10 @@
 
 ## Recently completed
 
+- Audited the exact finite-stage scaling in Li-Xia's zero-mass construction
+  through stage 20 and separated it from the analytic limiting theorem.
+- Documented why the zero-mass and Bieberbach conjectures are distinct, and
+  retained only the one-sided-implication proof discipline.
 - Separated state coverage from convention incompatibility with exact grounded
   and ungrounded binary coordination games.
 - Added exact oracle trace metrics and a memoized Chomp Grundy laboratory;

@@ -786,6 +786,22 @@ differential operator, so no PIKS theorem is imported. Future Kemeny
 heuristics should nevertheless report objective regret and structural
 validity separately.
 
+Li and Xia's counterexample to the zero-mass conjecture supplies a different
+one-sided-implication warning. At finite stage \(j\), their two-dimensional
+map has degree \(4^j\), while the potential is scaled by \(2^{-j}\). Thus
+
+\[
+(2^{-j})^2 4^j=1,\qquad \nu(q_j,0)=2^{-j}.
+\]
+
+The implementation checks these exact identities through stage 20. The
+counterexample itself needs the source's decreasing truncations, sweeping
+formula, weak Monge-Ampere convergence, and directional witness argument; it
+is not computationally verified here. No complex-analytic theorem transfers
+to ranking aggregation. The relevant proof discipline is already visible in
+Proposition 4.1: the lower bound \(b_{\rm TV}\geq\mu/2\) is not reversible
+without an additional endpoint-mass condition.
+
 ## 13. Relation to prior work and open questions
 
 Hay, Elagina, and Miklau introduced differentially private rank aggregation.
@@ -865,6 +881,8 @@ Concrete open problems are:
 16. J. Bona-Pellissier, G. Meanti, M. Santacesaria, and L. Rosasco. "PIKS:
     Universal Physics-Informed Kernel Methods." 2026.
     [arXiv:2607.27062](https://arxiv.org/abs/2607.27062).
+17. L. Li and M. Xia. "A counterexample to the zero-mass conjecture." 2026.
+    [arXiv:2607.26549](https://arxiv.org/abs/2607.26549).
 
 ## Acknowledgments
 

@@ -22,6 +22,7 @@ item. Git history supplies the exact timestamps.
 | P14 | In the two-convention ungrounded binary protocol game, paired accuracy is one, crossed accuracy is zero, every fixed decoder averages one half, and one labeled interaction identifies the convention. | PROVED FINITE TOY MODEL; NO KEMENY/DP CLAIM | 0.8.0 | OvercookedV2 grounded communication and test-time protocol motivation. |
 | K1 | The three-cell majority reduction preserves the unique Y-game winner. | KNOWN; IMPLEMENTED | 0.3.0 | Karlin and Peres, *Game Theory, Alive*. |
 | K2 | In finite Chomp, Sprague-Grundy recursion labels a winning move exactly by transition to Grundy zero. | KNOWN; IMPLEMENTED | 0.8.0 | Standard Sprague-Grundy theory; Kong-Ram-Yu oracle evaluation. |
+| K3 | In Li-Xia's finite stages, `degree(H_j)=4^j`, scale `2^-j`, normalized two-dimensional Monge-Ampere mass one, and Lelong number `2^-j`. | KNOWN SOURCE FORMULAS; IMPLEMENTED | 0.8.1 | Li-Xia Proposition 3.2. |
 | C1 | Exact atlases through five candidates and three voters. | COMPUTATIONAL | 0.3.0 | Exhaustive verification of P5. |
 | C2 | JL preservation, sample-and-center, and exponential-mechanism experiments. | COMPUTATIONAL | 0.3.0 | Dwork survey, NRS07, and Blocki et al. |
 | C3 | Structured versus unrestricted synthetic market-priority experiments. | COMPUTATIONAL; NO ECONOMIC EQUILIBRIUM CLAIM | 0.3.0 | Carroll's multiple-proposal open direction; market-design literature. |
@@ -33,12 +34,14 @@ item. Git history supplies the exact timestamps.
 | C9 | 8,581 center certificates have zero factor-two or minimizer-equivariance failures; 612 ordered two-ballot profiles have zero optimum failures; Borda's largest observed ratio on 3,002 profiles is `3/2`. | EXACT COMPUTATIONAL; NO PRIVACY CLAIM | 0.7.0 | Finite audit of P12-P13 and the known Borda approximation. |
 | C10 | The ten-button grounded game has exact brittle self/cross-play accuracies one and one half; complete button coverage restores one; both binary conventions, all four fixed decoders, and all feedback cases verify P14. | EXACT COMPUTATIONAL; NO RL CLAIM | 0.8.0 | OvercookedV2 Button Game and benchmark diagnosis. |
 | C11 | Exact Chomp evaluation covers 923 states in a six-by-six box, including 875 labeled winning states, plus 25 full-game starts; the oracle is exact everywhere and the largest-bite negative control matches `2/175` sampled labeled states. | EXACT COMPUTATIONAL; NO ALPHAZERO CLAIM | 0.8.0 | Kong-Ram-Yu trace and sampled-state oracle metrics. |
+| C12 | Exact rational arithmetic verifies K3 through stage 20: mass remains one, Lelong numbers strictly decrease, and the mass-to-Lelong ratio reaches `2^20`. | EXACT ARITHMETIC AUDIT; NO ANALYTIC-LIMIT CLAIM | 0.8.1 | Finite-stage mechanism in Li-Xia. |
 | A1 | Kemeny aggregation could combine stakeholder rankings of high-level risk-mitigation priorities. | OPEN APPLICATION; NO PROBABILITY OR POLICY CLAIM | 0.3.0 | Critch-Tsimerman scenario taxonomy; social-choice caveats. |
 | A2 | Language/reality/simulation ledger for every cross-domain diagram. | METHODOLOGICAL AUDIT; NO NEW DOMAIN THEOREM | 0.3.0 | Jaffe-Liu picture-language program. |
 | A3 | Loop-equation proof audit separating identities, error control, and branch selection; no random-matrix theorem is transported to Kemeny or privacy. | METHODOLOGICAL AUDIT | 0.4.0 | Bourgade-Huang characterization theorems. |
 | A4 | Non-instrumental exploration is permitted, but certification still requires correct sources, defined maps, evidence, and status labels. | RESEARCH POLICY; NO MATHEMATICAL CLAIM | 0.4.1 | Tagore, *The Fugitive-III*, section 26. |
 | A5 | State coverage, convention compatibility, oracle consistency, and aggregate outcome are reported as distinct benchmark properties. | METHODOLOGICAL AUDIT | 0.8.0 | Gessler et al.; Kong, Ram, and Yu. |
 | A6 | Value fit and structural residual should be measured separately, but PIKS's RKHS/PDE consistency theorem does not transfer to finite ranking transitivity. | METHODOLOGICAL AUDIT; NO TRANSPORTED THEOREM | 0.8.0 | Bona-Pellissier et al. |
+| A7 | A one-sided lower bound from a coarse local invariant is not treated as reversible without additional structure; the Li-Xia theorem is recorded without transport to Kemeny or privacy. | METHODOLOGICAL AUDIT | 0.8.1 | Li-Xia zero-mass counterexample; strictness in P11. |
 
 ## Corrections
 

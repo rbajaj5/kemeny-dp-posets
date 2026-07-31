@@ -119,6 +119,12 @@ The [`PIKS assessment`](notes/PIKS_SOURCE_ASSESSMENT.md) adopts the narrower
 discipline of measuring fit and structural residual separately while
 documenting why no RKHS/PDE consistency theorem transfers here.
 
+The [`zero-mass counterexample assessment`](notes/ZERO_MASS_SOURCE_ASSESSMENT.md)
+checks Li and Xia's exact finite-stage degree normalization while leaving the
+pluripotential-theoretic limiting argument to the source. It also explains
+why plurisubharmonic functions and the zero-mass conjecture are distinct from
+the one-variable Bieberbach coefficient problem.
+
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
@@ -146,6 +152,8 @@ documenting why no RKHS/PDE consistency theorem transfers here.
 - exact oracle-match, longest-chain, first-failure, and perfect-trace metrics;
 - a memoized exact Chomp Grundy oracle and exhaustive states through a
   six-by-six bounding box;
+- exact finite-stage degree, Lelong-number, and normalized-mass scaling for
+  the supplied zero-mass counterexample source;
 - reproducible CSV/JSON experiments and SVG Hasse diagrams for both profile
   and coloring cover relations.
 
@@ -164,6 +172,7 @@ python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/run_profile_law_hierarchy.py
 python scripts/run_coordination_audit.py
 python scripts/run_oracle_consistency_audit.py
+python scripts/run_zero_mass_scaling_audit.py
 python scripts/generate_hasse.py
 python scripts/generate_hex_hasse.py
 ```
@@ -205,6 +214,7 @@ factor-two bridge and its limits. Novelty is still unconfirmed.
 - [Gessler et al., *OvercookedV2: Rethinking Overcooked for Zero-Shot Coordination*](https://arxiv.org/abs/2503.17821)
 - [Kong, Ram, and Yu, *AlphaZero in Sparsely Rewarded Games: Limits and Auxiliary Supervision*](https://arxiv.org/abs/2607.08984)
 - [Bona-Pellissier et al., *PIKS: Universal Physics-Informed Kernel Methods*](https://arxiv.org/abs/2607.27062)
+- [Li and Xia, *A counterexample to the zero-mass conjecture*](https://arxiv.org/abs/2607.26549)
 
 ## Authorship and assistance
 

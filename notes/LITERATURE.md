@@ -180,3 +180,14 @@ used as a novelty claim.
   separation of fit from structural residual is retained; no PDE/RKHS theorem
   is transported to Kemeny aggregation.
   <https://arxiv.org/abs/2607.27062>
+
+## Complex-analysis counterexample discipline
+
+- Long Li and Mingchen Xia, **A counterexample to the zero-mass conjecture**
+  (2026). Constructs an isolated plurisubharmonic singularity with zero Lelong
+  number and unit residual Monge-Ampere mass in every complex dimension at
+  least two. The repository audits only the exact two-dimensional finite-stage
+  scaling `degree = 4^j`, `scale = 2^-j`, mass one, and Lelong number `2^-j`.
+  The decreasing truncation and analytic limit remain source results. This is
+  unrelated to the Bieberbach coefficient theorem.
+  <https://arxiv.org/abs/2607.26549>

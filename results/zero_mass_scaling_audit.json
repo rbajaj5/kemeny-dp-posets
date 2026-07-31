@@ -1,0 +1,234 @@
+{
+  "checks": {
+    "all_normalized_masses_equal_one": true,
+    "last_stage_lelong_number": "1/1048576",
+    "last_stage_mass_to_lelong_ratio": 1048576,
+    "lelong_numbers_strictly_decrease": true,
+    "stages_checked": 20
+  },
+  "claim_boundary": "The arithmetic verifies only Proposition 3.2's finite-stage degree normalization. The decreasing truncations, weak Monge-Ampere convergence, continuity, isolated pole, and zero Lelong number of the limit use the paper's analytic arguments.",
+  "model": {
+    "complex_dimension": 2,
+    "cutoff": "V_j = max(q_j, -4^j)",
+    "minimum_component_vanishing_order": 1,
+    "normalized_mass_formula": "(2^-j)^2 4^j",
+    "potential_scale": "2^-j",
+    "stage_map_degree": "4^j"
+  },
+  "source": {
+    "arxiv": "2607.26549",
+    "authors": [
+      "Long Li",
+      "Mingchen Xia"
+    ],
+    "title": "A counterexample to the zero-mass conjecture",
+    "url": "https://arxiv.org/abs/2607.26549"
+  },
+  "stages": [
+    {
+      "cutoff_depth": 4,
+      "lelong_number": "1/2",
+      "map_degree": 4,
+      "mass_to_lelong_ratio": 2,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/2",
+      "stage": 1
+    },
+    {
+      "cutoff_depth": 16,
+      "lelong_number": "1/4",
+      "map_degree": 16,
+      "mass_to_lelong_ratio": 4,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/4",
+      "stage": 2
+    },
+    {
+      "cutoff_depth": 64,
+      "lelong_number": "1/8",
+      "map_degree": 64,
+      "mass_to_lelong_ratio": 8,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/8",
+      "stage": 3
+    },
+    {
+      "cutoff_depth": 256,
+      "lelong_number": "1/16",
+      "map_degree": 256,
+      "mass_to_lelong_ratio": 16,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/16",
+      "stage": 4
+    },
+    {
+      "cutoff_depth": 1024,
+      "lelong_number": "1/32",
+      "map_degree": 1024,
+      "mass_to_lelong_ratio": 32,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/32",
+      "stage": 5
+    },
+    {
+      "cutoff_depth": 4096,
+      "lelong_number": "1/64",
+      "map_degree": 4096,
+      "mass_to_lelong_ratio": 64,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/64",
+      "stage": 6
+    },
+    {
+      "cutoff_depth": 16384,
+      "lelong_number": "1/128",
+      "map_degree": 16384,
+      "mass_to_lelong_ratio": 128,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/128",
+      "stage": 7
+    },
+    {
+      "cutoff_depth": 65536,
+      "lelong_number": "1/256",
+      "map_degree": 65536,
+      "mass_to_lelong_ratio": 256,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/256",
+      "stage": 8
+    },
+    {
+      "cutoff_depth": 262144,
+      "lelong_number": "1/512",
+      "map_degree": 262144,
+      "mass_to_lelong_ratio": 512,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/512",
+      "stage": 9
+    },
+    {
+      "cutoff_depth": 1048576,
+      "lelong_number": "1/1024",
+      "map_degree": 1048576,
+      "mass_to_lelong_ratio": 1024,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/1024",
+      "stage": 10
+    },
+    {
+      "cutoff_depth": 4194304,
+      "lelong_number": "1/2048",
+      "map_degree": 4194304,
+      "mass_to_lelong_ratio": 2048,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/2048",
+      "stage": 11
+    },
+    {
+      "cutoff_depth": 16777216,
+      "lelong_number": "1/4096",
+      "map_degree": 16777216,
+      "mass_to_lelong_ratio": 4096,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/4096",
+      "stage": 12
+    },
+    {
+      "cutoff_depth": 67108864,
+      "lelong_number": "1/8192",
+      "map_degree": 67108864,
+      "mass_to_lelong_ratio": 8192,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/8192",
+      "stage": 13
+    },
+    {
+      "cutoff_depth": 268435456,
+      "lelong_number": "1/16384",
+      "map_degree": 268435456,
+      "mass_to_lelong_ratio": 16384,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/16384",
+      "stage": 14
+    },
+    {
+      "cutoff_depth": 1073741824,
+      "lelong_number": "1/32768",
+      "map_degree": 1073741824,
+      "mass_to_lelong_ratio": 32768,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/32768",
+      "stage": 15
+    },
+    {
+      "cutoff_depth": 4294967296,
+      "lelong_number": "1/65536",
+      "map_degree": 4294967296,
+      "mass_to_lelong_ratio": 65536,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/65536",
+      "stage": 16
+    },
+    {
+      "cutoff_depth": 17179869184,
+      "lelong_number": "1/131072",
+      "map_degree": 17179869184,
+      "mass_to_lelong_ratio": 131072,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/131072",
+      "stage": 17
+    },
+    {
+      "cutoff_depth": 68719476736,
+      "lelong_number": "1/262144",
+      "map_degree": 68719476736,
+      "mass_to_lelong_ratio": 262144,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/262144",
+      "stage": 18
+    },
+    {
+      "cutoff_depth": 274877906944,
+      "lelong_number": "1/524288",
+      "map_degree": 274877906944,
+      "mass_to_lelong_ratio": 524288,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/524288",
+      "stage": 19
+    },
+    {
+      "cutoff_depth": 1099511627776,
+      "lelong_number": "1/1048576",
+      "map_degree": 1099511627776,
+      "mass_to_lelong_ratio": 1048576,
+      "minimum_component_vanishing_order": 1,
+      "normalized_monge_ampere_mass": "1",
+      "potential_scale": "1/1048576",
+      "stage": 20
+    }
+  ],
+  "status": {
+    "finite_stage_scaling": "KNOWN_FORMULAS_EXACTLY_AUDITED",
+    "kemeny_privacy_or_bieberbach_claim": "NONE",
+    "plurisubharmonic_limit": "NOT_COMPUTATIONALLY_VERIFIED"
+  }
+}

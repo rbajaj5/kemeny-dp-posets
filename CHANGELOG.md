@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.8.1 - 2026-07-30
+
+- Added a scoped assessment of Li and Xia's counterexample to the zero-mass
+  conjecture, including an explicit distinction from the Bieberbach
+  conjecture.
+- Implemented the exact finite-stage identities `degree(H_j)=4^j`,
+  `nu(q_j,0)=2^-j`, and normalized mass `(2^-j)^2 4^j=1`.
+- Audited stages one through 20 with exact rational arithmetic; the
+  mass-to-Lelong ratio reaches `2^20`.
+- Kept the decreasing truncation, Monge-Ampere convergence, limiting Lelong
+  number, and higher-dimensional construction labeled as source results, not
+  computational verification.
+- Connected only the proof discipline of nonreversible one-sided bounds to the
+  existing strict Kemeny breakdown inequality.
+
 ## 0.8.0 - 2026-07-30
 
 - Added exact grounded Button Game and ungrounded binary-protocol audits that

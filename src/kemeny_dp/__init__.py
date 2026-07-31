@@ -72,6 +72,11 @@ from .sample_aggregate import (
 )
 from .sensitivity import SensitivityAnalyzer, SmoothSensitivityResult
 from .subset_dp import SubsetDPResult, exact_kemeny_subset_dp
+from .zero_mass_scaling import (
+    ZeroMassFiniteStage,
+    zero_mass_finite_stage,
+    zero_mass_scaling_audit,
+)
 
 __all__ = [
     "BreakdownComparison",
@@ -85,6 +90,7 @@ __all__ = [
     "SubsetDPResult",
     "TriangularYBoard",
     "TraceOracleMetrics",
+    "ZeroMassFiniteStage",
     "aggregate_oracle_traces",
     "binary_winner_smooth_sensitivity",
     "binary_conventions",
@@ -133,4 +139,6 @@ __all__ = [
     "two_ballot_kemeny",
     "unrestricted_attention_certificate",
     "validate_probability_mass",
+    "zero_mass_finite_stage",
+    "zero_mass_scaling_audit",
 ]
