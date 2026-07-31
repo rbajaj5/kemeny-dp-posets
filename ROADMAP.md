@@ -8,6 +8,10 @@
 
 ## Recently completed
 
+- Implemented Li's binary-coin and independent-column spherical JL
+  constructions and explicit sufficient-dimension calculator.
+- Compared both constructions on all 7,140 five-candidate ranking pairs and
+  separated fixed-vector, finite-family, argmin, and privacy claims.
 - Audited the exact finite-stage scaling in Li-Xia's zero-mass construction
   through stage 20 and separated it from the analytic limiting theorem.
 - Documented why the zero-mass and Bieberbach conjectures are distinct, and
@@ -62,7 +66,8 @@
 
 ## Geometry
 
-- Extend the dense JL experiment to sparse transforms and neutral tie-breaking.
+- Extend the dense binary and spherical JL audit to sparse transforms and
+  neutral tie-breaking.
 - Quantify when Euclidean distortion controls Kendall utility.
 - Study whether low-dimensional tournament structure permits efficient
   transitive postprocessing.

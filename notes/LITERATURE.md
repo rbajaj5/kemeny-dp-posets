@@ -73,6 +73,14 @@ used as a novelty claim.
 
 ## Johnson-Lindenstrauss and privacy
 
+- Yingru Li, **Simple, unified analysis of Johnson-Lindenstrauss with
+  applications** (2024). Proposition 8 gives the explicit fixed-vector
+  sufficient dimension `64 epsilon^-2 log(2/delta)` for both binary-coin and
+  independent-column spherical projections. Proposition 24 applies a finite
+  union bound. These are concentration results, not privacy or Kemeny argmin
+  theorems.
+  <https://arxiv.org/abs/2402.10232>
+
 - Jeremiah Blocki, Avrim Blum, Anupam Datta, and Or Sheffet, **The
   Johnson-Lindenstrauss Transform Itself Preserves Differential Privacy**
   (FOCS 2012). Proves privacy for JL transforms under bounded rank-one changes

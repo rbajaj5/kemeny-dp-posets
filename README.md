@@ -125,6 +125,12 @@ pluripotential-theoretic limiting argument to the source. It also explains
 why plurisubharmonic functions and the zero-mass conjecture are distinct from
 the one-variable Bieberbach coefficient problem.
 
+The [`independent-column JL assessment`](notes/JL_CONSTRUCTION_ASSESSMENT.md)
+implements Li's binary-coin and spherical-column constructions, computes the
+source's explicit fixed-vector and finite-family sufficient dimensions, and
+compares both on all five-candidate ranking pairs. It makes no privacy or
+projected-Kemeny theorem claim.
+
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
@@ -143,6 +149,8 @@ the one-variable Bieberbach coefficient problem.
 - exact attention certificates, a two-ballot Kemeny shortcut, and Borda block
   outputs with exhaustive component audits;
 - three-voter JL, private-learning, and market-priority experiments;
+- matched binary-coin and spherical-column JL audits with explicit source
+  bounds;
 - exact triangular Y-game connectivity and majority reduction;
 - exact small-board pivotality, outcome radii, and binary smooth sensitivity;
 - exact majority-circuit size and repeated connectivity-versus-circuit timings;
@@ -173,6 +181,7 @@ python scripts/run_profile_law_hierarchy.py
 python scripts/run_coordination_audit.py
 python scripts/run_oracle_consistency_audit.py
 python scripts/run_zero_mass_scaling_audit.py
+python scripts/run_jl_construction_audit.py
 python scripts/generate_hasse.py
 python scripts/generate_hex_hasse.py
 ```
@@ -215,6 +224,7 @@ factor-two bridge and its limits. Novelty is still unconfirmed.
 - [Kong, Ram, and Yu, *AlphaZero in Sparsely Rewarded Games: Limits and Auxiliary Supervision*](https://arxiv.org/abs/2607.08984)
 - [Bona-Pellissier et al., *PIKS: Universal Physics-Informed Kernel Methods*](https://arxiv.org/abs/2607.27062)
 - [Li and Xia, *A counterexample to the zero-mass conjecture*](https://arxiv.org/abs/2607.26549)
+- [Li, *Simple, unified analysis of Johnson-Lindenstrauss with applications*](https://arxiv.org/abs/2402.10232)
 
 ## Authorship and assistance
 

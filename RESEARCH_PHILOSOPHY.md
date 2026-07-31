@@ -135,6 +135,13 @@ The repository therefore states sufficient equality hypotheses beside lower
 bounds and retains strict counterexamples when they exist. The analogy is
 methodological; pluripotential theory supplies no ranking theorem.
 
+Li's independent-column JL analysis adds another separation rule. A
+fixed-vector concentration theorem, a union bound over a finite family, an
+argmin-preservation theorem, and a differential-privacy theorem are different
+objects. A shared use of random projection does not collapse their assumptions.
+The repository therefore reports its source theorem, finite experiment,
+profile-level margin condition, and privacy gap separately.
+
 ## Priority and publication
 
 The repository follows these rules:
@@ -180,6 +187,10 @@ execute a mechanism against people or infrastructure.
 - Arthur M. Jaffe and Zhengwei Liu,
   [*A Mathematical Picture Language Program*](https://doi.org/10.1073/pnas.1710707114),
   for the language/reality/simulation distinction.
+- Yingru Li,
+  [*Simple, unified analysis of Johnson-Lindenstrauss with
+  applications*](https://arxiv.org/abs/2402.10232),
+  for the independent-column concentration theorem.
 - Rabindranath Tagore,
   [*The Fugitive*](https://www.gutenberg.org/ebooks/7971), section 26 of
   *The Fugitive-III*, for the distinction between exploration and compulsory

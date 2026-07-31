@@ -27,9 +27,11 @@ from .chomp import (
 )
 from .core import KemenyAnalyzer, RankingSpace, kendall_distance
 from .geometry import (
+    jl_sufficient_dimension,
     pairwise_sign_vector,
     project_vector,
     rademacher_projection,
+    spherical_column_projection,
     squared_euclidean,
 )
 from .finite_sample import BernoulliSummary, bernoulli_summary
@@ -118,6 +120,7 @@ __all__ = [
     "majority_circuit_gate_count",
     "invert_upper_set_probabilities",
     "inverse_decoder",
+    "jl_sufficient_dimension",
     "exponential_kemeny",
     "exponential_kemeny_probabilities",
     "kendall_distance",
@@ -134,6 +137,7 @@ __all__ = [
     "release_optimum_score",
     "rectangular_chomp_state",
     "sample_and_center",
+    "spherical_column_projection",
     "squared_euclidean",
     "upper_set_probabilities",
     "two_ballot_kemeny",

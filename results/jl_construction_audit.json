@@ -1,0 +1,287 @@
+{
+  "claim_boundary": "Proposition 8 is a fixed-vector norm guarantee. The finite-set bound uses a union bound. Neither result makes a projected Kemeny optimizer private or guarantees argmin preservation without a separate score-margin argument.",
+  "constructions": {
+    "binary_coin": {
+      "10": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.0,
+        "fixed_vector_empirical_failure_rate": 0.32177734375,
+        "fixed_vector_median_distortion": 0.28,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.365327380952381,
+        "mean_pair_fraction_within_epsilon": 0.7114758403361344,
+        "mean_pairwise_absolute_distortion": 0.30293250633586766,
+        "mean_pairwise_p95_distortion": 0.7213194444444445,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "16": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.7,
+        "fixed_vector_empirical_failure_rate": 0.21728515625,
+        "fixed_vector_median_distortion": 0.2250000000000001,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.0385044642857142,
+        "mean_pair_fraction_within_epsilon": 0.8266193977591036,
+        "mean_pairwise_absolute_distortion": 0.23905735210750967,
+        "mean_pairwise_p95_distortion": 0.5867373511904762,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "2": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 2.1999999999999993,
+        "fixed_vector_empirical_failure_rate": 0.6982421875,
+        "fixed_vector_median_distortion": 0.6000000000000001,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 3.5831349206349197,
+        "mean_pair_fraction_within_epsilon": 0.32853641456582633,
+        "mean_pairwise_absolute_distortion": 0.6479289771464141,
+        "mean_pairwise_p95_distortion": 1.508333333333333,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "24": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.6666666666666665,
+        "fixed_vector_empirical_failure_rate": 0.13623046875,
+        "fixed_vector_median_distortion": 0.18333333333333335,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.8821676587301588,
+        "mean_pair_fraction_within_epsilon": 0.8882703081232493,
+        "mean_pairwise_absolute_distortion": 0.1934650503720007,
+        "mean_pairwise_p95_distortion": 0.48799603174603196,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "32": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.4999999999999998,
+        "fixed_vector_empirical_failure_rate": 0.07763671875,
+        "fixed_vector_median_distortion": 0.16249999999999987,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.713783482142857,
+        "mean_pair_fraction_within_epsilon": 0.9375612745098039,
+        "mean_pairwise_absolute_distortion": 0.16716348865935263,
+        "mean_pairwise_p95_distortion": 0.4116102430555555,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "4": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.3333333333333335,
+        "fixed_vector_empirical_failure_rate": 0.48046875,
+        "fixed_vector_median_distortion": 0.4,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 2.0342261904761907,
+        "mean_pair_fraction_within_epsilon": 0.5006039915966386,
+        "mean_pairwise_absolute_distortion": 0.44300875905917925,
+        "mean_pairwise_p95_distortion": 1.0461309523809523,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "6": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.166666666666667,
+        "fixed_vector_empirical_failure_rate": 0.45556640625,
+        "fixed_vector_median_distortion": 0.3333333333333335,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.9000000000000004,
+        "mean_pair_fraction_within_epsilon": 0.5747461484593838,
+        "mean_pairwise_absolute_distortion": 0.3957053932684185,
+        "mean_pairwise_p95_distortion": 0.9077876984126986,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "64": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 1,
+        "best_global_maximum_distortion": 0.375,
+        "fixed_vector_empirical_failure_rate": 0.01513671875,
+        "fixed_vector_median_distortion": 0.11250000000000004,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.4987537202380953,
+        "mean_pair_fraction_within_epsilon": 0.9926908263305322,
+        "mean_pairwise_absolute_distortion": 0.11747326100579121,
+        "mean_pairwise_p95_distortion": 0.2916434151785714,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "8": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.9999999999999996,
+        "fixed_vector_empirical_failure_rate": 0.40869140625,
+        "fixed_vector_median_distortion": 0.30000000000000016,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.5076884920634916,
+        "mean_pair_fraction_within_epsilon": 0.6593312324929972,
+        "mean_pairwise_absolute_distortion": 0.33484255507758653,
+        "mean_pairwise_p95_distortion": 0.8492187499999998,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      }
+    },
+    "spherical_independent_columns": {
+      "10": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.9406843183328217,
+        "fixed_vector_empirical_failure_rate": 0.34375,
+        "fixed_vector_median_distortion": 0.2957784277258391,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.392122995057721,
+        "mean_pair_fraction_within_epsilon": 0.6953781512605042,
+        "mean_pairwise_absolute_distortion": 0.31204270540644663,
+        "mean_pairwise_p95_distortion": 0.7723015792696478,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "16": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.6688993296210997,
+        "fixed_vector_empirical_failure_rate": 0.2431640625,
+        "fixed_vector_median_distortion": 0.2304675425576388,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.9533642563405335,
+        "mean_pair_fraction_within_epsilon": 0.8312675070028012,
+        "mean_pairwise_absolute_distortion": 0.2272057754207562,
+        "mean_pairwise_p95_distortion": 0.541182914778009,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "2": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 2.4164768195701924,
+        "fixed_vector_empirical_failure_rate": 0.6728515625,
+        "fixed_vector_median_distortion": 0.6152298458301514,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 3.666568019718735,
+        "mean_pair_fraction_within_epsilon": 0.3257090336134454,
+        "mean_pairwise_absolute_distortion": 0.6600113806721397,
+        "mean_pairwise_p95_distortion": 1.578096197590826,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "24": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.5682340360879963,
+        "fixed_vector_empirical_failure_rate": 0.13427734375,
+        "fixed_vector_median_distortion": 0.18317148337201383,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.7964334026113543,
+        "mean_pair_fraction_within_epsilon": 0.9088935574229692,
+        "mean_pairwise_absolute_distortion": 0.1860777430687602,
+        "mean_pairwise_p95_distortion": 0.4552597652161134,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "32": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.5389442761562049,
+        "fixed_vector_empirical_failure_rate": 0.09228515625,
+        "fixed_vector_median_distortion": 0.15137778523463719,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.7936267268354321,
+        "mean_pair_fraction_within_epsilon": 0.9191526610644257,
+        "mean_pairwise_absolute_distortion": 0.18039510332933925,
+        "mean_pairwise_p95_distortion": 0.4465041578351949,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "4": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.296130643675137,
+        "fixed_vector_empirical_failure_rate": 0.5576171875,
+        "fixed_vector_median_distortion": 0.44916435239415514,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 2.38346367451744,
+        "mean_pair_fraction_within_epsilon": 0.47551645658263303,
+        "mean_pairwise_absolute_distortion": 0.4936514724657285,
+        "mean_pairwise_p95_distortion": 1.2359094679086642,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "6": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.2632947148007396,
+        "fixed_vector_empirical_failure_rate": 0.46923828125,
+        "fixed_vector_median_distortion": 0.37692881154104185,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.8682664364643045,
+        "mean_pair_fraction_within_epsilon": 0.5813200280112045,
+        "mean_pairwise_absolute_distortion": 0.3902496168959381,
+        "mean_pairwise_p95_distortion": 0.9661960387947306,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "64": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 0.4065037853156519,
+        "fixed_vector_empirical_failure_rate": 0.01318359375,
+        "fixed_vector_median_distortion": 0.11450107845835283,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 0.501747529894783,
+        "mean_pair_fraction_within_epsilon": 0.9883403361344538,
+        "mean_pairwise_absolute_distortion": 0.12168572456620964,
+        "mean_pairwise_p95_distortion": 0.3027998269111333,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      },
+      "8": {
+        "all_pair_trials": 16,
+        "all_pairs_successful_trials": 0,
+        "best_global_maximum_distortion": 1.0365776247081913,
+        "fixed_vector_empirical_failure_rate": 0.388671875,
+        "fixed_vector_median_distortion": 0.3268471415242951,
+        "fixed_vector_trials": 2048,
+        "mean_global_maximum_distortion": 1.4682938004506156,
+        "mean_pair_fraction_within_epsilon": 0.633359593837535,
+        "mean_pairwise_absolute_distortion": 0.3391224726509914,
+        "mean_pairwise_p95_distortion": 0.7954420540349467,
+        "proposition_8_tail_upper_bound_capped_at_one": 1.0
+      }
+    }
+  },
+  "explicit_sufficient_dimensions": {
+    "all_pair_bound_is_dimension_reduction": false,
+    "all_unordered_ranking_pairs_by_union_bound": 5025,
+    "ambient_dimension": 10,
+    "fixed_vector_bound_is_dimension_reduction": false,
+    "one_fixed_vector_proposition_8": 1476
+  },
+  "parameters": {
+    "all_pair_trials_per_dimension": 16,
+    "delta": 0.05,
+    "epsilon": 0.4,
+    "fixed_vector_trials_per_dimension": 2048,
+    "output_dimensions": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      16,
+      24,
+      32,
+      64
+    ]
+  },
+  "ranking_geometry": {
+    "ambient_pairwise_dimension": 10,
+    "candidate_count": 5,
+    "identity": "squared Euclidean pairwise-sign distance = 4 * Kendall distance",
+    "rankings": 120,
+    "unordered_ranking_pairs": 7140
+  },
+  "source": {
+    "arxiv": "2402.10232v4",
+    "author": "Yingru Li",
+    "title": "Simple, unified analysis of Johnson-Lindenstrauss with applications",
+    "url": "https://arxiv.org/abs/2402.10232"
+  },
+  "status": {
+    "kemeny_argmin_theorem": "NONE",
+    "privacy_claim": "NONE",
+    "projection_implementations": "TESTED",
+    "proposition_8": "KNOWN_SOURCE_THEOREM",
+    "ranking_geometry_comparison": "MONTE_CARLO"
+  }
+}

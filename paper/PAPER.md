@@ -814,13 +814,24 @@ an exact mass-transport problem, and the factor-two bridge holds under a
 sufficient endpoint-mass condition. Novelty remains unconfirmed.
 
 The Johnson–Lindenstrauss direction is geometric but incomplete. Pairwise
-preference vectors embed rankings into \(\{-1,+1\}^D\), with Kendall distance
-proportional to their Hamming distance. Random projection can preserve
-Euclidean geometry of a fixed finite family, and some JL transforms satisfy
+preference vectors embed rankings into \(\{-1,+1\}^D\), with squared Euclidean
+distance exactly four times Kendall distance. Li's Proposition 8 covers both
+the binary-coin construction and independent columns uniform on the output
+sphere, with the explicit fixed-vector sufficient dimension
+\(64\epsilon^{-2}\log(2/\delta)\). A finite-family union bound replaces the
+logarithm by \(\log(2|X|/\delta)\).
+
+The implementation compares both constructions on all 7,140 unordered pairs
+of the 120 five-candidate rankings. At \(\epsilon=0.4,\delta=0.05\), the
+explicit sufficient dimensions are 1,476 for one fixed vector and 5,025 for
+all ranking differences, both larger than the exact ambient dimension 10.
+The theorem is therefore conservative rather than a compression certificate
+for this small complete family. Some JL transforms separately satisfy
 differential privacy under additional spectral assumptions. Neither fact
-alone preserves the transitivity constraint or yields a private Kemeny
-mechanism. A valid result needs to control projection distortion, privacy
-adjacency, and postprocessing back into the linear-order polytope together.
+alone preserves a Kemeny argmin, enforces transitivity, or yields a private
+mechanism. A valid result needs to control score margins, projection
+distortion, privacy adjacency, and postprocessing back into the linear-order
+polytope together.
 
 Concrete open problems are:
 
@@ -883,6 +894,9 @@ Concrete open problems are:
     [arXiv:2607.27062](https://arxiv.org/abs/2607.27062).
 17. L. Li and M. Xia. "A counterexample to the zero-mass conjecture." 2026.
     [arXiv:2607.26549](https://arxiv.org/abs/2607.26549).
+18. Y. Li. "Simple, unified analysis of Johnson-Lindenstrauss with
+    applications." 2024.
+    [arXiv:2402.10232](https://arxiv.org/abs/2402.10232).
 
 ## Acknowledgments
 

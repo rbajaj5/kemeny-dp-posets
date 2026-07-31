@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.9.0 - 2026-07-30
+
+- Implemented independent columns uniform on the sphere via normalized
+  Gaussian vectors, beside the existing binary-coin JL construction.
+- Added Li's explicit fixed-vector and finite-family sufficient-dimension
+  calculator with input validation and unit tests.
+- Compared both constructions on all 7,140 unordered pairs of the 120
+  five-candidate rankings at nine output dimensions with fixed seeds.
+- Recorded that the explicit dimensions 1,476 and 5,025 exceed the exact
+  ambient dimension 10 at `epsilon=0.4` and `delta=0.05`.
+- Kept fixed-vector concentration, finite-family preservation, Kemeny argmin
+  preservation, and differential privacy as separate claims.
+
 ## 0.8.1 - 2026-07-30
 
 - Added a scoped assessment of Li and Xia's counterexample to the zero-mass

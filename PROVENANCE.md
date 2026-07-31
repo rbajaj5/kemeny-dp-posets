@@ -23,6 +23,7 @@ item. Git history supplies the exact timestamps.
 | K1 | The three-cell majority reduction preserves the unique Y-game winner. | KNOWN; IMPLEMENTED | 0.3.0 | Karlin and Peres, *Game Theory, Alive*. |
 | K2 | In finite Chomp, Sprague-Grundy recursion labels a winning move exactly by transition to Grundy zero. | KNOWN; IMPLEMENTED | 0.8.0 | Standard Sprague-Grundy theory; Kong-Ram-Yu oracle evaluation. |
 | K3 | In Li-Xia's finite stages, `degree(H_j)=4^j`, scale `2^-j`, normalized two-dimensional Monge-Ampere mass one, and Lelong number `2^-j`. | KNOWN SOURCE FORMULAS; IMPLEMENTED | 0.8.1 | Li-Xia Proposition 3.2. |
+| K4 | Binary-coin and independent-column spherical projections satisfy Li's explicit fixed-vector JL sufficient-dimension bound; a finite-family bound follows by union bound. | KNOWN SOURCE THEOREM; IMPLEMENTED | 0.9.0 | Li Propositions 8 and 24. |
 | C1 | Exact atlases through five candidates and three voters. | COMPUTATIONAL | 0.3.0 | Exhaustive verification of P5. |
 | C2 | JL preservation, sample-and-center, and exponential-mechanism experiments. | COMPUTATIONAL | 0.3.0 | Dwork survey, NRS07, and Blocki et al. |
 | C3 | Structured versus unrestricted synthetic market-priority experiments. | COMPUTATIONAL; NO ECONOMIC EQUILIBRIUM CLAIM | 0.3.0 | Carroll's multiple-proposal open direction; market-design literature. |
@@ -35,6 +36,7 @@ item. Git history supplies the exact timestamps.
 | C10 | The ten-button grounded game has exact brittle self/cross-play accuracies one and one half; complete button coverage restores one; both binary conventions, all four fixed decoders, and all feedback cases verify P14. | EXACT COMPUTATIONAL; NO RL CLAIM | 0.8.0 | OvercookedV2 Button Game and benchmark diagnosis. |
 | C11 | Exact Chomp evaluation covers 923 states in a six-by-six box, including 875 labeled winning states, plus 25 full-game starts; the oracle is exact everywhere and the largest-bite negative control matches `2/175` sampled labeled states. | EXACT COMPUTATIONAL; NO ALPHAZERO CLAIM | 0.8.0 | Kong-Ram-Yu trace and sampled-state oracle metrics. |
 | C12 | Exact rational arithmetic verifies K3 through stage 20: mass remains one, Lelong numbers strictly decrease, and the mass-to-Lelong ratio reaches `2^20`. | EXACT ARITHMETIC AUDIT; NO ANALYTIC-LIMIT CLAIM | 0.8.1 | Finite-stage mechanism in Li-Xia. |
+| C13 | Matched seeded trials compare binary-coin and spherical-column projections on all 7,140 five-candidate ranking pairs; the explicit 1,476 fixed-vector and 5,025 all-pair sufficient dimensions exceed ambient dimension 10. | MONTE CARLO + EXACT BOUND EVALUATION; NO PRIVACY/ARGMIN CLAIM | 0.9.0 | Li Proposition 8 and finite-family union bound. |
 | A1 | Kemeny aggregation could combine stakeholder rankings of high-level risk-mitigation priorities. | OPEN APPLICATION; NO PROBABILITY OR POLICY CLAIM | 0.3.0 | Critch-Tsimerman scenario taxonomy; social-choice caveats. |
 | A2 | Language/reality/simulation ledger for every cross-domain diagram. | METHODOLOGICAL AUDIT; NO NEW DOMAIN THEOREM | 0.3.0 | Jaffe-Liu picture-language program. |
 | A3 | Loop-equation proof audit separating identities, error control, and branch selection; no random-matrix theorem is transported to Kemeny or privacy. | METHODOLOGICAL AUDIT | 0.4.0 | Bourgade-Huang characterization theorems. |
@@ -42,6 +44,7 @@ item. Git history supplies the exact timestamps.
 | A5 | State coverage, convention compatibility, oracle consistency, and aggregate outcome are reported as distinct benchmark properties. | METHODOLOGICAL AUDIT | 0.8.0 | Gessler et al.; Kong, Ram, and Yu. |
 | A6 | Value fit and structural residual should be measured separately, but PIKS's RKHS/PDE consistency theorem does not transfer to finite ranking transitivity. | METHODOLOGICAL AUDIT; NO TRANSPORTED THEOREM | 0.8.0 | Bona-Pellissier et al. |
 | A7 | A one-sided lower bound from a coarse local invariant is not treated as reversible without additional structure; the Li-Xia theorem is recorded without transport to Kemeny or privacy. | METHODOLOGICAL AUDIT | 0.8.1 | Li-Xia zero-mass counterexample; strictness in P11. |
+| A8 | Fixed-vector concentration, finite-family geometry preservation, Kemeny argmin preservation, and differential privacy are four distinct claims requiring separate assumptions. | METHODOLOGICAL AUDIT | 0.9.0 | Li; Blocki et al.; profile-level margin certificates. |
 
 ## Corrections
 

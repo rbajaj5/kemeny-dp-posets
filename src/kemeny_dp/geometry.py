@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from math import sqrt
+from math import ceil, log, sqrt
 from random import Random
 from typing import Sequence
 
@@ -51,6 +51,62 @@ def rademacher_projection(
     return tuple(
         tuple(scale if rng.random() < 0.5 else -scale for _ in range(input_dimension))
         for _ in range(output_dimension)
+    )
+
+
+def spherical_column_projection(
+    input_dimension: int,
+    output_dimension: int,
+    *,
+    rng: Random,
+) -> Projection:
+    """Draw independent columns uniformly from the output unit sphere.
+
+    Normalizing an isotropic Gaussian vector gives a uniform point on the
+    sphere. Unlike the dense Rademacher construction, entries within one
+    column are dependent, while distinct columns remain independent.
+    """
+    if input_dimension < 1 or output_dimension < 1:
+        raise ValueError("projection dimensions must be positive")
+    columns: list[Vector] = []
+    for _ in range(input_dimension):
+        norm = 0.0
+        while norm == 0.0:
+            values = tuple(rng.gauss(0.0, 1.0) for _ in range(output_dimension))
+            norm = sqrt(sum(value * value for value in values))
+        columns.append(tuple(value / norm for value in values))
+    return tuple(
+        tuple(columns[column][row] for column in range(input_dimension))
+        for row in range(output_dimension)
+    )
+
+
+def jl_sufficient_dimension(
+    epsilon: float,
+    delta: float,
+    *,
+    finite_set_size: int = 1,
+) -> int:
+    """Return Li's explicit JL sufficient dimension.
+
+    Proposition 8 gives ``64 epsilon^-2 log(2/delta)`` for one fixed vector.
+    A union bound, as in Proposition 24, replaces ``2`` by
+    ``2 * finite_set_size`` for a finite vector set.
+    """
+    if not 0 < epsilon < 0.5:
+        raise ValueError("epsilon must lie strictly between zero and one half")
+    if not 0 < delta < 0.5:
+        raise ValueError("delta must lie strictly between zero and one half")
+    if (
+        isinstance(finite_set_size, bool)
+        or not isinstance(finite_set_size, int)
+        or finite_set_size < 1
+    ):
+        raise ValueError("finite_set_size must be a positive integer")
+    return ceil(
+        64
+        * epsilon**-2
+        * log(2 * finite_set_size / delta)
     )
 
 
