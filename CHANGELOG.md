@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.8.0 - 2026-07-30
+
+- Added exact grounded Button Game and ungrounded binary-protocol audits that
+  separate state coverage from convention incompatibility.
+- Proved and exhausted the two-convention fixed-decoder one-half bound and
+  one-labeled-feedback recovery result.
+- Added generic exact oracle trace metrics with explicit handling of unlabeled
+  states, raw first-failure plies, and non-vacuous perfection.
+- Added a memoized exact Chomp Grundy oracle, full-game simulation, and an
+  exhaustive 923-state audit inside a six-by-six box.
+- Verified the oracle policy on all 875 labeled winning states; recorded the
+  largest-bite negative control's exact `2/175` sampled-state match rate.
+- Added scoped source assessments for OvercookedV2, AlphaZero auxiliary
+  supervision, and PIKS, without claiming RL reproduction or transporting an
+  RKHS/PDE theorem.
+- Tightened oracle-flag validation to reject integer lookalikes for booleans.
+
 ## 0.7.0 - 2026-07-30
 
 - Added exact center-of-attention certificates, including the full minimizing

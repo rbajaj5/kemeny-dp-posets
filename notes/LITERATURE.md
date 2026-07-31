@@ -154,3 +154,29 @@ used as a novelty claim.
   Man in Workers' Paradise." It is used here only to distinguish open-ended
   exploration from certification. It supplies no mathematical premise.
   <https://www.gutenberg.org/ebooks/7971>
+
+## Benchmark validity and structural supervision
+
+- Tobias Gessler, Tin Dizdarevic, Anisoara Calinescu, Benjamin Ellis, Andrei
+  Lupu, and Jakob Foerster, **OvercookedV2: Rethinking Overcooked for
+  Zero-Shot Coordination** (ICLR 2025). Separates state-coverage artifacts
+  from coordination problems involving asymmetric information, grounded
+  communication, stochasticity, and test-time feedback. The repository
+  exactly audits the paper's grounded Button Game and a separate ungrounded
+  binary convention counterexample.
+  <https://arxiv.org/abs/2503.17821>
+
+- Brent Kong, Tejas Ram, and Tony Yue Yu, **AlphaZero in Sparsely Rewarded
+  Games: Limits and Auxiliary Supervision** (2026). Distinguishes strong
+  empirical outcomes from exact oracle-consistent play in Connect Four and
+  Chomp. The repository implements its trace-metric definitions and a separate
+  exact small-board Chomp oracle, not its AlphaZero experiments.
+  <https://arxiv.org/abs/2607.08984>
+
+- Joachim Bona-Pellissier, Giacomo Meanti, Matteo Santacesaria, and Lorenzo
+  Rosasco, **PIKS: Universal Physics-Informed Kernel Methods** (2026). Proves
+  simultaneous value and linear-operator consistency under RKHS density,
+  boundedness, sampling, and regularization hypotheses. Only the diagnostic
+  separation of fit from structural residual is retained; no PDE/RKHS theorem
+  is transported to Kemeny aggregation.
+  <https://arxiv.org/abs/2607.27062>

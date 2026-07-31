@@ -109,6 +109,26 @@ The last quantity omits the theorem's absolute constant and substitutes an
 estimate for the unknown Bernoulli parameter. It is labeled as a diagnostic,
 not presented as a rigorous coverage guarantee.
 
+## Coverage, coordination, and structural consistency
+
+Three recent sources sharpen the evaluation policy without changing the core
+Kemeny theorems.
+
+OvercookedV2 shows why cross-play failure must first be tested against state
+augmentation: unseen states can mimic a coordination problem. The exact
+binary counterexample in this repository then shows the converse limit:
+complete state coverage cannot reconcile incompatible ungrounded conventions.
+
+The AlphaZero oracle study separates strong outcomes from move-by-move perfect
+play. We therefore report exact-oracle agreement, regret, failure location,
+and sampled-state coverage separately whenever an oracle is feasible. An
+empirical win or favorable aggregate score is not a proof of exactness.
+
+PIKS separates ordinary value error from a linear-operator constraint error.
+We adopt that measurement discipline, but not its RKHS/PDE theorem. Any
+transitivity, privacy, or neutrality residual in this repository must be
+defined and proved for the finite ranking model itself.
+
 ## Priority and publication
 
 The repository follows these rules:

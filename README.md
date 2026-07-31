@@ -110,6 +110,15 @@ two-ballot shortcut and a Borda block option, and exhaustively tests metric
 witnesses, relabeling, approximation, and invalid-remainder validation. It
 does not claim an end-to-end private mechanism.
 
+The [`OvercookedV2 benchmark assessment`](notes/OVERCOOKEDV2_BENCHMARK_ASSESSMENT.md)
+separates state-coverage failures from incompatible conventions with two
+exact finite games. The
+[`AlphaZero oracle assessment`](notes/ALPHAZERO_ORACLE_ASSESSMENT.md) adds
+generic move-level oracle metrics and an exact small-board Chomp laboratory.
+The [`PIKS assessment`](notes/PIKS_SOURCE_ASSESSMENT.md) adopts the narrower
+discipline of measuring fit and structural residual separately while
+documenting why no RKHS/PDE consistency theorem transfers here.
+
 ## What runs
 
 - exact Kemeny enumeration for small candidate sets;
@@ -133,6 +142,10 @@ does not claim an end-to-end private mechanism.
 - exact majority-circuit size and repeated connectivity-versus-circuit timings;
 - exact upper-set transforms and Möbius inversion for laws on bounded profile
   posets, including a three-voter first-moment counterexample;
+- exact grounded-coverage and ungrounded binary-protocol coordination games;
+- exact oracle-match, longest-chain, first-failure, and perfect-trace metrics;
+- a memoized exact Chomp Grundy oracle and exhaustive states through a
+  six-by-six bounding box;
 - reproducible CSV/JSON experiments and SVG Hasse diagrams for both profile
   and coloring cover relations.
 
@@ -149,6 +162,8 @@ python scripts/run_sample_aggregate_audit.py
 python scripts/run_market_microstructure.py
 python scripts/run_hex_y.py --exhaustive-max 6
 python scripts/run_profile_law_hierarchy.py
+python scripts/run_coordination_audit.py
+python scripts/run_oracle_consistency_audit.py
 python scripts/generate_hasse.py
 python scripts/generate_hex_hasse.py
 ```
@@ -187,6 +202,9 @@ factor-two bridge and its limits. Novelty is still unconfirmed.
 - [Jaffe and Liu, *A Mathematical Picture Language Program*](https://doi.org/10.1073/pnas.1710707114)
 - [Bourgade and Huang, *Loop Equations Characterize Random Matrix Statistics*](https://arxiv.org/abs/2607.07617)
 - [Tagore, *The Fugitive*, section 26 of *The Fugitive-III*](https://www.gutenberg.org/ebooks/7971)
+- [Gessler et al., *OvercookedV2: Rethinking Overcooked for Zero-Shot Coordination*](https://arxiv.org/abs/2503.17821)
+- [Kong, Ram, and Yu, *AlphaZero in Sparsely Rewarded Games: Limits and Auxiliary Supervision*](https://arxiv.org/abs/2607.08984)
+- [Bona-Pellissier et al., *PIKS: Universal Physics-Informed Kernel Methods*](https://arxiv.org/abs/2607.27062)
 
 ## Authorship and assistance
 

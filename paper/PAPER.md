@@ -736,7 +736,57 @@ whereas Peters concerns a Kemeny median of three arbitrary permutations as
 the candidate count grows. The common structure is the cover-radius question,
 not computational complexity.
 
-## 12. Relation to prior work and open questions
+## 12. Benchmark-validity extensions
+
+Two small exact laboratories record evaluation distinctions that apply to
+future computational work but do not alter the Kemeny or privacy theorems.
+
+First, the grounded Button Game of Gessler et al. has hidden bit
+\(b\in\{0,1\}\), sender button \(a\), and observed bulb
+\(\ell=2a+b\). Parity decodes \(b\) independently of \(a\). A receiver that
+learns parity only for one button and uses a fixed guess elsewhere has
+self-play accuracy one and off-diagonal cross-play accuracy one half; covering
+all buttons restores accuracy one. This is a state-coverage failure.
+
+Coverage cannot solve every coordination problem. Consider the two
+ungrounded encoders \(e_0=(0,1)\) and \(e_1=(1,0)\). Both cover both messages.
+
+**Proposition 8 (binary convention obstruction).** A paired encoder-decoder
+has uniform-bit accuracy one, a crossed pair has accuracy zero, and every
+fixed deterministic decoder has mean accuracy one half under a uniform choice
+of encoder. One labeled interaction identifies the active bijective encoder.
+
+**Proof.** A paired decoder is the inverse and the crossed inverse flips both
+bits. Across the two encoders, each observed message corresponds once to each
+hidden bit, so a fixed guess is correct in exactly half the encoder-bit cases.
+The equality or inequality of one observed message and its revealed bit
+distinguishes identity from flip. \(\square\)
+
+Second, following Kong, Ram, and Yu, the implementation reports oracle-match
+rate, longest labeled oracle-consistent chain, first failure in original game
+plies, and perfect-trace rate separately. An exact Chomp oracle uses
+
+\[
+g(s)=\operatorname{mex}\{g(s'):s'\in N(s)\},
+\]
+
+and labels moves from \(g(s)\ne0\) as optimal precisely when they reach Grundy
+zero. Exhaustion of all 923 nonempty partition states in a \(6\times6\) box
+finds 875 winning labeled states. The exact policy matches all 875. A
+largest-bite negative control matches only 10, or \(2/175\), and has no
+perfect trace on the 25 full rectangular starts with side lengths two through
+six. This is an implementation check, not an AlphaZero reproduction.
+
+The PIKS analysis of Bona-Pellissier et al. supplies a compatible caution:
+ordinary value convergence and linear-operator consistency are distinct
+claims. Its universal-consistency theorem depends on RKHS density, bounded
+linear operators, compatible sampling, bounded data and features, and a
+regularization regime. Transitivity of finite rankings is not such a
+differential operator, so no PIKS theorem is imported. Future Kemeny
+heuristics should nevertheless report objective regret and structural
+validity separately.
+
+## 13. Relation to prior work and open questions
 
 Hay, Elagina, and Miklau introduced differentially private rank aggregation.
 Alabi et al. studied private rank aggregation in central and local models, and
@@ -806,6 +856,15 @@ Concrete open problems are:
 13. K. De, H. Mittal, P. Dey, and N. Misra. "Parameterized Aspects of
     Distinct Kemeny Rank Aggregation." 2023.
     [arXiv:2309.03517](https://arxiv.org/abs/2309.03517).
+14. T. Gessler et al. "OvercookedV2: Rethinking Overcooked for Zero-Shot
+    Coordination." ICLR, 2025.
+    [arXiv:2503.17821](https://arxiv.org/abs/2503.17821).
+15. B. Kong, T. Ram, and T. Y. Yu. "AlphaZero in Sparsely Rewarded Games:
+    Limits and Auxiliary Supervision." 2026.
+    [arXiv:2607.08984](https://arxiv.org/abs/2607.08984).
+16. J. Bona-Pellissier, G. Meanti, M. Santacesaria, and L. Rosasco. "PIKS:
+    Universal Physics-Informed Kernel Methods." 2026.
+    [arXiv:2607.27062](https://arxiv.org/abs/2607.27062).
 
 ## Acknowledgments
 

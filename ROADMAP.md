@@ -8,6 +8,12 @@
 
 ## Recently completed
 
+- Separated state coverage from convention incompatibility with exact grounded
+  and ungrounded binary coordination games.
+- Added exact oracle trace metrics and a memoized Chomp Grundy laboratory;
+  exhausted 923 states in a six-by-six box and 25 full-game starts.
+- Adopted separate reporting of empirical outcome, oracle consistency, and
+  structural residual; documented why PIKS does not supply a Kemeny theorem.
 - Proved the sharp factor-two input-center approximation, exposed the complete
   relabeling-equivariant minimizer set, and documented why lexicographic
   resolution is not neutral.
@@ -37,6 +43,18 @@
 - Identify distributional conditions under which block rankings concentrate
   around the full Kemeny optimum.
 - Compare against the 2022 and 2026 worst-case DP algorithms.
+- Report exact-optimum agreement, score regret, failure shells, relabeling,
+  and independently sampled profiles rather than one aggregate utility alone.
+
+## Benchmark validity
+
+- Test state augmentation before labeling a cross-play gap as coordination.
+- Randomize or symmetrize arbitrary candidate-label and tie conventions, then
+  test cross-convention behavior explicitly.
+- For learned or heuristic game policies, pair outcome rates with exact-oracle
+  match, longest consistent chain, first failure, and sampled-state coverage.
+- Treat auxiliary structural penalties as new algorithms requiring their own
+  approximation, neutrality, and privacy analyses.
 
 ## Geometry
 

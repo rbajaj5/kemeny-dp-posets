@@ -1,0 +1,174 @@
+{
+  "grounded_button_game": {
+    "all_grounded_states_checked": 20,
+    "brittle_accuracy_matrix": [
+      [
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1"
+      ]
+    ],
+    "button_count": 10,
+    "cross_play_off_diagonal_mean": "1/2",
+    "self_play_diagonal_accuracy": "1",
+    "state_augmented_accuracy": "1"
+  },
+  "source": {
+    "arxiv": "2503.17821",
+    "title": "OvercookedV2: Rethinking Overcooked for Zero-Shot Coordination",
+    "url": "https://arxiv.org/abs/2503.17821"
+  },
+  "status": {
+    "feedback_adaptation": "PROVED_FINITE_TOY_MODEL",
+    "grounded_button_game": "KNOWN_MODEL_EXACTLY_AUDITED",
+    "kemeny_or_privacy_claim": "NONE",
+    "protocol_impossibility": "PROVED_FINITE_TOY_MODEL"
+  },
+  "ungrounded_protocol_game": {
+    "best_fixed_decoder_mean_accuracy": "1/2",
+    "conventions": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "each_encoder_covers_all_messages": true,
+    "encoder_feedback_cases_checked": 4,
+    "fixed_decoder_mean_accuracies": {
+      "(0, 0)": "1/2",
+      "(0, 1)": "1/2",
+      "(1, 0)": "1/2",
+      "(1, 1)": "1/2"
+    },
+    "one_feedback_future_accuracy": "1",
+    "self_cross_play_accuracy_matrix": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  }
+}
